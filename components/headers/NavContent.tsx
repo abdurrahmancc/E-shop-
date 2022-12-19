@@ -1,0 +1,161 @@
+import Link from "next/link";
+import React, { FC, PropsWithChildren } from "react";
+import { GoChevronDown } from "react-icons/go";
+import { useRouter } from "next/router";
+
+interface Props {
+  children: string;
+}
+
+const NavContent: FC<PropsWithChildren<Props>> = ({ children: textColor }) => {
+  const router = useRouter();
+  return (
+    <nav className="h-full">
+      <ul className="flex menu menu-horizontal gap-x-7 items-center h-full">
+        <li className="hover:bg-inherit" tabIndex={0}>
+          <Link
+            href={"/"}
+            className={`focus:bg-inherit p-0 hover:bg-inherit ${textColor} px-0 flex font-[500] gap-2 items-center`}
+          >
+            <span
+              className={` inline-block pb-1  text-[16px] leading-[26px] ${
+                router.pathname == "/" ? "border-primary border-b-2" : "border-animate"
+              }`}
+            >
+              Home
+            </span>
+            <GoChevronDown className="w-3 h-3 mb-2" />
+          </Link>
+          <ul className="menu py-3 rounded-lg overflow-hidden bg-white z-50 w-[270px] shadow-xl">
+            <li>
+              <Link
+                href={"/"}
+                className={`sub-menu-animate text-[15px] py-[10px] relative text-[rgba(0,0,0,0.7)] bg-white px-0 font-semibold hover:text-primary`}
+              >
+                <span className="px-8">Home 1</span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={"/home2"}
+                className={`sub-menu-animate py-[10px] text-[15px] relative text-[rgba(0,0,0,0.7)] bg-white px-0 font-semibold hover:text-primary`}
+              >
+                <span className="px-8">Home 2</span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={"/home2"}
+                className={`sub-menu-animate py-[10px] text-[15px] relative text-[rgba(0,0,0,0.7)] bg-white px-0 font-semibold hover:text-primary`}
+              >
+                <span className="px-8">Home 3</span>
+              </Link>
+            </li>
+          </ul>
+        </li>
+        <li className="hover:bg-inherit" tabIndex={0}>
+          <Link
+            href={"/shop"}
+            className={`focus:bg-inherit p-0 hover:bg-inherit ${textColor} px-0 flex font-[500] gap-2 items-center`}
+          >
+            <span
+              className={` inline-block pb-1  text-[16px] leading-[26px] ${
+                router.pathname == "/shop" ? "border-primary border-b-2" : "border-animate"
+              }`}
+            >
+              Shop
+            </span>
+            <GoChevronDown className="w-3 h-3 mb-2" />
+          </Link>
+          <ul className="menu py-3 rounded-lg overflow-hidden bg-white z-50 w-[270px] shadow-xl">
+            <li>
+              <Link
+                href={"/shop"}
+                className={`sub-menu-animate text-[15px] py-[10px] relative text-[rgba(0,0,0,0.7)] bg-white px-0 font-semibold hover:text-primary`}
+              >
+                <span className="px-8">Shop default</span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={"/shop/shop2"}
+                className={`sub-menu-animate py-[10px] text-[15px] relative text-[rgba(0,0,0,0.7)] bg-white px-0 font-semibold hover:text-primary`}
+              >
+                <span className="px-8">Right Filter Shop</span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={"/shop/shop3"}
+                className={`sub-menu-animate py-[10px] text-[15px] relative text-[rgba(0,0,0,0.7)] bg-white px-0 font-semibold hover:text-primary`}
+              >
+                <span className="px-8">Shop 3</span>
+              </Link>
+            </li>
+          </ul>
+        </li>
+
+        <li className="flex hover:bg-inherit font-[500] gap-[10px] items-center">
+          <Link
+            href={"/about"}
+            className={`focus:bg-inherit p-0 hover:bg-inherit ${textColor} px-0 flex font-[500] gap-2 items-center`}
+          >
+            <span
+              className={` inline-block pb-1  text-[16px] leading-[26px] ${
+                router.pathname == "/about" ? "border-primary border-b-2" : "border-animate"
+              }`}
+            >
+              About
+            </span>
+          </Link>
+        </li>
+        <li className="flex hover:bg-inherit font-[500] gap-[10px] items-center">
+          <Link
+            href={"/contact"}
+            className={`focus:bg-inherit p-0 hover:bg-inherit ${textColor} px-0 flex font-[500] gap-2 items-center`}
+          >
+            <span
+              className={` inline-block pb-1  text-[16px] leading-[26px] ${
+                router.pathname == "/contact" ? "border-primary border-b-2" : "border-animate"
+              }`}
+            >
+              Contact
+            </span>
+          </Link>
+        </li>
+
+        <li className="flex hover:bg-inherit font-[500] gap-[10px] items-center">
+          <Link
+            href={"/blogs"}
+            className={`focus:bg-inherit p-0 hover:bg-inherit ${textColor} px-0 flex font-[500] gap-2 items-center`}
+          >
+            <span
+              className={` inline-block pb-1  text-[16px] leading-[26px] ${
+                router.pathname == "/blog" ? "border-primary border-b-2" : "border-animate"
+              }`}
+            >
+              Blog
+            </span>
+          </Link>
+        </li>
+        <li className="flex hover:bg-inherit font-[500] gap-[10px] items-center">
+          <Link
+            href={"/home"}
+            className={`focus:bg-inherit p-0 hover:bg-inherit ${textColor} px-0 flex font-[500] gap-2 items-center`}
+          >
+            <span
+              className={` inline-block pb-1  text-[16px] leading-[26px] ${
+                router.pathname == "/pages" ? "border-primary border-b-2" : "border-animate"
+              }`}
+            >
+              Pages
+            </span>
+            <GoChevronDown className="w-3 h-3 mb-2" />
+          </Link>
+        </li>
+      </ul>
+    </nav>
+  );
+};
+
+export default NavContent;
