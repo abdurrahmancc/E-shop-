@@ -1,0 +1,6 @@
+@media only screen and (max-width: 500px) {
+    #trendingProducts{
+        max-width: 265px;
+        grid-template-columns: 1fr;
+    }
+}

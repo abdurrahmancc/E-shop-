@@ -8,7 +8,7 @@ const BottomHeader1 = () => {
   const [toggle, setToggle] = useState<boolean>(true);
   return (
     <div className="pb-5 hidden lg:flex items-center justify-between">
-      <div className=" max-w-[250px] xl:max-w-[289px] w-full">
+      <div className=" max-w-[250px] xl:max-w-[290px] w-full">
         <button
           onClick={() => setToggle(!toggle)}
           className=" bg-primary flex justify-between items-center px-3 text-secondary w-full h-[60px]"

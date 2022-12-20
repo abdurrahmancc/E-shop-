@@ -41,3 +41,28 @@ body {
   left: 0;
 }
 /*============== menu border animate end============== */
+
+
+/* ============== add to card animation start ================ */
+.addToCardAnimate{
+  bottom: -56px;
+  transition: all .3s ease;
+}
+
+.hoverAddToCardAnimate{
+  bottom: 48px;
+  transform: translateY(100%)
+}
+/* ============== add to card animation end ================ */
+
+
+/* ============= button animation start ========= */
+.btn-animate{
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: .4s ;
+}
+.btn-animate:hover {
+  background-size: 100% 100%;
+}
+/* ============= button animation end ========= */

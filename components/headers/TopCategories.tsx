@@ -6,8 +6,8 @@ import rightArrow from "../../assets/icons/right-arrow.svg";
 
 const TopCategories = () => {
   return (
-    <div className="w-full">
-      <ul className="flex flex-col h-[573px] border border-[#D9D9D9] w-[290px]">
+    <div className="xl:max-w-[290px] hidden lg:block max-w-[250px] w-full">
+      <ul className="flex flex-col  w-[250px] xl:w-[290px] h-[577px] border border-[#D9D9D9] ">
         <li className="border-b text-[#282828] border-[#D9D9D9] transition-all duration-150 ease-linear hover:bg-primary flex items-center w-full flex-grow">
           <div className="dropdown w-full h-full hover:overflow-visible dropdown-right dropdown-hover">
             <label tabIndex={0} className="w-full ">
@@ -24,7 +24,7 @@ const TopCategories = () => {
             <ul
               tabIndex={0}
               id="bottom-dropdown-category"
-              className="dropdown-content border border-[#D9D9D9] overflow-hidden text-[#282828] side-dropdown menu shadow  w-52"
+              className="dropdown-content border border-[#D9D9D9] overflow-hidden bg-white text-[#282828] side-dropdown menu shadow  w-52"
             >
               <li className="border-b border-[#D9D9D9] hover:bg-primary  duration-150 ease-in-out transition capitalize">
                 <Link href="/" className="pl-8 font-semibold">
@@ -104,7 +104,7 @@ const TopCategories = () => {
             <Image src={rightArrow} width={16} height={16} alt="rightArrow" />
           </Link>
         </li>
-        <li className="border-b transition-all duration-150 ease-linear hover:bg-primary flex items-center w-full px-[13px] flex-grow border-[#D9D9D9]">
+        <li className="transition-all duration-150 ease-linear hover:bg-primary flex items-center w-full px-[13px] flex-grow">
           <Link href={"/shop"} className="flex w-full items-center justify-between">
             <div className="flex gap-3 items-center">
               <Image src={computer} width={20} height={20} alt="computer" /> Computer & Laptop
