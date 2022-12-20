@@ -70,7 +70,7 @@ const TrendingProducts = () => {
           <div className="flex-grow">
             <div
               id="trendingProducts"
-              className=" grid grid-cols-2 max-w-[550px] mx-auto lg:grid-cols-3 xl:grid-cols-4 gap-y-[17px] gap-3 sm:gap-x-5 2xl:gap-x-[30px]"
+              className=" grid grid-cols-2 max-w-[550px] lg:max-w-full  mx-auto lg:grid-cols-3 xl:grid-cols-4 gap-y-[17px] gap-3 sm:gap-x-5 2xl:gap-x-[30px]"
             >
               <ProductCard1 />
               <ProductCard1 />
