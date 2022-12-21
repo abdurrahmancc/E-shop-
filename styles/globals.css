@@ -44,12 +44,12 @@ body {
 
 
 /* ============== add to card animation start ================ */
-.addToCardAnimate{
+.bottomToTop{
   bottom: -56px;
   transition: all .3s ease;
 }
 
-.hoverAddToCardAnimate{
+.bottomToTopAnimate{
   bottom: 48px;
   transform: translateY(100%)
 }

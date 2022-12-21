@@ -1,6 +1,9 @@
 import Image from "next/image";
 import React, { useState } from "react";
+import { AiOutlineHeart } from "react-icons/ai";
+import { BiGitCompare, BiSearch } from "react-icons/bi";
 import img1 from "../../../assets/product-Image/product-1.png";
+import img2 from "../../../assets/product-Image/product-2.png";
 import { Rating5 } from "../Ratings/Ratings";
 
 const ProductCard1 = () => {
@@ -13,8 +16,51 @@ const ProductCard1 = () => {
       className="max-w-[265px] overflow-hidden w-full h-[443px]"
     >
       <div className="border border-[#fff0] h-full ease-linear duration-300 transition-all  hover:border-primary">
-        <div className="w-full bg-[#F8F8F8] h-[298px] flex justify-center items-center">
-          <Image src={img1} width={212} height={212} alt="product image" />
+        <div className="w-full overflow-hidden relative bg-[#F8F8F8] h-[298px] flex justify-center items-center">
+          <figure className="max-w-[212px] max-h-[212px] overflow-hidden">
+            {isHover ? (
+              <Image
+                src={img2}
+                className={`transition-all duration-300 ease-linear scale-100 ${
+                  isHover ? "scale-110" : ""
+                }`}
+                width={212}
+                height={212}
+                alt="product image"
+              />
+            ) : (
+              <Image
+                className={`transition-all duration-300 ease-linear scale-100 ${
+                  isHover ? "scale-110" : ""
+                }`}
+                src={img1}
+                width={212}
+                height={212}
+                alt="product image"
+              />
+            )}
+            {/* <Image
+              src={img1}
+              className={`cardImage1 ${isHover ? "cardImageHover1" : ""}`}
+              width={212}
+              height={212}
+              alt="product image"
+            /> */}
+          </figure>
+
+          <div className={`absolute bottomToTop ${isHover ? "bottomToTopAnimate" : ""} `}>
+            <ul className="flex gap-[10px] items-center">
+              <li className="w-8 transition-all duration-300 ease-linear text-[#031424] hover:bg-primary hover:text-[#000000] rounded-full h-8 flex items-center justify-center border border-primary">
+                <BiSearch className="text-[16px] " />
+              </li>
+              <li className="w-8 transition-all duration-300 ease-linear text-[#031424] hover:bg-primary hover:text-[#000000] rounded-full h-8 flex items-center justify-center border border-primary">
+                <AiOutlineHeart className="text-[16px]" />
+              </li>
+              <li className="w-8 transition-all duration-300 ease-linear text-[#031424] hover:bg-primary hover:text-[#000000] rounded-full h-8 flex items-center justify-center border border-primary">
+                <BiGitCompare className="rotate-90 text-[16px]" />
+              </li>
+            </ul>
+          </div>
         </div>
         <div className="pt-5 px-[10px]">
           <h3 className="text-lg leading-[27px] text-center font-[600] text-info">
@@ -35,8 +81,8 @@ const ProductCard1 = () => {
               </p>
             </div>
             <div
-              className={`absolute addToCardAnimate w-full
-             mx-auto ${isHover ? "hoverAddToCardAnimate" : ""} `}
+              className={`absolute bottomToTop w-full
+             mx-auto ${isHover ? "bottomToTopAnimate" : ""} `}
             >
               <button className="text-[#000000] flex justify-center items-center h-[42px] rounded-[32px] mx-auto max-w-[158px] w-full bg-gradient-to-r from-[#f9c536] to-[#f9c536] btn-animate  bg-primary text-[16px] leading-[24px] ">
                 Add to cart
