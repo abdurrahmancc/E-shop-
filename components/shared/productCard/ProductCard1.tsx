@@ -6,14 +6,18 @@ import img1 from "../../../assets/product-Image/product-1.png";
 import img2 from "../../../assets/product-Image/product-2.png";
 import { Rating5 } from "../Ratings/Ratings";
 
-const ProductCard1 = () => {
+interface ExtraStyle {
+  extraStyle?: string;
+}
+
+const ProductCard1 = ({ extraStyle }: ExtraStyle) => {
   const [isHover, setIsHover] = useState<boolean>(false);
 
   return (
     <div
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
-      className="max-w-[265px] overflow-hidden w-full h-[443px]"
+      className="max-w-[265px] mx-auto overflow-hidden w-full h-[443px]"
     >
       <div className="border border-[#fff0] h-full ease-linear duration-300 transition-all  hover:border-primary">
         <div className="w-full overflow-hidden relative bg-[#F8F8F8] h-[298px] flex justify-center items-center">
@@ -69,7 +73,7 @@ const ProductCard1 = () => {
           <div className="relative mt-[5px]">
             <div className={`${isHover ? "scale-0" : "scale-100"}`}>
               <div className="flex justify-center items-center gap-[10px]">
-                <div className="flex items-center justify-center">
+                <div className="flex gap-[2px] items-center justify-center">
                   <Rating5 />
                 </div>
                 <span className="2xl:text-[16px] text-[14px] text-[#808080] font-[500]  leading-[24px]">

@@ -6,11 +6,11 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
 import Image from "next/image";
-import banner1 from "../../assets/banner/banner-1.jpg";
-import banner2 from "../../assets/banner/banner-2.png";
+import banner1 from "../../assets/banner/banner-2-1.png";
+
 const { Fade } = require("react-reveal");
 
-const TopBannerSlider1 = () => {
+const TopBannerSlider2 = () => {
   const pagination = {
     clickable: true,
     renderBullet: function (index: any, className: any) {
@@ -31,34 +31,34 @@ const TopBannerSlider1 = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <div className="relative">
+          <div className="relative rounded-[8px] w-full">
             <Image
               src={banner1}
               height={577}
               width={1114}
-              className={`w-[1114] min-h-[320px] lg:max-h-[577px] lg:min-h-[577px] h-[577px]`}
+              className={`w-[1114] rounded-[8px] min-h-[320px] lg:max-h-[577px] lg:min-h-[577px] h-[577px]`}
               alt="banner"
             />
-            <div className="absolute top-0 h-full flex items-center pl-10">
+            <div className="absolute top-0 h-full flex items-center pl-5 md:pl-10">
               <div className="text-start max-w-[580px]">
-                <Fade left delay={300}>
-                  <span className="text-secondary rounded-[36px] inline-block py-[3px] px-[15px] bg-primary text-xs leading-5 lg:text-sm lg:leading-[26px] font-[500] ">
-                    Sale Top 20% OFF
+                <Fade top delay={300}>
+                  <span className="font-[600] inline-block text-[20px] text-[#313131] leading-[30px]">
+                    Top Monthly Seller
                   </span>
                 </Fade>
-                <Fade top>
-                  <h2 className="xl:text-[58px] text-2xl sm:text-[32px] sm:leading-[44px] md:text-[40px] md:leading-[52px] mt-2 text-start font-[600] xl:leading-[73px] text-[#313131] ">
-                    Get High On Sound <br /> <span className="text-info">Quality</span>{" "}
+                <Fade left>
+                  <h2 className="md:text-[42px] sm:text-[36px] text-[24px] leading-8 md:mt-7 sm:mt-4 mt-2 text-start font-[600] md:leading-[48px] sm:leading-[44px] text-[#313131] ">
+                    <span className="text-primary">Top Headphone</span>
+                    <br /> <span className="text-[#313131]">HAVIT HV-H2178D 3.5</span>{" "}
                   </h2>
                 </Fade>
                 <Fade bottom delay={300}>
-                  <p className="lg:text-[16px] text-xs  md:text-sm mb-5 lg:mb-10 lg:mt-4 mt-2 text-[#424242] md:leading-[26px] ">
-                    Lorem ipsum dolor sit amet consectetur. Ullamcorper <br className="xl:hidden" />{" "}
-                    enim sed <br className="xl:block hidden" /> morbi integer felis ut tristique.
+                  <p className="sm:mt-5 mt-3 md:text-[16px] text-xs sm:text-sm mb-5 md:mb-10 md:leading-[26px] text-[#424242]">
+                    Lorem ipsum dolor sit amet consectetur. <br /> Ullamcorper enim sed morbi.
                   </p>
                 </Fade>
                 <Fade bottom delay={600}>
-                  <button className="lg:h-[62px] lg:max-w-[159px] h-[44px] max-w-[110px] md:h-[52px] md:max-w-[130px] w-full flex items-center lg:text-[20px] lg:leading-[30px] text-[16px] md:text-lg font-[500] justify-center text-white bg-info ">
+                  <button className="md:w-[155px] sm:w-[120px] sm:h-[50px] w-[100px] h-[40px] bg-info text-sm md:text-[16px] leading-[24px]  text-white flex justify-center items-center font-[500] md:h-[56px] rounded-[30px]">
                     Shop Now
                   </button>
                 </Fade>
@@ -74,4 +74,4 @@ const TopBannerSlider1 = () => {
   );
 };
 
-export default TopBannerSlider1;
+export default TopBannerSlider2;

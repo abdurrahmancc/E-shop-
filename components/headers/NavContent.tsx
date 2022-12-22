@@ -15,11 +15,13 @@ const NavContent: FC<PropsWithChildren<Props>> = ({ children: textColor }) => {
         <li className="hover:bg-inherit" tabIndex={0}>
           <Link
             href={"/"}
-            className={`focus:bg-inherit p-0 hover:bg-inherit ${textColor} px-0 flex font-[500] gap-2 items-center`}
+            className={`focus:bg-inherit p-0 hover:bg-inherit ${textColor} px-0 flex gap-2 items-center`}
           >
             <span
-              className={` inline-block pb-1  text-[16px] leading-[26px] ${
-                router.pathname == "/" ? "border-primary border-b-2" : "border-animate"
+              className={` inline-block pb-1  text-[15px] leading-[26px] ${
+                router.pathname == "/"
+                  ? "border-primary font-[500] border-b-2"
+                  : "border-animate font-[400]"
               }`}
             >
               Home
@@ -37,7 +39,7 @@ const NavContent: FC<PropsWithChildren<Props>> = ({ children: textColor }) => {
             </li>
             <li>
               <Link
-                href={"/home2"}
+                href={"/home/home2"}
                 className={`sub-menu-animate py-[10px] text-[15px] relative text-[rgba(0,0,0,0.7)] bg-white px-0 font-semibold hover:text-primary`}
               >
                 <span className="px-8">Home 2</span>
@@ -56,11 +58,13 @@ const NavContent: FC<PropsWithChildren<Props>> = ({ children: textColor }) => {
         <li className="hover:bg-inherit" tabIndex={0}>
           <Link
             href={"/shop"}
-            className={`focus:bg-inherit p-0 hover:bg-inherit ${textColor} px-0 flex font-[500] gap-2 items-center`}
+            className={`focus:bg-inherit p-0 hover:bg-inherit ${textColor} px-0 flex gap-2 items-center`}
           >
             <span
-              className={` inline-block pb-1  text-[16px] leading-[26px] ${
-                router.pathname == "/shop" ? "border-primary border-b-2" : "border-animate"
+              className={` inline-block pb-1  text-[15px] leading-[26px] ${
+                router.pathname == "/shop"
+                  ? "border-primary font-[500] border-b-2"
+                  : "border-animate font-[400]"
               }`}
             >
               Shop
@@ -94,58 +98,64 @@ const NavContent: FC<PropsWithChildren<Props>> = ({ children: textColor }) => {
             </li>
           </ul>
         </li>
-
-        <li className="flex hover:bg-inherit font-[500] gap-[10px] items-center">
+        <li className="flex hover:bg-inherit gap-[10px] items-center">
           <Link
             href={"/about"}
-            className={`focus:bg-inherit p-0 hover:bg-inherit ${textColor} px-0 flex font-[500] gap-2 items-center`}
+            className={`focus:bg-inherit p-0 hover:bg-inherit ${textColor} px-0 flex gap-2 items-center`}
           >
             <span
-              className={` inline-block pb-1  text-[16px] leading-[26px] ${
-                router.pathname == "/about" ? "border-primary border-b-2" : "border-animate"
+              className={` inline-block pb-1  text-[15px] leading-[26px] ${
+                router.pathname == "/about"
+                  ? "border-primary font-[500] border-b-2"
+                  : "border-animate font-[400]"
               }`}
             >
               About
             </span>
           </Link>
         </li>
-        <li className="flex hover:bg-inherit font-[500] gap-[10px] items-center">
+        <li className="flex hover:bg-inherit gap-[10px] items-center">
           <Link
             href={"/contact"}
-            className={`focus:bg-inherit p-0 hover:bg-inherit ${textColor} px-0 flex font-[500] gap-2 items-center`}
+            className={`focus:bg-inherit p-0 hover:bg-inherit ${textColor} px-0 flex gap-2 items-center`}
           >
             <span
               className={` inline-block pb-1  text-[16px] leading-[26px] ${
-                router.pathname == "/contact" ? "border-primary border-b-2" : "border-animate"
+                router.pathname == "/contact"
+                  ? "border-primary font-[500] border-b-2"
+                  : "border-animate font-[400]"
               }`}
             >
               Contact
             </span>
           </Link>
         </li>
-
-        <li className="flex hover:bg-inherit font-[500] gap-[10px] items-center">
+        <li className="flex hover:bg-inherit gap-[10px] items-center">
           <Link
             href={"/blogs"}
-            className={`focus:bg-inherit p-0 hover:bg-inherit ${textColor} px-0 flex font-[500] gap-2 items-center`}
+            className={`focus:bg-inherit p-0 hover:bg-inherit ${textColor} px-0 flex gap-2 items-center`}
           >
             <span
-              className={` inline-block pb-1  text-[16px] leading-[26px] ${
-                router.pathname == "/blog" ? "border-primary border-b-2" : "border-animate"
+              className={` inline-block pb-1  text-[15px] leading-[26px] ${
+                router.pathname == "/blog"
+                  ? "border-primary font-[500] border-b-2"
+                  : "border-animate font-[400]"
               }`}
             >
               Blog
             </span>
           </Link>
         </li>
-        <li className="flex hover:bg-inherit font-[500] gap-[10px] items-center">
+        <li className="flex hover:bg-inherit gap-[10px] items-center">
           <Link
             href={"/home"}
-            className={`focus:bg-inherit p-0 hover:bg-inherit ${textColor} px-0 flex font-[500] gap-2 items-center`}
+            className={`focus:bg-inherit p-0 hover:bg-inherit ${textColor} px-0 flex gap-2 items-center`}
           >
             <span
-              className={` inline-block pb-1  text-[16px] leading-[26px] ${
-                router.pathname == "/pages" ? "border-primary border-b-2" : "border-animate"
+              className={` inline-block pb-1  text-[15px] leading-[26px] ${
+                router.pathname == "/pages"
+                  ? "border-primary font-[500] border-b-2"
+                  : "border-animate font-[400]"
               }`}
             >
               Pages

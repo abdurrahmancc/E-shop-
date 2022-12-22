@@ -8,9 +8,9 @@ import HomeFilter1 from "./HomeFilter1";
 const TrendingProducts = () => {
   const [activeProducts, setActiveProducts] = useState<string>("newProducts");
   return (
-    <div className="">
+    <>
       <div className="w-full border-b border-[#AEAEAE]">
-        <div className="flex items-center justify-between pb-5">
+        <div className="flex items-center justify-between pb-4">
           <h2 className="text-[#031424]  lg:text-[28px] lg:leading-[42px] text-[24px] leading-8 font-[600]">
             Trending Products
           </h2>
@@ -68,10 +68,7 @@ const TrendingProducts = () => {
           </div>
           {/*============= filter end ============*/}
           <div className="flex-grow">
-            <div
-              id="trendingProducts"
-              className=" grid grid-cols-2 max-w-[550px] lg:max-w-full  mx-auto lg:grid-cols-3 xl:grid-cols-4 gap-y-[17px] gap-3 sm:gap-x-5 2xl:gap-x-[30px]"
-            >
+            <div className="xs-responsive grid grid-cols-2 max-w-[550px] lg:max-w-full  mx-auto lg:grid-cols-3 xl:grid-cols-4 gap-y-[17px] gap-3 sm:gap-x-5 2xl:gap-x-[30px]">
               <ProductCard1 />
               <ProductCard1 />
               <ProductCard1 />
@@ -84,7 +81,7 @@ const TrendingProducts = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

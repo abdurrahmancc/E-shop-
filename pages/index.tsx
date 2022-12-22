@@ -6,7 +6,15 @@ import MiddleHeader1 from "../components/headers/MiddleHeader1";
 import TopCategories from "../components/headers/TopCategories";
 import TopHeader1 from "../components/headers/TopHeader1";
 import TrendingProducts from "../components/home/home1/TrendingProducts";
-import TopBannerSlider1 from "../components/sliderBanner/TopBannerSlider1";
+import TopBannerSlider1 from "../components/Banner/TopBannerSlider1";
+import CardBanner1 from "../components/Banner/CardBanner1";
+import SpecialProducts from "../components/home/home1/SpecialProducts";
+import FeaturedProducts from "../components/home/home1/FeaturedProducts";
+import TopSellingProducts from "../components/home/home1/TopSellingProducts";
+import SpecialSec from "../components/home/home1/specialSec/SpecialSec";
+import Newsletter1 from "../components/shared/newsletter/Newsletter1";
+import Footer1 from "../components/shared/footer/Footer1";
+import ScrollUpBtn from "../components/shared/ScrollUpBtn";
 
 export default function Home() {
   return (
@@ -17,7 +25,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header className="bg-white">
+      <header>
         <div className="bg-secondary">
           <div className="max-w-[1443px] w-full mx-auto container px-4 lg:px-10 2xl:px-0">
             {/* ============= top header start ============== */}
@@ -34,7 +42,7 @@ export default function Home() {
           </div>
         </div>
       </header>
-      <main className="pt-[50px]  bg-white">
+      <main className="pt-[50px]">
         {/* ============= features start =========== */}
         <section className="max-w-[1443px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
           <Features1 />
@@ -45,7 +53,44 @@ export default function Home() {
           <TrendingProducts />
         </section>
         {/* ============= Trending Products end =========== */}
+        {/* ============= card banner start =========== */}
+        <section className="max-w-[1443px] mt-20 container w-full mx-auto px-4 lg:px-10 2xl:px-0">
+          <CardBanner1 />
+        </section>
+        {/* ============= card banner end =========== */}
+        {/* ============= Special Products start =========== */}
+        <section className="max-w-[1443px] mt-20 container w-full mx-auto px-4 lg:px-10 2xl:px-0">
+          <SpecialProducts />
+        </section>
+        {/* ============= Special Products end =========== */}
+        {/* ============= Special Sec start =========== */}
+        <section className="bg-[#F2F2F6] mt-[190px] 2xl:h-[517px] xl:h-[400px] lg:h-[517px] md:h-[340px] sm:h-[450px] h-[350px]">
+          <SpecialSec />
+        </section>
+        {/* ============= Special Sec end =========== */}
+        {/* ============= Featured Products start =========== */}
+        <section className="max-w-[1443px] mt-20 container w-full mx-auto px-4 lg:px-10 2xl:px-0">
+          <FeaturedProducts />
+        </section>
+        {/* ============= Featured Products end =========== */}
+
+        {/* ============= newsletter start =========== */}
+        <section className="mt-20">
+          <Newsletter1 />
+        </section>
+        {/* ============= newsletter end =========== */}
+        {/* ============= Top Selling Products start =========== */}
+        <section className="max-w-[1443px] mt-20 container w-full mx-auto px-4 lg:px-10 2xl:px-0">
+          <TopSellingProducts />
+        </section>
+        {/* ============= Top Selling Products end =========== */}
+        {/* ======== scroll up button start ======= */}
+        <ScrollUpBtn />
+        {/* ======== scroll up button end ======= */}
       </main>
+      <footer className="mt-20">
+        <Footer1 />
+      </footer>
     </>
   );
 }

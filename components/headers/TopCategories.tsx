@@ -1,13 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 import computer from "../../assets/icons/computer.svg";
 import rightArrow from "../../assets/icons/right-arrow.svg";
 
 const TopCategories = () => {
+  const { pathname } = useRouter();
   return (
     <div className="xl:max-w-[290px] hidden lg:block max-w-[250px] w-full">
-      <ul className="flex flex-col  w-[250px] xl:w-[290px] h-[577px] border border-[#D9D9D9] ">
+      <ul
+        className={`flex flex-col w-[250px] xl:w-[290px] h-[577px] border border-[#D9D9D9] ${
+          pathname !== "/" ? "rounded-[8px]" : "rounded-none"
+        }`}
+      >
         <li className="border-b text-[#282828] border-[#D9D9D9] transition-all duration-150 ease-linear hover:bg-primary flex items-center w-full flex-grow">
           <div className="dropdown w-full h-full hover:overflow-visible dropdown-right dropdown-hover">
             <label tabIndex={0} className="w-full ">

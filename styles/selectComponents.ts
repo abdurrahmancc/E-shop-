@@ -58,7 +58,7 @@ export const searchCategorySelected = {
       ...defaultStyles,
       color: '#313131',
       fontSize: 16,
-      fontWeight: 600,
+      fontWeight: 400,
       margin: 0
     }
   },
