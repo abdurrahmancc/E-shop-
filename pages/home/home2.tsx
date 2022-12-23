@@ -6,6 +6,7 @@ import SmartBannerSlider from "../../components/Banner/SmartBannerSlider";
 import TopBannerSlider1 from "../../components/Banner/TopBannerSlider1";
 import TopBannerSlider2 from "../../components/Banner/TopBannerSlider2";
 import TopCardBanner from "../../components/Banner/TopCardBanner";
+import Features2 from "../../components/features/Features2";
 import BottomHeader2 from "../../components/headers/BottomHeader2";
 import MiddleHeader1 from "../../components/headers/MiddleHeader1";
 import TopCategories from "../../components/headers/TopCategories";
@@ -17,6 +18,7 @@ import SpecialProducts2 from "../../components/home/home2/SpecialProducts2";
 import TopTrendingRecentlyGroupSec from "../../components/home/home2/TopTrendingRecentlyGroupSec";
 import TrendingCategories from "../../components/home/home2/TrendingCategories";
 import SingleProductCategoryCard from "../../components/shared/cards/SingleProductCategoryCard";
+import Footer2 from "../../components/shared/footer/Footer2";
 
 const Home2 = () => {
   return (
@@ -88,11 +90,14 @@ const Home2 = () => {
         </section>
         {/* ============= smart banner end =========== */}
         {/* ============= Featured Products start =========== */}
-        <section className="max-w-[1443px] mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
+        <section className="max-w-[1443px] my-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
           <FeaturedProducts2 />
         </section>
         {/* ============= Featured Products end =========== */}
       </main>
+      <footer className="">
+        <Footer2 />
+      </footer>
     </>
   );
 };

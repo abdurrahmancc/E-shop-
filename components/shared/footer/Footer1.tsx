@@ -2,6 +2,10 @@ import Image from "next/image";
 import React from "react";
 import bg from "../../../assets/bg/footer-1.png";
 import payment from "../../../assets/icons/payment.png";
+import { FaPhoneAlt } from "react-icons/fa";
+import { CiMail } from "react-icons/ci";
+import { HiLocationMarker } from "react-icons/hi";
+import { MdOutlineWatchLater } from "react-icons/md";
 
 const Footer1 = () => {
   const year = new Date().getFullYear();
@@ -30,51 +34,63 @@ const Footer1 = () => {
           </div>
           <div className="">
             <span className="footer-title opacity-100 mb-[10px] text-[20px] leading-[30px] font-[600] text-primary">
-              CUSTOMER SERVICE
+              USEFUL LINKS
             </span>
-            <a className="link link-hover text-[16px] leading-[32px] text-neutral">Contact us</a>
+            <a className="link link-hover text-[16px] leading-[32px] text-neutral">About Us</a>
+            <a className="link link-hover text-[16px] leading-[32px] text-neutral">Shop Products</a>
+            <a className="link link-hover text-[16px] leading-[32px] text-neutral">My Cart</a>
             <a className="link link-hover text-[16px] leading-[32px] text-neutral">
-              Payments & Returns
+              Order Tracking
             </a>
             <a className="link link-hover text-[16px] leading-[32px] text-neutral">
-              Shipping & Returns
+              Privacy Policy
             </a>
-            <a className="link link-hover text-[16px] leading-[32px] text-neutral">
-              Terms and conditions
-            </a>
-            <a className="link link-hover text-[16px] leading-[32px] text-neutral">Refund Policy</a>
           </div>
           <div className="">
             <span className="footer-title opacity-100 mb-[10px] text-[20px] leading-[30px] font-[600] text-primary">
-              CUSTOMER SERVICE
+              Categories
             </span>
-            <a className="link link-hover text-[16px] leading-[32px] text-neutral">Contact us</a>
             <a className="link link-hover text-[16px] leading-[32px] text-neutral">
-              Payments & Returns
+              Computer & Laptop
             </a>
             <a className="link link-hover text-[16px] leading-[32px] text-neutral">
-              Shipping & Returns
+              Television & Video
             </a>
+            <a className="link link-hover text-[16px] leading-[32px] text-neutral">Headphones</a>
+            <a className="link link-hover text-[16px] leading-[32px] text-neutral">Smartphones</a>
             <a className="link link-hover text-[16px] leading-[32px] text-neutral">
-              Terms and conditions
+              Camera & Photos
             </a>
-            <a className="link link-hover text-[16px] leading-[32px] text-neutral">Refund Policy</a>
           </div>
           <div className="">
             <span className="footer-title opacity-100 mb-[10px] text-[20px] leading-[30px] font-[600] text-primary">
-              CUSTOMER SERVICE
+              Information
             </span>
-            <a className="link link-hover text-[16px] leading-[32px] text-neutral">Contact us</a>
-            <a className="link link-hover text-[16px] leading-[32px] text-neutral">
-              Payments & Returns
+            <div className="text-[16px] leading-[32px] text-neutral flex items-center gap-2">
+              <div className="w-7 h-7 rounded-full flex justify-center items-center bg-primary text-[#031424]">
+                <FaPhoneAlt />
+              </div>
+              +12064812559
+            </div>
+            <div className="text-[16px] leading-[32px] text-neutral flex items-center gap-2">
+              {" "}
+              <div className="w-7 h-7 rounded-full flex justify-center items-center bg-primary text-[#031424]">
+                <CiMail />
+              </div>{" "}
+              info@demo.com
+            </div>
+            <a className="text-[16px] leading-[32px] text-neutral flex items-center gap-2">
+              <div className="w-7 h-7 rounded-full flex justify-center items-center bg-primary text-[#031424]">
+                <HiLocationMarker />
+              </div>{" "}
+              4140 Alfred Drive, New York
             </a>
-            <a className="link link-hover text-[16px] leading-[32px] text-neutral">
-              Shipping & Returns
+            <a className="text-[16px] leading-[32px] text-neutral flex items-center gap-2">
+              <div className="w-7 h-7 rounded-full flex justify-center items-center bg-primary text-[#031424]">
+                <MdOutlineWatchLater />
+              </div>{" "}
+              8.00AM - 21.00AM
             </a>
-            <a className="link link-hover text-[16px] leading-[32px] text-neutral">
-              Terms and conditions
-            </a>
-            <a className="link link-hover text-[16px] leading-[32px] text-neutral">Refund Policy</a>
           </div>
         </div>
         <div className="footer pt-7 pb-9 border-t text-base-content border-[rgba(255,255,255,0.40)]">
@@ -86,9 +102,9 @@ const Footer1 = () => {
           <div className="md:place-self-center md:justify-self-end">
             <Image
               src={payment}
-              width={480}
+              width={342}
               height={40}
-              className="h-10 max-w-[500]"
+              className="h-10 max-w-[342.77px]"
               alt="payment method"
             />
           </div>

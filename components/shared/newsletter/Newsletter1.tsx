@@ -23,7 +23,7 @@ const Newsletter1 = () => {
             <input
               type="text"
               placeholder="Enter your email"
-              className="input h-full rounded-none w-full text-black pl-[20px] sm:text-[16px] 2xl:text-[20px] text-sm leading-[28px] placeholder:text-secondary bg-white focus:outline-none"
+              className="input h-full rounded-none w-full text-black pl-[20px] sm:text-[16px] text-sm leading-[28px] placeholder:text-[#363636] bg-white focus:outline-none"
             />
             <button className="bg-primary bg-gradient-to-r from-[#f9c536] to-[#f9c536] btn-animate h-full sm:px-[26px] px-4 text-secondary 2xl:text-[20px] sm:text-[16px] text-sm leading-[28px]text-center font-[500]">
               Subscribe
