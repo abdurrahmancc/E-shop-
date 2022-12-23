@@ -1,18 +1,14 @@
 import Image from "next/image";
 import React, { useState } from "react";
-import { FaUserCircle } from "react-icons/fa";
 import { VscGitCompare, VscThreeBars } from "react-icons/vsc";
 import Select from "react-select";
 import { useForm } from "react-hook-form";
-import { BiGitCompare, BiSearch } from "react-icons/bi";
+import { BiSearch } from "react-icons/bi";
 import { AiOutlineHeart } from "react-icons/ai";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 import logo from "../../assets/icons/logo.png";
 import { searchCategorySelected } from "../../styles/selectComponents";
 import Link from "next/link";
-import compareIcon from "../../assets/icons/compare.svg";
-import wishlistIcon from "../../assets/icons/wishlist.svg";
-import cartIcon from "../../assets/icons/cart.svg";
 import DrawerSidebar from "../shared/drawerSidebar";
 import { useRouter } from "next/router";
 

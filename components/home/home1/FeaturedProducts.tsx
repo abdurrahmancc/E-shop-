@@ -1,6 +1,6 @@
 import React from "react";
 import { HiOutlineArrowRight } from "react-icons/hi2";
-import ProductCard1 from "../../shared/productCard/ProductCard1";
+import ProductCard1 from "../../shared/cards/ProductCard1";
 
 const FeaturedProducts = () => {
   return (

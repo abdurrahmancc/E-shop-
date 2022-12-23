@@ -5,7 +5,7 @@ import { Rating5 } from "../Ratings/Ratings";
 import watch from "../../../assets/product-Image/product-3.png";
 import Image from "next/image";
 
-const SpecialProductCard = () => {
+const SpecialProductCard1 = () => {
   return (
     <div>
       <figure className="">
@@ -53,4 +53,4 @@ const SpecialProductCard = () => {
   );
 };
 
-export default SpecialProductCard;
+export default SpecialProductCard1;

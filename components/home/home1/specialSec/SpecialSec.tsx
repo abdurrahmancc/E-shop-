@@ -1,5 +1,5 @@
 import React from "react";
-import SpecialMiniCard from "../../../shared/productCard/SpecialMiniCard";
+import SpecialMiniCard from "../../../shared/cards/SpecialMiniCard";
 import bg from "../../../../assets/bg/bg-1.png";
 import Image from "next/image";
 import img from "../../../../assets/product-Image/product-2.png";

@@ -1,10 +1,10 @@
 import Image from "next/image";
 import React from "react";
-import banner1 from "../../assets/banner/card-banner-1.png";
-import banner2 from "../../assets/banner/card-banner-2.png";
-import banner3 from "../../assets/banner/card-banner-3.png";
+import banner1 from "../../assets/banner/card-banner-4.png";
+import banner2 from "../../assets/banner/card-banner-5.png";
+import banner3 from "../../assets/banner/card-banner-6.png";
 
-const CardBanner1 = () => {
+const CardBanner2 = () => {
   return (
     <div className="flex 2xl:gap-[26px] justify-center xl:gap-5 gap-4">
       <Image
@@ -32,4 +32,4 @@ const CardBanner1 = () => {
   );
 };
 
-export default CardBanner1;
+export default CardBanner2;

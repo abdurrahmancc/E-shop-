@@ -7,15 +7,16 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { TfiAngleLeft, TfiAngleRight } from "react-icons/tfi";
+import ProductCard2 from "../../shared/cards/ProductCard2";
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
-const TopSellingProducts = () => {
+const OnSaleProducts = () => {
   return (
     <>
       <div className="w-full border-b border-[#AEAEAE]">
         <div className="flex items-center justify-between pb-4">
           <h2 className="text-[#031424]  lg:text-[28px] lg:leading-[42px] text-[24px] leading-8 font-[600]">
-            Top Selling Products
+            On Sale Products
           </h2>
           <div className="flex items-center gap-3">
             <button className="hover:text-white custom_prev transition-all duration-300 ease-linear hover:bg-info justify-center text-info border border-info rounded-full text-ing flex items-center gap-3 w-[36px] h-[36px] leading-[24px] font-[500]">
@@ -68,40 +69,45 @@ const TopSellingProducts = () => {
           }}
         >
           <SwiperSlide>
-            <ProductCard1 />
+            <ProductCard2 />
           </SwiperSlide>
           <SwiperSlide>
-            <ProductCard1 />
+            <ProductCard2 />
           </SwiperSlide>
           <SwiperSlide>
-            <ProductCard1 />
+            <ProductCard2 />
           </SwiperSlide>
+
           <SwiperSlide>
-            <ProductCard1 />
+            <ProductCard2 />
           </SwiperSlide>
+
           <SwiperSlide>
-            <ProductCard1 />
+            <ProductCard2 />
           </SwiperSlide>
+
           <SwiperSlide>
-            <ProductCard1 />
+            <ProductCard2 />
           </SwiperSlide>
+
           <SwiperSlide>
-            <ProductCard1 />
+            <ProductCard2 />
           </SwiperSlide>
+
           <SwiperSlide>
-            <ProductCard1 />
+            <ProductCard2 />
           </SwiperSlide>
+
           <SwiperSlide>
-            <ProductCard1 />
+            <ProductCard2 />
           </SwiperSlide>
+
           <SwiperSlide>
-            <ProductCard1 />
+            <ProductCard2 />
           </SwiperSlide>
+
           <SwiperSlide>
-            <ProductCard1 />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard1 />
+            <ProductCard2 />
           </SwiperSlide>
         </Swiper>
       </div>
@@ -109,4 +115,4 @@ const TopSellingProducts = () => {
   );
 };
 
-export default TopSellingProducts;
+export default OnSaleProducts;

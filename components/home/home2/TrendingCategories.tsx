@@ -1,21 +1,22 @@
+import React from "react";
 import { HiOutlineArrowLeft, HiOutlineArrowRight } from "react-icons/hi2";
-import ProductCard1 from "../../shared/cards/ProductCard1";
-import React, { useState } from "react";
 import SwiperCore, { Pagination, Navigation, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { TfiAngleLeft, TfiAngleRight } from "react-icons/tfi";
+import ProductCard1 from "../../shared/cards/ProductCard1";
+import CategoriesCard from "../../shared/cards/CategoriesCard";
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
-const TopSellingProducts = () => {
+const TrendingCategories = () => {
   return (
     <>
       <div className="w-full border-b border-[#AEAEAE]">
         <div className="flex items-center justify-between pb-4">
           <h2 className="text-[#031424]  lg:text-[28px] lg:leading-[42px] text-[24px] leading-8 font-[600]">
-            Top Selling Products
+            Trending Categories
           </h2>
           <div className="flex items-center gap-3">
             <button className="hover:text-white custom_prev transition-all duration-300 ease-linear hover:bg-info justify-center text-info border border-info rounded-full text-ing flex items-center gap-3 w-[36px] h-[36px] leading-[24px] font-[500]">
@@ -41,67 +42,49 @@ const TopSellingProducts = () => {
               slidesPerView: 1,
               spaceBetween: 16,
             },
-            500: {
+            400: {
               slidesPerView: 2,
               spaceBetween: 16,
             },
             640: {
-              slidesPerView: 2,
-              spaceBetween: 16,
-            },
-            768: {
               slidesPerView: 3,
               spaceBetween: 16,
             },
-            1024: {
+            768: {
               slidesPerView: 4,
               spaceBetween: 16,
             },
-            1280: {
+            1024: {
               slidesPerView: 5,
               spaceBetween: 16,
             },
+            1280: {
+              slidesPerView: 6,
+              spaceBetween: 16,
+            },
             1650: {
-              slidesPerView: 5,
+              slidesPerView: 6,
               spaceBetween: 16,
             },
           }}
         >
           <SwiperSlide>
-            <ProductCard1 />
+            <CategoriesCard />
           </SwiperSlide>
           <SwiperSlide>
-            <ProductCard1 />
+            <CategoriesCard />
           </SwiperSlide>
           <SwiperSlide>
-            <ProductCard1 />
+            <CategoriesCard />
           </SwiperSlide>
           <SwiperSlide>
-            <ProductCard1 />
+            <CategoriesCard />
           </SwiperSlide>
           <SwiperSlide>
-            <ProductCard1 />
+            <CategoriesCard />
           </SwiperSlide>
           <SwiperSlide>
-            <ProductCard1 />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard1 />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard1 />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard1 />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard1 />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard1 />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard1 />
+            <CategoriesCard />
           </SwiperSlide>
         </Swiper>
       </div>
@@ -109,4 +92,4 @@ const TopSellingProducts = () => {
   );
 };
 
-export default TopSellingProducts;
+export default TrendingCategories;

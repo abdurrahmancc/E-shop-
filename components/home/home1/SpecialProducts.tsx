@@ -1,12 +1,12 @@
 import Image from "next/image";
 import React from "react";
 import { HiOutlineArrowRight } from "react-icons/hi2";
-import ProductCard1 from "../../shared/productCard/ProductCard1";
+import ProductCard1 from "../../shared/cards/ProductCard1";
 import watch from "../../../assets/product-Image/product-3.png";
 import { BiGitCompare, BiSearch } from "react-icons/bi";
 import { AiOutlineHeart } from "react-icons/ai";
 import { Rating5 } from "../../shared/Ratings/Ratings";
-import SpecialProductCard from "../../shared/productCard/SpecialProductCard";
+import SpecialProductCard from "../../shared/cards/SpecialProductCard1";
 
 const SpecialProducts = () => {
   return (

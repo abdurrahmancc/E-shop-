@@ -1,54 +1,53 @@
 import React, { useState } from "react";
-import { BiArrowBack, BiArrowToRight } from "react-icons/bi";
-import { HiArrowNarrowRight } from "react-icons/hi";
 import { HiOutlineArrowRight } from "react-icons/hi2";
-import ProductCard1 from "../../shared/cards/ProductCard1";
-import HomeFilter1 from "./HomeFilter1";
+import ProductCard2 from "../../shared/cards/ProductCard2";
+import SpecialProductCard from "../../shared/cards/SpecialProductCard1";
+import SpecialProductCard2 from "../../shared/cards/SpecialProductCard2";
 
-const TrendingProducts = () => {
+const HotNewArrivals = () => {
   const [activeProducts, setActiveProducts] = useState<string>("newProducts");
   return (
     <>
       <div className="w-full border-b border-[#AEAEAE]">
         <div className="flex items-center justify-between pb-4">
           <h2 className="text-[#031424]  lg:text-[28px] lg:leading-[42px] text-[24px] leading-8 font-[600]">
-            Trending Products
+            Hot New Arrivals
           </h2>
           <ul className="flex items-center gap-[24px] lg:gap-[37px]">
             <li className="hidden sm:block">
               <button
-                onClick={() => setActiveProducts("newProducts")}
+                onClick={() => setActiveProducts("trending")}
                 className={`text-[#5F5F5F] hover:text-[#0070DC] text-[16px] leading-[24px] font-[500] ${
-                  activeProducts == "newProducts"
+                  activeProducts == "trending"
                     ? "text-[#0070DC]"
                     : "hover:text-[#0070DC] text-[#5F5F5F]"
                 }`}
               >
-                New Products
+                Trending
               </button>
             </li>
             <li className="hidden sm:block">
               <button
-                onClick={() => setActiveProducts("featured")}
+                onClick={() => setActiveProducts("bestSelling")}
                 className={`text-[#5F5F5F] text-[16px] leading-[24px] font-[500] ${
-                  activeProducts == "featured"
+                  activeProducts == "bestSelling"
                     ? "text-[#0070DC]"
                     : "hover:text-[#0070DC] text-[#5F5F5F]"
                 } `}
               >
-                Featured
+                Best Selling
               </button>
             </li>
             <li className="hidden md:block">
               <button
-                onClick={() => setActiveProducts("bestSeller")}
+                onClick={() => setActiveProducts("hotSelling")}
                 className={`text-[#5F5F5F] hover:text-[#0070DC] text-[16px] leading-[24px] font-[500] ${
-                  activeProducts == "bestSeller"
+                  activeProducts == "hotSelling"
                     ? "text-[#0070DC]"
                     : "hover:text-[#0070DC] text-[#5F5F5F]"
                 }`}
               >
-                Best Seller
+                Hot Selling
               </button>
             </li>
             <li>
@@ -60,24 +59,21 @@ const TrendingProducts = () => {
         </div>
         <div className="h-[6px] bg-primary w-[86.5px]"></div>
       </div>
-      <div className="mt-[50px]">
-        <div className="flex md:flex-row flex-col gap-y-8 gap-x-5 2xl:gap-x-[30px]">
-          {/*============= filter start ============*/}
-          <div className="pt-2 bg-[#F8F8F8] flex-grow-0 md:min-w-[264px] md:w-[264px] pb-7 pl-6 h-full max-h-[905px]">
-            <HomeFilter1 />
+      <div className="mt-[50px] flex lg:flex-row flex-col items-center lg:items-start gap-y-8 gap-x-5 2xl:gap-x-[30px]">
+        <div className="2xl:w-[557px] mt-5 order-2 lg:order-1 lg:mt-0 xl:w-[420px] md:w-[558px] sm:w-[500px] max-h-[776px] h-[776px] rounded-[8px] bg-[#F8F8F8]">
+          <div className=" flex justify-center items-center h-full ">
+            <SpecialProductCard2 />
           </div>
-          {/*============= filter end ============*/}
-          <div className="flex-grow">
-            <div className="xs-responsive grid grid-cols-2 max-w-[550px] lg:max-w-full  mx-auto lg:grid-cols-3 xl:grid-cols-4 gap-y-[17px] gap-3 sm:gap-x-5 2xl:gap-x-[30px]">
-              <ProductCard1 />
-              <ProductCard1 />
-              <ProductCard1 />
-              <ProductCard1 />
-              <ProductCard1 />
-              <ProductCard1 />
-              <ProductCard1 />
-              <ProductCard1 />
-            </div>
+        </div>
+
+        <div className="flex-grow lg:order-2 order-1 ">
+          <div className="grid xs-responsive grid-cols-2 md:grid-cols-3 lg:grid-cols-2 max-w-[550px] md:max-w-[834px] lg:max-w-[558px] xl:max-w-full  mx-auto xl:grid-cols-3 gap-y-[30px] gap-3 sm:gap-x-5 lg:gap-x-[30px]">
+            <ProductCard2 />
+            <ProductCard2 />
+            <ProductCard2 />
+            <ProductCard2 />
+            <ProductCard2 />
+            <ProductCard2 />
           </div>
         </div>
       </div>
@@ -85,4 +81,4 @@ const TrendingProducts = () => {
   );
 };
 
-export default TrendingProducts;
+export default HotNewArrivals;

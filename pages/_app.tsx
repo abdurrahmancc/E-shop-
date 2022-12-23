@@ -7,7 +7,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../styles/selectComponents.css";
 import "../styles/swiperSlider.css";
-import "../styles/home1.css";
+import "../styles/home.css";
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();

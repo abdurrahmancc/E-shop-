@@ -1,9 +1,9 @@
 import Image from "next/image";
 import React from "react";
-import shipping from "../../assets/icons/freeShipping.svg";
-import moneyBack from "../../assets/icons/moneyBack.svg";
-import payment from "../../assets/icons/payment.svg";
-import customerSupport from "../../assets/icons/customerSupport.svg";
+import shipping from "../../assets/icons/freeShipping.png";
+import moneyBack from "../../assets/icons/money.png";
+import payment from "../../assets/icons/pay.png";
+import customerSupport from "../../assets/icons/customerSupport.png";
 
 const Features1 = () => {
   return (
@@ -32,7 +32,7 @@ const Features1 = () => {
                   width={35.68}
                   height={35.94}
                   alt="free shipping"
-                  className="xl:w-[35.68px] xl:h-[35.94] w-[28px] h-[28px]"
+                  className="xl:w-[35.68px] xl:h-[35.94px] w-[28px] h-[28px]"
                 />
                 <h4 className="text-neutral capitalize text-[16px] xl:text-[20px] leading-[30.81px] font-[500]">
                   money back guarantee
@@ -46,7 +46,7 @@ const Features1 = () => {
                   width={35.68}
                   height={35.94}
                   alt="free shipping"
-                  className="xl:w-[35.68px] xl:h-[35.94] w-[28px] h-[28px]"
+                  className="xl:w-[35.68px] xl:h-[35.94px] w-[28px] h-[28px]"
                 />
                 <h4 className="text-neutral capitalize text-[16px] xl:text-[20px] leading-[30.81px] font-[500]">
                   Free Shipping
@@ -60,7 +60,7 @@ const Features1 = () => {
                   width={35.68}
                   height={35.94}
                   alt="free shipping"
-                  className="xl:w-[35.68px] xl:h-[35.94] w-[28px] h-[28px]"
+                  className="xl:w-[35.68px] xl:h-[35.9px] w-[28px] h-[28px]"
                 />
                 <h4 className="text-neutral capitalize text-[16px] xl:text-[20px] leading-[30.81px] font-[500]">
                   Secure Payment

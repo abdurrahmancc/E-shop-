@@ -1,0 +1,15 @@
+@media only screen and (max-width: 500px) {
+    .xs-responsive{
+        max-width: 265px;
+        grid-template-columns: 1fr;
+    }
+    .xs-max-width{
+        max-width: 200px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .xs-max-width{
+        max-width: 180px;
+    }
+}

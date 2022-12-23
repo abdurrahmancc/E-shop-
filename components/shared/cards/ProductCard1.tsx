@@ -43,13 +43,6 @@ const ProductCard1 = ({ extraStyle }: ExtraStyle) => {
                 alt="product image"
               />
             )}
-            {/* <Image
-              src={img1}
-              className={`cardImage1 ${isHover ? "cardImageHover1" : ""}`}
-              width={212}
-              height={212}
-              alt="product image"
-            /> */}
           </figure>
 
           <div className={`absolute bottomToTop ${isHover ? "bottomToTopAnimate" : ""} `}>
@@ -77,7 +70,7 @@ const ProductCard1 = ({ extraStyle }: ExtraStyle) => {
                   <Rating5 />
                 </div>
                 <span className="2xl:text-[16px] text-[14px] text-[#808080] font-[500]  leading-[24px]">
-                  (15 reviews )
+                  (15 reviews)
                 </span>
               </div>
               <p className="text-[16px] mt-[5px] leading-6 font-[500] text-[#FD8D03] text-center">
