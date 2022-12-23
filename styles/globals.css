@@ -68,4 +68,16 @@ body {
 }
 /* ============= button animation end ========= */
 
+/* ============== Trending Categories animate style start ================ */
+.bottomToTopCategory{
+  bottom: -56px;
+  transition: all .3s ease;
+}
+
+.bottomToTopAnimateCategory{
+  bottom: 56px;
+  transform: translateY(100%)
+}
+/* ============== Trending Categories animate style end ================ */
+
 

@@ -22,7 +22,7 @@ const Footer2 = () => {
       <div className="max-w-[1443px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
         {/* ============= features start =========== */}
         <div className="relative w-full">
-          <div className="absolute lg:-top-14 sm:-top-24 md:-top-20 -top-40 w-full">
+          <div className="absolute xl:-top-[68px] lg:-top-16 sm:-top-24 md:-top-24 -top-44 w-full">
             <div className="w-full">
               <div className="2xl:w-[1443px] xl:w-[1200px] lg:w-[940px] mx-auto">
                 <Features2 />

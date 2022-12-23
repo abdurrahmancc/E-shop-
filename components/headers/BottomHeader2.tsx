@@ -36,12 +36,12 @@ const BottomHeader2 = () => {
           {/* ========== nav link end ========= */}
           <div>
             <div className="flex items-center gap-[20px]">
-              <div className="flex items-center">
+              <div className="flex gap-2 items-center">
                 <IoMdStarHalf className="w-[20px] h-[20px] text-white" />
                 <span className="text-[15px] leading-[22px] text-white">Best Offer</span>
               </div>
               <div className="h-8 bg-white w-[1px]"></div>
-              <div className="flex items-center">
+              <div className="flex gap-2 items-center">
                 <HiLocationMarker className="w-[20px] h-[20px] text-white" />
                 <span className="text-[15px] leading-[22px] text-white">Order Tracking</span>
               </div>

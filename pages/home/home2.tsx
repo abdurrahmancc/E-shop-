@@ -90,12 +90,12 @@ const Home2 = () => {
         </section>
         {/* ============= smart banner end =========== */}
         {/* ============= Featured Products start =========== */}
-        <section className="max-w-[1443px] my-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
+        <section className="max-w-[1443px] mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
           <FeaturedProducts2 />
         </section>
         {/* ============= Featured Products end =========== */}
       </main>
-      <footer className="">
+      <footer className="mt-[186px] ">
         <Footer2 />
       </footer>
     </>
