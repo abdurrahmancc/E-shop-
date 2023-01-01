@@ -1,7 +1,7 @@
 import Head from "next/head";
 import React from "react";
 import CardBanner2 from "../../components/Banner/CardBanner2";
-import SmartBanner3 from "../../components/Banner/SmartBanner3";
+import SmartBanner3 from "../../components/Banner/SmartBanner2";
 import SmartBannerSlider from "../../components/Banner/SmartBannerSlider";
 import TopBannerSlider1 from "../../components/Banner/TopBannerSlider1";
 import TopBannerSlider2 from "../../components/Banner/TopBannerSlider2";
@@ -17,7 +17,7 @@ import OnSaleProducts from "../../components/home/home2/OnSaleProducts";
 import SpecialProducts2 from "../../components/home/home2/SpecialProducts2";
 import TopTrendingRecentlyGroupSec from "../../components/home/home2/TopTrendingRecentlyGroupSec";
 import TrendingCategories from "../../components/home/home2/TrendingCategories";
-import SingleProductCategoryCard from "../../components/shared/cards/SingleProductCategoryCard";
+import ShopByCategories from "../../components/home/home2/ShopByCategories";
 import Footer2 from "../../components/shared/footer/Footer2";
 
 const Home2 = () => {
@@ -47,7 +47,7 @@ const Home2 = () => {
       <main>
         {/*======== single product banner section start ============*/}
         <section className="max-w-[1443px] container mt-[60px] w-full mx-auto px-4 lg:px-10 2xl:px-0">
-          <SingleProductCategoryCard />
+          <ShopByCategories />
         </section>
         {/*======== single product banner section end ==============*/}
         {/* ============= Trending Products start =========== */}

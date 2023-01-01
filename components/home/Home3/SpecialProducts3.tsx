@@ -1,22 +1,20 @@
-import React from "react";
 import { HiOutlineArrowLeft, HiOutlineArrowRight } from "react-icons/hi2";
+import ProductCard1 from "../../shared/cards/ProductCard1";
+import React from "react";
 import SwiperCore, { Pagination, Navigation, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { TfiAngleLeft, TfiAngleRight } from "react-icons/tfi";
-import ProductCard1 from "../../shared/cards/ProductCard1";
-import CategoriesCard from "../../shared/cards/CategoriesCard";
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
-const TrendingCategories = () => {
+const SpecialProducts3 = () => {
   return (
     <>
       <div className="w-full">
         <div className="flex items-center justify-between pb-4">
           <h2 className="text-[#031424]  lg:text-[28px] lg:leading-[42px] text-[24px] leading-8 font-[600]">
-            Trending Categories
+            Special Products
           </h2>
           <div className="flex items-center gap-3">
             <button className="hover:text-white custom_prev transition-all duration-300 ease-linear hover:bg-info justify-center text-info border border-info rounded-full text-ing flex items-center gap-3 w-[36px] h-[36px] leading-[24px] font-[500]">
@@ -45,49 +43,67 @@ const TrendingCategories = () => {
               slidesPerView: 1,
               spaceBetween: 16,
             },
-            400: {
+            500: {
               slidesPerView: 2,
               spaceBetween: 16,
             },
             640: {
-              slidesPerView: 3,
+              slidesPerView: 2,
               spaceBetween: 16,
             },
             768: {
-              slidesPerView: 4,
+              slidesPerView: 3,
               spaceBetween: 16,
             },
             1024: {
-              slidesPerView: 5,
+              slidesPerView: 4,
               spaceBetween: 16,
             },
             1280: {
-              slidesPerView: 6,
+              slidesPerView: 5,
               spaceBetween: 16,
             },
             1650: {
-              slidesPerView: 6,
+              slidesPerView: 5,
               spaceBetween: 16,
             },
           }}
         >
           <SwiperSlide>
-            <CategoriesCard />
+            <ProductCard1 />
           </SwiperSlide>
           <SwiperSlide>
-            <CategoriesCard />
+            <ProductCard1 />
           </SwiperSlide>
           <SwiperSlide>
-            <CategoriesCard />
+            <ProductCard1 />
           </SwiperSlide>
           <SwiperSlide>
-            <CategoriesCard />
+            <ProductCard1 />
           </SwiperSlide>
           <SwiperSlide>
-            <CategoriesCard />
+            <ProductCard1 />
           </SwiperSlide>
           <SwiperSlide>
-            <CategoriesCard />
+            <ProductCard1 />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ProductCard1 />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ProductCard1 />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ProductCard1 />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ProductCard1 />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ProductCard1 />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ProductCard1 />
           </SwiperSlide>
         </Swiper>
       </div>
@@ -95,4 +111,4 @@ const TrendingCategories = () => {
   );
 };
 
-export default TrendingCategories;
+export default SpecialProducts3;

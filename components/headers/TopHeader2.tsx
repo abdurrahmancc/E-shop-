@@ -8,7 +8,7 @@ const TopHeader2 = () => {
   return (
     <div className="max-w-[1443px] w-full mx-auto container px-4 lg:px-10 2xl:px-0">
       <div className="py-2 flex justify-center sm:justify-between items-center">
-        <ul className="lg:flex lg:gap-3 gap-1 hidden">
+        <ul className="lg:flex items-center lg:gap-3 gap-1 hidden">
           <li className="flex capitalize items-center gap-1">
             <Image src={mail} width={16} height={16} alt="mail icons" />
             <span className="text-[#424242] text-xs leading-[18px]">info@demo.com</span>

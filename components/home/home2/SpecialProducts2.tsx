@@ -18,7 +18,7 @@ const SpecialProducts2 = () => {
           <div>
             <Image src={banner} height={254} width={1146} alt="banner" />
           </div>
-          <div className="w-full mb-[50px] mt-[23px] border-b border-[#AEAEAE]">
+          <div className="w-full mb-[50px] mt-[23px]">
             <div className="flex items-center justify-between pb-4">
               <h2 className="text-[#031424]  lg:text-[28px] lg:leading-[42px] text-[24px] leading-8 font-[600]">
                 Special Products
@@ -27,7 +27,10 @@ const SpecialProducts2 = () => {
                 See All <HiOutlineArrowRight className="text-info w-5 h-5 " />
               </button>
             </div>
-            <div className="h-[6px] bg-primary w-[86.5px]"></div>
+            <div className="flex w-full">
+              <div className="h-[7px] bg-primary w-[86.5px]"></div>
+              <div className="border-b w-full border-[#AEAEAE]"></div>
+            </div>
           </div>
           <div className="xs-responsive  grid grid-cols-2 max-w-[550px] lg:max-w-full  mx-auto lg:grid-cols-3 xl:grid-cols-4 gap-y-[17px] gap-3 sm:gap-x-5 2xl:gap-x-[30px]">
             <ProductCard2 />

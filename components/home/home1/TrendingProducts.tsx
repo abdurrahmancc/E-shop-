@@ -9,7 +9,7 @@ const TrendingProducts = () => {
   const [activeProducts, setActiveProducts] = useState<string>("newProducts");
   return (
     <>
-      <div className="w-full border-b border-[#AEAEAE]">
+      <div className="w-full">
         <div className="flex items-center justify-between pb-4">
           <h2 className="text-[#031424]  lg:text-[28px] lg:leading-[42px] text-[24px] leading-8 font-[600]">
             Trending Products
@@ -58,7 +58,10 @@ const TrendingProducts = () => {
             </li>
           </ul>
         </div>
-        <div className="h-[6px] bg-primary w-[86.5px]"></div>
+        <div className="flex w-full">
+          <div className="h-[7px] bg-primary w-[86.5px]"></div>
+          <div className="border-b w-full border-[#AEAEAE]"></div>
+        </div>
       </div>
       <div className="mt-[50px]">
         <div className="flex md:flex-row flex-col gap-y-8 gap-x-5 2xl:gap-x-[30px]">

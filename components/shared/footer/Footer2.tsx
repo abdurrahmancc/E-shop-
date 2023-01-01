@@ -35,19 +35,19 @@ const Footer2 = () => {
         <div className="pb-[54px] sm:pt-[146px] pt-[200px]">
           <Newsletter2 />
         </div>
-        <div className="pt-[54px] border-t border-[rgba(255,255,255,0.28)]">
-          <div className="footer pb-[90px] text-base-content">
+        <div className="pt-[56px] border-t border-[rgba(255,255,255,0.28)]">
+          <div className="footer pb-[54px] text-base-content">
             <div className="max-w-[323px]">
               <Image src={logo} width={163} height={51} alt="logo" />
-              <p className="text-[18px] pt-2 leading-[30px] text-neutral">
+              <p className="text-[16px] pt-2 leading-[30px] text-neutral">
                 Lorem ipsum dolor sit amet Senectus mattis fermentum mauris orci sit.enim. Orci
                 duis.
               </p>
-              <div className="flex mt-2 items-center text-[#ffffff] tracking-[0.04em] gap-[8px] text-[18px] leading-[27px]">
+              <div className="flex mt-2 items-center text-[#ffffff] tracking-[0.04em] gap-[8px] text-[16px] leading-[24px]">
                 <FaPhoneAlt className="text-lg text-[#FCB700]" />
                 +12064812559
               </div>
-              <div className="flex mt-2 text-[#ffffff] tracking-[0.04em] gap-[8px] text-[18px] leading-[27px]">
+              <div className="flex mt-2 text-[#ffffff] tracking-[0.04em] gap-[8px] text-[16px] leading-[27px]">
                 <HiLocationMarker className="text-lg text-[#FCB700]" />
                 4140 Alfred Drive, Elmhurst New York
               </div>
@@ -56,101 +56,111 @@ const Footer2 = () => {
               </div>
             </div>
             <div>
-              <span className="footer-title opacity-100 mb-2 text-[28px] leading-[28px] font-[600] text-primary">
+              <span className="footer-title opacity-100 mb-5 text-[20px] leading-[30px] font-[600] text-primary">
                 Information
               </span>
-              <a className="link link-hover flex items-center gap-2 text-[18px] leading-[27px] text-neutral">
+              <a className="hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
                 {" "}
                 <IoIosArrowForward className="text-[16px]" /> About Us
               </a>
-              <a className="link link-hover flex items-center gap-2 text-[18px] leading-[27px] text-neutral">
+              <a className="hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
                 {" "}
                 <IoIosArrowForward className="text-[16px]" />
                 Contact Us
               </a>
-              <a className="link link-hover flex items-center gap-2 text-[18px] leading-[27px] text-neutral">
+              <a className=" hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
                 {" "}
                 <IoIosArrowForward className="text-[16px]" />
                 Term & Condition
               </a>
-              <a className="link link-hover flex items-center gap-2 text-[18px] leading-[27px] text-neutral">
+              <a className=" hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
                 {" "}
                 <IoIosArrowForward className="text-[16px]" />
                 Return Policy
               </a>
-              <a className="link link-hover flex items-center gap-2 text-[18px] leading-[27px] text-neutral">
+              <a className=" hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
                 {" "}
                 <IoIosArrowForward className="text-[16px]" />
                 Shipping Return
               </a>
             </div>
             <div>
-              <span className="footer-title opacity-100 mb-2 text-[28px] leading-[28px] font-[600] text-primary">
+              <span className="footer-title opacity-100 mb-5 text-[20px] leading-[30px] font-[600] text-primary">
                 Information
               </span>
-              <a className="link link-hover flex items-center gap-2 text-[18px] leading-[27px] text-neutral">
-                {" "}
+              <a className=" hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
                 <IoIosArrowForward className="text-[16px]" /> About Us
               </a>
-              <a className="link link-hover flex items-center gap-2 text-[18px] leading-[27px] text-neutral">
-                {" "}
+              <a className=" hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
                 <IoIosArrowForward className="text-[16px]" />
                 Contact Us
               </a>
-              <a className="link link-hover flex items-center gap-2 text-[18px] leading-[27px] text-neutral">
+              <a className=" hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
                 {" "}
                 <IoIosArrowForward className="text-[16px]" />
                 Term & Condition
               </a>
-              <a className="link link-hover flex items-center gap-2 text-[18px] leading-[27px] text-neutral">
+              <a className=" hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
                 {" "}
                 <IoIosArrowForward className="text-[16px]" />
                 Return Policy
               </a>
-              <a className="link link-hover flex items-center gap-2 text-[18px] leading-[27px] text-neutral">
+              <a className=" hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
                 {" "}
                 <IoIosArrowForward className="text-[16px]" />
                 Shipping Return
               </a>
             </div>
             <div>
-              <span className="footer-title opacity-100 mb-2 text-[28px] leading-[28px] font-[600] text-primary">
+              <span className="footer-title opacity-100 mb-5 text-[20px] leading-[30px] font-[600] text-primary">
                 Information
               </span>
-              <a className="link link-hover flex items-center gap-2 text-[18px] leading-[27px] text-neutral">
+              <a className=" hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
                 {" "}
                 <IoIosArrowForward className="text-[16px]" /> About Us
               </a>
-              <a className="link link-hover flex items-center gap-2 text-[18px] leading-[27px] text-neutral">
+              <a className=" hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
                 {" "}
                 <IoIosArrowForward className="text-[16px]" />
                 Contact Us
               </a>
-              <a className="link link-hover flex items-center gap-2 text-[18px] leading-[27px] text-neutral">
+              <a className=" hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
                 {" "}
                 <IoIosArrowForward className="text-[16px]" />
                 Term & Condition
               </a>
-              <a className="link link-hover flex items-center gap-2 text-[18px] leading-[27px] text-neutral">
+              <a className=" hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
                 {" "}
                 <IoIosArrowForward className="text-[16px]" />
                 Return Policy
               </a>
-              <a className="link link-hover flex items-center gap-2 text-[18px] leading-[27px] text-neutral">
+              <a className=" hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
                 {" "}
                 <IoIosArrowForward className="text-[16px]" />
                 Shipping Return
               </a>
             </div>
             <div>
-              <span className="footer-title opacity-100 mb-2 text-[28px] leading-[28px] font-[600] text-primary">
+              <span className="footer-title opacity-100 mb-5 text-[20px] leading-[30px] font-[600] text-primary">
                 Download App
               </span>
-              <p className="text-[18px] max-w-[262px] leading-[30px] text-neutral">
+              <p className="text-[16px] max-w-[262px] leading-[30px] text-neutral">
                 App is now available on Play & App Store. Get it now.
               </p>
-              <Image src={googleApp} width={205} height={64} className="mt-3" alt="google play" />
-              <Image src={appStore} width={205} height={64} className="mt-3" alt="app Store" />
+              <Image
+                src={googleApp}
+                width={205}
+                height={64}
+                className="mt-3  hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer"
+                alt="google play"
+              />
+              <Image
+                src={appStore}
+                width={205}
+                height={64}
+                className="mt-3  hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer"
+                alt="app Store"
+              />
             </div>
           </div>
           <div className="pt-[30px] pb-[53px] text-base-content border-t border-[rgba(255,255,255,0.28)]">

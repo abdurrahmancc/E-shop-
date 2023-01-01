@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { HiOutlineArrowRight } from "react-icons/hi2";
-import ProductCard2 from "../../shared/cards/ProductCard2";
-import SpecialProductCard from "../../shared/cards/SpecialProductCard1";
-import SpecialProductCard2 from "../../shared/cards/SpecialProductCard2";
+import ProductCard1 from "../../components/shared/cards/ProductCard1";
+import banner from "../../assets/banner/product-banner.png";
+import Image from "next/image";
+import Link from "next/link";
 
-const HotNewArrivals = () => {
+const HotNewArrivals2 = () => {
   const [activeProducts, setActiveProducts] = useState<string>("newProducts");
   return (
     <>
@@ -63,20 +64,24 @@ const HotNewArrivals = () => {
         </div>
       </div>
       <div className="mt-[50px] flex lg:flex-row flex-col items-center lg:items-start gap-y-8 gap-x-5 2xl:gap-x-[30px]">
-        <div className="2xl:w-[557px] mt-5 order-2 lg:order-1 lg:mt-0 xl:w-[420px] md:w-[558px] sm:w-[500px] max-h-[776px] h-[776px] rounded-[8px] bg-[#F8F8F8]">
+        <div className="2xl:w-[557px] mt-5 order-2 lg:order-1 lg:mt-0 xl:w-[420px] md:w-[558px] sm:w-[500px] max-h-[905px] h-[905px] rounded-[8px] bg-[#F8F8F8]">
           <div className=" flex justify-center items-center h-full ">
-            <SpecialProductCard2 />
+            <figure>
+              <Link href={"/shop"}>
+                <Image src={banner} width={558} height={905} alt="banner image" />
+              </Link>
+            </figure>
           </div>
         </div>
 
         <div className="flex-grow lg:order-2 order-1 ">
-          <div className="grid xs-responsive grid-cols-2 md:grid-cols-3 lg:grid-cols-2 max-w-[550px] md:max-w-[834px] lg:max-w-[558px] xl:max-w-full  mx-auto xl:grid-cols-3 gap-y-[30px] gap-3 sm:gap-x-5 lg:gap-x-[30px]">
-            <ProductCard2 />
-            <ProductCard2 />
-            <ProductCard2 />
-            <ProductCard2 />
-            <ProductCard2 />
-            <ProductCard2 />
+          <div className="grid xs-responsive grid-cols-2 md:grid-cols-3 lg:grid-cols-2 max-w-[550px] md:max-w-[834px] lg:max-w-[558px] xl:max-w-full  mx-auto xl:grid-cols-3 gap-y-[17px] gap-3 sm:gap-x-5 lg:gap-x-[30px]">
+            <ProductCard1 />
+            <ProductCard1 />
+            <ProductCard1 />
+            <ProductCard1 />
+            <ProductCard1 />
+            <ProductCard1 />
           </div>
         </div>
       </div>
@@ -84,4 +89,4 @@ const HotNewArrivals = () => {
   );
 };
 
-export default HotNewArrivals;
+export default HotNewArrivals2;

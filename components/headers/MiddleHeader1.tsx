@@ -6,7 +6,8 @@ import { useForm } from "react-hook-form";
 import { BiSearch } from "react-icons/bi";
 import { AiOutlineHeart } from "react-icons/ai";
 import { HiOutlineShoppingBag } from "react-icons/hi";
-import logo from "../../assets/icons/logo-white.png";
+import whiteLogo from "../../assets/icons/logo-white.png";
+import logo from "../../assets/icons/logo.png";
 import { searchCategorySelected } from "../../styles/selectComponents";
 import Link from "next/link";
 import DrawerSidebar from "../shared/drawerSidebar";
@@ -42,7 +43,11 @@ const MiddleHeader1 = () => {
     <div className="max-w-[1443px] w-full mx-auto container px-4 lg:px-10 2xl:px-0">
       <div className="py-5 flex w-full justify-between">
         <div>
-          <Image src={logo} width={163} height={51} alt="logo" />
+          {router.pathname.includes("/home/home2") ? (
+            <Image src={logo} width={163} height={51} alt="logo" />
+          ) : (
+            <Image src={whiteLogo} width={163} height={51} alt="logo" />
+          )}
         </div>
         {/*========= category search from start =========-*/}
         <div className="h-full hidden w-full lg:block">
@@ -87,7 +92,6 @@ const MiddleHeader1 = () => {
               <div className="flex items-center gap-2">
                 <div className="indicator">
                   <Link href={"/wishlist"} className="  rounded-full" aria-label="shopping cart">
-                    {/* <Image src={compareIcon} alt="compare" /> */}
                     <VscGitCompare
                       className={` ${
                         router?.pathname == "/home/home2" ? "text-[#424242]" : "text-[#FFFFFF]"

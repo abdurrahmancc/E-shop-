@@ -47,7 +47,7 @@ const NavContent: FC<PropsWithChildren<Props>> = ({ children: textColor }) => {
             </li>
             <li>
               <Link
-                href={"/home2"}
+                href={"/home/home3"}
                 className={`sub-menu-animate py-[10px] text-[15px] relative text-[rgba(0,0,0,0.7)] bg-white px-0 font-semibold hover:text-primary`}
               >
                 <span className="px-8">Home 3</span>
