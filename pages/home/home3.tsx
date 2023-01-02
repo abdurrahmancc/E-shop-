@@ -15,6 +15,7 @@ import SpecialProducts3 from "../../components/home/Home3/SpecialProducts3";
 import TopRatedItems from "../../components/home/Home3/TopRatedItems";
 import TopSellingProducts from "../../components/home/Home3/TopSellingProducts";
 import TrendingProducts from "../../components/home/Home3/TrendingProducts";
+import Footer3 from "../../components/shared/footer/Footer3";
 import Newsletter3 from "../../components/shared/newsletter/Newsletter3";
 import HotNewArrivals2 from "./HotNewArrivals2";
 
@@ -108,6 +109,9 @@ const home3 = () => {
         </section>
         {/* ============= Featured Products end =========== */}
       </main>
+      <footer className="mt-[186px] ">
+        <Footer3 />
+      </footer>
     </>
   );
 };

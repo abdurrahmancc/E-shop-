@@ -59,26 +59,26 @@ const Footer2 = () => {
               <span className="footer-title opacity-100 mb-5 text-[20px] leading-[30px] font-[600] text-primary">
                 Information
               </span>
-              <a className="hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
+              <a className="hover:translate-x-3 transition-transform duration-200 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
                 {" "}
                 <IoIosArrowForward className="text-[16px]" /> About Us
               </a>
-              <a className="hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
+              <a className="hover:translate-x-3 transition-transform duration-200 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
                 {" "}
                 <IoIosArrowForward className="text-[16px]" />
                 Contact Us
               </a>
-              <a className=" hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
+              <a className=" hover:translate-x-3 transition-transform duration-200 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
                 {" "}
                 <IoIosArrowForward className="text-[16px]" />
                 Term & Condition
               </a>
-              <a className=" hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
+              <a className=" hover:translate-x-3 transition-transform duration-200 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
                 {" "}
                 <IoIosArrowForward className="text-[16px]" />
                 Return Policy
               </a>
-              <a className=" hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
+              <a className=" hover:translate-x-3 transition-transform duration-200 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
                 {" "}
                 <IoIosArrowForward className="text-[16px]" />
                 Shipping Return
@@ -88,24 +88,24 @@ const Footer2 = () => {
               <span className="footer-title opacity-100 mb-5 text-[20px] leading-[30px] font-[600] text-primary">
                 Information
               </span>
-              <a className=" hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
+              <a className=" hover:translate-x-3 transition-transform duration-200 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
                 <IoIosArrowForward className="text-[16px]" /> About Us
               </a>
-              <a className=" hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
+              <a className=" hover:translate-x-3 transition-transform duration-200 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
                 <IoIosArrowForward className="text-[16px]" />
                 Contact Us
               </a>
-              <a className=" hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
+              <a className=" hover:translate-x-3 transition-transform duration-200 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
                 {" "}
                 <IoIosArrowForward className="text-[16px]" />
                 Term & Condition
               </a>
-              <a className=" hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
+              <a className=" hover:translate-x-3 transition-transform duration-200 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
                 {" "}
                 <IoIosArrowForward className="text-[16px]" />
                 Return Policy
               </a>
-              <a className=" hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
+              <a className=" hover:translate-x-3 transition-transform duration-200 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
                 {" "}
                 <IoIosArrowForward className="text-[16px]" />
                 Shipping Return
@@ -115,26 +115,26 @@ const Footer2 = () => {
               <span className="footer-title opacity-100 mb-5 text-[20px] leading-[30px] font-[600] text-primary">
                 Information
               </span>
-              <a className=" hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
+              <a className=" hover:translate-x-3 transition-transform duration-200 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
                 {" "}
                 <IoIosArrowForward className="text-[16px]" /> About Us
               </a>
-              <a className=" hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
+              <a className=" hover:translate-x-3 transition-transform duration-200 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
                 {" "}
                 <IoIosArrowForward className="text-[16px]" />
                 Contact Us
               </a>
-              <a className=" hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
+              <a className=" hover:translate-x-3 transition-transform duration-200 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
                 {" "}
                 <IoIosArrowForward className="text-[16px]" />
                 Term & Condition
               </a>
-              <a className=" hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
+              <a className=" hover:translate-x-3 transition-transform duration-200 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
                 {" "}
                 <IoIosArrowForward className="text-[16px]" />
                 Return Policy
               </a>
-              <a className=" hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
+              <a className=" hover:translate-x-3 transition-transform duration-200 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
                 {" "}
                 <IoIosArrowForward className="text-[16px]" />
                 Shipping Return
@@ -151,14 +151,14 @@ const Footer2 = () => {
                 src={googleApp}
                 width={205}
                 height={64}
-                className="mt-3  hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer"
+                className="mt-3  hover:translate-x-3 transition-transform duration-200 ease-linear cursor-pointer"
                 alt="google play"
               />
               <Image
                 src={appStore}
                 width={205}
                 height={64}
-                className="mt-3  hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer"
+                className="mt-3  hover:translate-x-3 transition-transform duration-200 ease-linear cursor-pointer"
                 alt="app Store"
               />
             </div>

@@ -20,19 +20,19 @@ const Footer1 = () => {
             <span className="footer-title opacity-100 mb-[10px] text-[20px] leading-[30px] font-[600] text-primary">
               CUSTOMER SERVICE
             </span>
-            <a className="hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
+            <a className="hover:translate-x-3 transition-transform duration-200 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
               Contact us
             </a>
-            <a className="hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
+            <a className="hover:translate-x-3 transition-transform duration-200 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
               Payments & Returns
             </a>
-            <a className="hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
+            <a className="hover:translate-x-3 transition-transform duration-200 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
               Shipping & Returns
             </a>
-            <a className="hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
+            <a className="hover:translate-x-3 transition-transform duration-200 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
               Terms and conditions
             </a>
-            <a className="hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
+            <a className="hover:translate-x-3 transition-transform duration-200 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
               Refund Policy
             </a>
           </div>
@@ -40,19 +40,19 @@ const Footer1 = () => {
             <span className="footer-title opacity-100 mb-[10px] text-[20px] leading-[30px] font-[600] text-primary">
               USEFUL LINKS
             </span>
-            <a className="hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
+            <a className="hover:translate-x-3 transition-transform duration-200 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
               About Us
             </a>
-            <a className="hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
+            <a className="hover:translate-x-3 transition-transform duration-200 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
               Shop Products
             </a>
-            <a className="hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
+            <a className="hover:translate-x-3 transition-transform duration-200 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
               My Cart
             </a>
-            <a className="hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
+            <a className="hover:translate-x-3 transition-transform duration-200 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
               Order Tracking
             </a>
-            <a className="hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
+            <a className="hover:translate-x-3 transition-transform duration-200 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
               Privacy Policy
             </a>
           </div>
@@ -60,19 +60,19 @@ const Footer1 = () => {
             <span className="footer-title opacity-100 mb-[10px] text-[20px] leading-[30px] font-[600] text-primary">
               Categories
             </span>
-            <a className="hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
+            <a className="hover:translate-x-3 transition-transform duration-200 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
               Computer & Laptop
             </a>
-            <a className="hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
+            <a className="hover:translate-x-3 transition-transform duration-200 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
               Television & Video
             </a>
-            <a className="hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
+            <a className="hover:translate-x-3 transition-transform duration-200 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
               Headphones
             </a>
-            <a className="hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
+            <a className="hover:translate-x-3 transition-transform duration-200 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
               Smartphones
             </a>
-            <a className="hover:translate-x-3 transition-transform duration-300 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
+            <a className="hover:translate-x-3 transition-transform duration-200 ease-linear cursor-pointer flex items-center gap-2 text-[16px] leading-[32px] text-neutral">
               Camera & Photos
             </a>
           </div>
