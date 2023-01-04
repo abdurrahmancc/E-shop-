@@ -57,12 +57,12 @@ const NavContent: FC<PropsWithChildren<Props>> = ({ children: textColor }) => {
         </li>
         <li className="hover:bg-inherit" tabIndex={0}>
           <Link
-            href={"/shop"}
+            href={"/shop/1"}
             className={`focus:bg-inherit p-0 hover:bg-inherit ${textColor} px-0 flex gap-2 items-center`}
           >
             <span
               className={` inline-block pb-1  text-[15px] leading-[26px] ${
-                router.pathname == "/shop"
+                router.pathname == "/shop/1"
                   ? "border-primary font-[500] border-b-2"
                   : "border-animate font-[400]"
               }`}
@@ -74,7 +74,7 @@ const NavContent: FC<PropsWithChildren<Props>> = ({ children: textColor }) => {
           <ul className="menu py-3 rounded-lg overflow-hidden bg-white z-50 w-[270px] shadow-xl">
             <li>
               <Link
-                href={"/shop"}
+                href={"/shop/1"}
                 className={`sub-menu-animate text-[15px] py-[10px] relative text-[rgba(0,0,0,0.7)] bg-white px-0 font-semibold hover:text-primary`}
               >
                 <span className="px-8">Shop default</span>
@@ -82,7 +82,7 @@ const NavContent: FC<PropsWithChildren<Props>> = ({ children: textColor }) => {
             </li>
             <li>
               <Link
-                href={"/shop/shop2"}
+                href={"/shop/2"}
                 className={`sub-menu-animate py-[10px] text-[15px] relative text-[rgba(0,0,0,0.7)] bg-white px-0 font-semibold hover:text-primary`}
               >
                 <span className="px-8">Right Filter Shop</span>
@@ -90,10 +90,18 @@ const NavContent: FC<PropsWithChildren<Props>> = ({ children: textColor }) => {
             </li>
             <li>
               <Link
-                href={"/shop/shop3"}
+                href={"/shop/3"}
                 className={`sub-menu-animate py-[10px] text-[15px] relative text-[rgba(0,0,0,0.7)] bg-white px-0 font-semibold hover:text-primary`}
               >
-                <span className="px-8">Shop 3</span>
+                <span className="px-8">Shop wide</span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={"/shop/4"}
+                className={`sub-menu-animate py-[10px] text-[15px] relative text-[rgba(0,0,0,0.7)] bg-white px-0 font-semibold hover:text-primary`}
+              >
+                <span className="px-8">Product list</span>
               </Link>
             </li>
           </ul>

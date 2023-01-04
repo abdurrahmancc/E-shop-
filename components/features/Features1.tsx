@@ -8,7 +8,7 @@ import customerSupport from "../../assets/icons/customerSupport.png";
 const Features1 = () => {
   return (
     <>
-      <div className="py-[37px] bg-secondary ">
+      <div className="py-[37px] bg-[#041E42]">
         <div className="max-w-[260px] sm:max-w-[520px] lg:max-w-full mx-auto">
           <div className="grid w-full lg:grid-cols-4 sm:grid-cols-2 gap-10 lg:gap-0">
             <div className="flex lg:justify-center w-full lg:border-r-[0.5px] border-gray-300">

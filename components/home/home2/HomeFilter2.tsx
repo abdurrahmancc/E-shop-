@@ -37,6 +37,7 @@ const headphones: HeadphonesModel[] = [
   { _id: "13", name: "Huawei", quantity: 32 },
   { _id: "14", name: "Lenovo ", quantity: 21 },
 ];
+
 const status: StatusModel[] = [
   { _id: "15", name: "Stock in", quantity: 12 },
   { _id: "16", name: "Pre Order", quantity: 34 },
@@ -68,7 +69,6 @@ const HomeFilter2 = () => {
           ))}
         </div>
       </div>
-
       {/* =========== Smart Watch end ========== */}
       {/* =========== Headphones start ========== */}
       <div className="mt-5">

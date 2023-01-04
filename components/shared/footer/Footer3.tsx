@@ -7,7 +7,6 @@ import { FaFacebookF, FaPhoneAlt } from "react-icons/fa";
 import { HiLocationMarker } from "react-icons/hi";
 import googleApp from "../../../assets/icons/googlePlay.png";
 import appStore from "../../../assets/icons/appStore.png";
-import payment from "../../../assets/icons/payment2.png";
 import payments from "../../../assets/icons/payments.png";
 import { BsInstagram, BsTwitter } from "react-icons/bs";
 import { SiMinutemailer } from "react-icons/si";

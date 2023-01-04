@@ -26,7 +26,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header>
-        <div className="bg-secondary">
+        <div className="bg-[#041E42]">
           <div className="max-w-[1443px] w-full mx-auto container px-4 lg:px-10 2xl:px-0">
             {/* ============= top header start ============== */}
             <TopHeader1 />

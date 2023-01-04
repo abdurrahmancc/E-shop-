@@ -8,6 +8,8 @@ import "react-toastify/dist/ReactToastify.css";
 import "../styles/selectComponents.css";
 import "../styles/swiperSlider.css";
 import "../styles/home.css";
+import "../styles/pagination.css";
+import "../styles/shop.css";
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();

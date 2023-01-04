@@ -1,4 +1,5 @@
 import React from "react";
+import { Ratings5 } from "../../shared/Ratings/Ratings5";
 
 interface Categories {
   label: string;
@@ -61,7 +62,7 @@ const HomeFilter1 = () => {
         <div className="">
           {categories.map((category, i) => (
             <div key={i} className={`form-control ${isLastCategory == i ? "" : "pb-3"}`}>
-              <label className="label p-0 justify-start gap-[10px] cursor-pointer">
+              <label className="label p-0 justify-start gap-2 cursor-pointer">
                 <input
                   type="checkbox"
                   className="checkbox w-[15px] h-[15px] checkbox-primary rounded-none "
@@ -81,7 +82,7 @@ const HomeFilter1 = () => {
         <div className="">
           {prices.map((price, i) => (
             <div key={i} className={`form-control ${isLastPrice == i ? "" : "pb-3"}`}>
-              <label className="label p-0 justify-start gap-[10px] cursor-pointer">
+              <label className="label p-0 justify-start gap-2 cursor-pointer">
                 <input
                   type="checkbox"
                   className="checkbox w-[15px] h-[15px] checkbox-primary rounded-none "
@@ -101,14 +102,19 @@ const HomeFilter1 = () => {
         <div className="">
           {ratings.map((rating, i) => (
             <div key={i} className={`form-control ${isLastRating == i ? "" : "pb-3"}`}>
-              <label className="label p-0 justify-start gap-[10px] cursor-pointer">
+              <label className="label p-0 justify-start gap-2 cursor-pointer">
                 <input
                   type="checkbox"
                   className="checkbox w-[15px] h-[15px] checkbox-primary rounded-none "
                 />
-                <span className="label-text text-[#414141] text-sm leading-[22px] ">
-                  {rating?.label}
-                </span>
+                <div className="flex w-full gap-2 items-center">
+                  <div className="flex max-w-[78px] w-full justify-between">
+                    <Ratings5 width="w-[14px]" height="h-[14px]" count={i + 1} />
+                  </div>
+                  <span className="label-text text-[#414141] text-sm leading-[22px] ">
+                    {rating?.label}
+                  </span>
+                </div>
               </label>
             </div>
           ))}
@@ -121,7 +127,7 @@ const HomeFilter1 = () => {
         <div className="">
           {status.map((item, i) => (
             <div key={i} className={`form-control ${isLastStatus == i ? "" : "pb-3"}`}>
-              <label className="label p-0 justify-start gap-[10px] cursor-pointer">
+              <label className="label p-0 justify-start gap-2 cursor-pointer">
                 <input
                   type="checkbox"
                   className="checkbox w-[15px] h-[15px] checkbox-primary rounded-none "

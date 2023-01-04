@@ -1,0 +1,55 @@
+.horizontal-slider {
+    width: 100%;
+    height: 18px;
+  }
+  
+  .example-thumb {
+    font-size: 12px;
+    text-align: center;
+    background-color: white;
+    border: 1px solid #FCB700;
+    cursor: pointer;
+    border-radius: 50%;
+    box-sizing: border-box;
+  }
+  
+  .example-thumb:focus{
+    outline: none !important;
+  }
+  
+  .example-thumb.active {
+    background-color: none;
+  }
+  
+  .example-track {
+    position: relative;
+    background: #EFEFEF;
+    height: 6px !important;
+  }
+  
+  .example-track.example-track-1 {
+    background: #FCB700;
+    height: 6px !important;
+  }
+  
+  .example-track.example-track-2 {
+    background: #EFEFEF;
+    height: 6px !important;
+  }
+  
+  .horizontal-slider .example-track {
+    top: 8px;
+    height: 6px;
+    border-radius: 12px;
+  }
+  
+  .horizontal-slider .example-thumb {
+    top: 2px;
+    width: 18px;
+    height: 18px;
+    line-height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+ 

@@ -1,13 +1,11 @@
-import React, { useEffect, useState, Dispatch, SetStateAction, FC } from "react";
+import React, { useState, Dispatch, SetStateAction } from "react";
 import Collapsible from "react-collapsible";
 import { BsChevronDown } from "react-icons/bs";
-// import logo from "../../assets/";
 import { useForm } from "react-hook-form";
 import { BiSearchAlt } from "react-icons/bi";
 import { IoMdClose } from "react-icons/io";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import Image from "next/image";
 
 type FormData = {
   search: string;

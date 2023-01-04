@@ -17,6 +17,7 @@ import TopSellingProducts from "../../components/home/Home3/TopSellingProducts";
 import TrendingProducts from "../../components/home/Home3/TrendingProducts";
 import Footer3 from "../../components/shared/footer/Footer3";
 import Newsletter3 from "../../components/shared/newsletter/Newsletter3";
+import ScrollUpBtn from "../../components/shared/ScrollUpBtn";
 import HotNewArrivals2 from "./HotNewArrivals2";
 
 const home3 = () => {
@@ -108,6 +109,9 @@ const home3 = () => {
           <FeaturedProducts3 />
         </section>
         {/* ============= Featured Products end =========== */}
+        {/* ======== scroll up button start ======= */}
+        <ScrollUpBtn />
+        {/* ======== scroll up button end ======= */}
       </main>
       <footer className="mt-[186px] ">
         <Footer3 />

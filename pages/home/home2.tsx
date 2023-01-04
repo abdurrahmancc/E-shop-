@@ -19,6 +19,7 @@ import TopTrendingRecentlyGroupSec from "../../components/home/home2/TopTrending
 import TrendingCategories from "../../components/home/home2/TrendingCategories";
 import ShopByCategories from "../../components/home/home2/ShopByCategories";
 import Footer2 from "../../components/shared/footer/Footer2";
+import ScrollUpBtn from "../../components/shared/ScrollUpBtn";
 
 const Home2 = () => {
   return (
@@ -94,6 +95,9 @@ const Home2 = () => {
           <FeaturedProducts2 />
         </section>
         {/* ============= Featured Products end =========== */}
+        {/* ======== scroll up button start ======= */}
+        <ScrollUpBtn />
+        {/* ======== scroll up button end ======= */}
       </main>
       <footer className="mt-[186px] ">
         <Footer2 />
