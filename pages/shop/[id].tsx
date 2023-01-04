@@ -98,7 +98,7 @@ const Shop = () => {
               ) : (
                 <ShopVertical />
               )}
-              {toggleCard ? <ShopHorizontal /> : <ShopVertical />}
+
               {/* ============= product card toggle end ============== */}
               {/* ============ pagination start =========== */}
               <div
