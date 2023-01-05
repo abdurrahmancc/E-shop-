@@ -42,45 +42,45 @@ export default function Home() {
           </div>
         </div>
       </header>
-      <main className="pt-[50px]">
+      <main className="pt-10 lg:pt-[50px]">
         {/* ============= features start =========== */}
         <section className="max-w-[1443px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
           <Features1 />
         </section>
         {/* ============= features end =========== */}
         {/* ============= Trending Products start =========== */}
-        <section className="max-w-[1443px] mt-20 container w-full mx-auto px-4 lg:px-10 2xl:px-0">
+        <section className="max-w-[1443px] mt-20 lg:mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
           <TrendingProducts />
         </section>
         {/* ============= Trending Products end =========== */}
         {/* ============= card banner start =========== */}
-        <section className="max-w-[1443px] mt-20 container w-full mx-auto px-4 lg:px-10 2xl:px-0">
+        <section className="max-w-[1443px] mt-20 lg:mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
           <CardBanner1 />
         </section>
         {/* ============= card banner end =========== */}
         {/* ============= Special Products start =========== */}
-        <section className="max-w-[1443px] mt-20 container w-full mx-auto px-4 lg:px-10 2xl:px-0">
+        <section className="max-w-[1443px] mt-20 lg:mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
           <SpecialProducts />
         </section>
         {/* ============= Special Products end =========== */}
         {/* ============= Special Sec start =========== */}
-        <section className="bg-[#F2F2F6] mt-[190px] 2xl:h-[517px] xl:h-[400px] lg:h-[517px] md:h-[340px] sm:h-[450px] h-[350px]">
+        <section className="bg-[#F2F2F6] mt-[150px] lg:mt-[190px] 2xl:h-[517px] xl:h-[400px] lg:h-[517px] md:h-[340px] sm:h-[450px] h-[350px]">
           <SpecialSec />
         </section>
         {/* ============= Special Sec end =========== */}
         {/* ============= Featured Products start =========== */}
-        <section className="max-w-[1443px] mt-20 container w-full mx-auto px-4 lg:px-10 2xl:px-0">
+        <section className="max-w-[1443px] mt-20 lg:mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
           <FeaturedProducts />
         </section>
         {/* ============= Featured Products end =========== */}
 
         {/* ============= newsletter start =========== */}
-        <section className="mt-20">
+        <section className="mt-20 lg:mt-[120px]">
           <Newsletter1 />
         </section>
         {/* ============= newsletter end =========== */}
         {/* ============= Top Selling Products start =========== */}
-        <section className="max-w-[1443px] mt-20 container w-full mx-auto px-4 lg:px-10 2xl:px-0">
+        <section className="max-w-[1443px] mt-20 lg:mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
           <TopSellingProducts />
         </section>
         {/* ============= Top Selling Products end =========== */}
@@ -88,7 +88,7 @@ export default function Home() {
         <ScrollUpBtn />
         {/* ======== scroll up button end ======= */}
       </main>
-      <footer className="mt-20">
+      <footer className="mt-20 lg:mt-[120px]">
         <Footer1 />
       </footer>
     </>

@@ -22,7 +22,7 @@ const ProductCard1 = ({ extraStyle }: ExtraStyle) => {
     >
       <div className="border border-[#fff0] h-full ease-linear duration-300 transition-all  hover:border-primary">
         <div className="w-full overflow-hidden relative bg-[#F8F8F8] h-[298px] flex justify-center items-center">
-          <Link href={`/shop/${1}`} className={""}>
+          <Link href={`/shop/product-details/${1}`} className={""}>
             <figure className="max-w-[212px] max-h-[212px] overflow-hidden">
               {isHover ? (
                 <Image
@@ -63,7 +63,7 @@ const ProductCard1 = ({ extraStyle }: ExtraStyle) => {
         </div>
         <div className="pt-5 px-[10px]">
           <h3 className="text-lg leading-[27px] text-center font-[600] text-info">
-            <Link href={`/shop/${1}`}>Apple Watch Series 6 A2292 (M00D3)</Link>
+            <Link href={`/shop/product-details/${1}`}>Apple Watch Series 6 A2292 (M00D3)</Link>
           </h3>
           <div className="relative mt-[5px]">
             <div className={`${isHover ? "scale-0" : "scale-100"}`}>

@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import LoadingBar from "react-top-loading-bar";
 import { ToastContainer } from "react-toastify";
+import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css";
 import "react-toastify/dist/ReactToastify.css";
 import "../styles/selectComponents.css";
 import "../styles/swiperSlider.css";

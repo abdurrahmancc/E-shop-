@@ -47,51 +47,51 @@ const Home2 = () => {
       </header>
       <main>
         {/*======== single product banner section start ============*/}
-        <section className="max-w-[1443px] container mt-[60px] w-full mx-auto px-4 lg:px-10 2xl:px-0">
+        <section className="max-w-[1443px] container pt-10 lg:pt-[60px] w-full mx-auto px-4 lg:px-10 2xl:px-0">
           <ShopByCategories />
         </section>
         {/*======== single product banner section end ==============*/}
         {/* ============= Trending Products start =========== */}
-        <section className="max-w-[1443px] mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
+        <section className="max-w-[1443px] mt-20 lg:mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
           <HotNewArrivals />
         </section>
         {/* ============= Trending Products end =========== */}
         {/* ============= Special Products start =========== */}
-        <section className="max-w-[1443px] mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
+        <section className="max-w-[1443px] mt-20 lg:mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
           <SpecialProducts2 />
         </section>
         {/* ============= Special Products end =========== */}
         {/* ============= Trending Categories start =========== */}
-        <section className="max-w-[1443px] mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
+        <section className="max-w-[1443px] mt-20 lg:mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
           <TrendingCategories />
         </section>
         {/* ============= Trending Categories end =========== */}
         {/* ============= smart banner start =========== */}
-        <section className="max-w-[1443px] mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
+        <section className="max-w-[1443px] mt-20 lg:mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
           <SmartBannerSlider />
         </section>
         {/* ============= smart banner end =========== */}
         {/* ============= On Sale Products start =========== */}
-        <section className="max-w-[1443px] mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
+        <section className="max-w-[1443px] mt-20 lg:mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
           <OnSaleProducts />
         </section>
         {/* ============= On Sale Products end =========== */}
         {/* ============= card banner start =========== */}
-        <section className="max-w-[1443px] mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
+        <section className="max-w-[1443px] mt-20 lg:mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
           <CardBanner2 />
         </section>
         {/* ============= Top Trending Recently Group Sec start =========== */}
-        <section className="max-w-[1443px] mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
+        <section className="max-w-[1443px] mt-20 lg:mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
           <TopTrendingRecentlyGroupSec />
         </section>
         {/* ============= Top Trending Recently Group Sec end =========== */}
         {/* ============= smart banner start =========== */}
-        <section className="max-w-[1443px] mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
+        <section className="max-w-[1443px] mt-20 lg:mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
           <SmartBanner3 />
         </section>
         {/* ============= smart banner end =========== */}
         {/* ============= Featured Products start =========== */}
-        <section className="max-w-[1443px] mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
+        <section className="max-w-[1443px] mt-20 lg:mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
           <FeaturedProducts2 />
         </section>
         {/* ============= Featured Products end =========== */}
@@ -99,7 +99,7 @@ const Home2 = () => {
         <ScrollUpBtn />
         {/* ======== scroll up button end ======= */}
       </main>
-      <footer className="mt-[186px] ">
+      <footer className="mt-[146px] lg:mt-[186px] ">
         <Footer2 />
       </footer>
     </>

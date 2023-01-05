@@ -6,15 +6,16 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import ProductCard2 from "../../shared/cards/ProductCard2";
+import ProductCard1 from "../../shared/cards/ProductCard1";
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
-const OnSaleProducts = () => {
+const RelatedProducts = () => {
   return (
     <>
       <div className="w-full">
         <div className="flex items-center justify-between pb-4">
           <h2 className="text-[#031424]  lg:text-[28px] lg:leading-[42px] text-[24px] leading-8 font-[600]">
-            On Sale Products
+            Related Products
           </h2>
           <div className="flex items-center gap-3">
             <button className="hover:text-white custom_prev transition-all duration-300 ease-linear hover:bg-info justify-center text-info border border-info rounded-full text-ing flex items-center gap-3 w-[36px] h-[36px] leading-[24px] font-[500]">
@@ -70,45 +71,58 @@ const OnSaleProducts = () => {
           }}
         >
           <SwiperSlide>
-            <ProductCard2 />
+            <ProductCard1 />
           </SwiperSlide>
           <SwiperSlide>
-            <ProductCard2 />
+            <ProductCard1 />
           </SwiperSlide>
           <SwiperSlide>
-            <ProductCard2 />
+            <ProductCard1 />
           </SwiperSlide>
-
           <SwiperSlide>
-            <ProductCard2 />
+            <ProductCard1 />
           </SwiperSlide>
-
           <SwiperSlide>
-            <ProductCard2 />
+            <ProductCard1 />
           </SwiperSlide>
-
           <SwiperSlide>
-            <ProductCard2 />
+            <ProductCard1 />
           </SwiperSlide>
-
           <SwiperSlide>
-            <ProductCard2 />
+            <ProductCard1 />
           </SwiperSlide>
-
           <SwiperSlide>
-            <ProductCard2 />
+            <ProductCard1 />
           </SwiperSlide>
-
           <SwiperSlide>
-            <ProductCard2 />
+            <ProductCard1 />
           </SwiperSlide>
-
           <SwiperSlide>
-            <ProductCard2 />
+            <ProductCard1 />
           </SwiperSlide>
-
           <SwiperSlide>
-            <ProductCard2 />
+            <ProductCard1 />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ProductCard1 />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ProductCard1 />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ProductCard1 />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ProductCard1 />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ProductCard1 />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ProductCard1 />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ProductCard1 />
           </SwiperSlide>
         </Swiper>
       </div>
@@ -116,4 +130,4 @@ const OnSaleProducts = () => {
   );
 };
 
-export default OnSaleProducts;
+export default RelatedProducts;

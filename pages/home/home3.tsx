@@ -18,7 +18,7 @@ import TrendingProducts from "../../components/home/Home3/TrendingProducts";
 import Footer3 from "../../components/shared/footer/Footer3";
 import Newsletter3 from "../../components/shared/newsletter/Newsletter3";
 import ScrollUpBtn from "../../components/shared/ScrollUpBtn";
-import HotNewArrivals2 from "./HotNewArrivals2";
+import HotNewArrivals2 from "../../components/home/Home3/HotNewArrivals2";
 
 const home3 = () => {
   return (
@@ -49,63 +49,63 @@ const home3 = () => {
         </section>
         {/* ============= features end =========== */}
         {/* ============= features start =========== */}
-        <section className="max-w-[1443px] mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
+        <section className="max-w-[1443px] mt-20 lg:mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
           <ShopByCategories />
         </section>
         {/* ============= features end =========== */}
         {/* ============= Top Selling Products start =========== */}
-        <section className="max-w-[1443px] mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
+        <section className="max-w-[1443px] mt-20 lg:mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
           <TopSellingProducts />
         </section>
         {/* ============= Top Selling Products end =========== */}
         {/* ============= Smart Banner start =========== */}
-        <section className="max-w-[1443px] mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
+        <section className="max-w-[1443px] mt-20 lg:mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
           <SmartBanner3 />
         </section>
         {/* ============= Smart Banner  end =========== */}
         {/* ============= Trending Products start =========== */}
-        <section className="max-w-[1443px] mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
+        <section className="max-w-[1443px] mt-20 lg:mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
           <TrendingProducts />
         </section>
         {/* ============= Trending Products end =========== */}
         {/* ============= Hot New Arrivals start =========== */}
-        <section className="max-w-[1443px] mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
+        <section className="max-w-[1443px] mt-20 lg:mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
           <HotNewArrivals2 />
         </section>
         {/* ============= Hot New Arrivals end =========== */}
         {/* ============= Categories start =========== */}
-        <section className="max-w-[1443px] mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
+        <section className="max-w-[1443px] mt-20 lg:mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
           <TrendingCategories />
         </section>
         {/* ============= Categories end =========== */}
         {/* ============= Smart Banner start =========== */}
-        <section className="max-w-[1443px] mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
+        <section className="max-w-[1443px] mt-20 lg:mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
           <SmartBanner4 />
         </section>
         {/* ============= Smart Banner end =========== */}
 
         {/* ============= Top Rated Items start =========== */}
-        <section className="max-w-[1443px] mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
+        <section className="max-w-[1443px] mt-20 lg:mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
           <TopRatedItems />
         </section>
         {/* ============= Top Rated Items end =========== */}
         {/* ============= Card Banner start =========== */}
-        <section className="max-w-[1443px] mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
+        <section className="max-w-[1443px] mt-20 lg:mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
           <CardBanner3 />
         </section>
         {/* ============= Card Banner end =========== */}
         {/* ============= Special Products start =========== */}
-        <section className="max-w-[1443px] mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
+        <section className="max-w-[1443px] mt-20 lg:mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
           <SpecialProducts3 />
         </section>
         {/* ============= Special Products end =========== */}
         {/* ============= Newsletter start =========== */}
-        <section className="mt-[120px] w-full">
+        <section className="mt-20 lg:mt-[120px] w-full">
           <Newsletter3 />
         </section>
         {/* ============= Newsletter end =========== */}
         {/* ============= Featured Products  start =========== */}
-        <section className="max-w-[1443px] mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
+        <section className="max-w-[1443px] mt-20 lg:mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
           <FeaturedProducts3 />
         </section>
         {/* ============= Featured Products end =========== */}
@@ -113,7 +113,7 @@ const home3 = () => {
         <ScrollUpBtn />
         {/* ======== scroll up button end ======= */}
       </main>
-      <footer className="mt-[186px] ">
+      <footer className="mt-20 lg:mt-[120px]">
         <Footer3 />
       </footer>
     </>

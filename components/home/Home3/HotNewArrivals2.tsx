@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { HiOutlineArrowRight } from "react-icons/hi2";
-import ProductCard1 from "../../components/shared/cards/ProductCard1";
+import ProductCard1 from "../../shared/cards/ProductCard1";
 import banner from "../../assets/banner/product-banner.png";
 import Image from "next/image";
 import Link from "next/link";
