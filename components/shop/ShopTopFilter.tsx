@@ -40,11 +40,11 @@ const ShopTopFilter = ({ toggleCard, setToggleCard }: Props) => {
   const [selectedShowOption, setSelectedShowOption] = useState<ShowOption | null>(sortOptions[0]);
 
   return (
-    <div className="flex sm:flex-row gap-y-5 flex-col mt-[50px] mb-[30px] md:items-center justify-between">
-      <span className="text-[16px] order-2 sm:order-1 leading-8 text-[#424242]">
+    <div className="flex md:flex-row gap-y-5 flex-col mt-[50px] mb-[30px] md:items-center justify-between">
+      <span className="text-[16px] order-2 md:order-1 leading-8 text-[#424242]">
         Showing 16 of 87 results
       </span>
-      <div className="flex order-1 sm:order-2 items-center gap-5">
+      <div className="flex order-1 md:order-2 items-center gap-5">
         <div className="flex items-center gap-3">
           <div
             onClick={() => setToggleCard(!toggleCard)}

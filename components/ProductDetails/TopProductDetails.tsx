@@ -6,7 +6,7 @@ import { BsInstagram, BsTwitter } from "react-icons/bs";
 import { FaFacebookF } from "react-icons/fa";
 import { SiMinutemailer } from "react-icons/si";
 import { TiArrowSortedUp } from "react-icons/ti";
-import { Rating5 } from "../../../components/shared/Ratings/Ratings";
+import { Rating5 } from "../shared/Ratings/Ratings";
 
 const shortFeatures = [
   'Apple iMac 21.5" Radeon Pro 560X',

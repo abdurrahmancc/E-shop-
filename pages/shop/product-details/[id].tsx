@@ -9,8 +9,8 @@ import Breadcrumb from "../../../components/shared/breadcrumb/Breadcrumb";
 import Footer1 from "../../../components/shared/footer/Footer1";
 import Newsletter4 from "../../../components/shared/newsletter/Newsletter4";
 import ScrollUpBtn from "../../../components/shared/ScrollUpBtn";
-import BottomDetails from "./BottomDetails";
-import TopProductDetails from "./TopProductDetails";
+import BottomDetails from "../../../components/ProductDetails/BottomDetails";
+import TopProductDetails from "../../../components/ProductDetails/TopProductDetails";
 
 const breadcrumbData = [
   { label: "home", value: "/" },
