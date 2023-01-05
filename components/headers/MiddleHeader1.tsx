@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { VscGitCompare, VscThreeBars } from "react-icons/vsc";
 import Select from "react-select";
 import { useForm } from "react-hook-form";
@@ -12,6 +12,9 @@ import { searchCategorySelected } from "../../styles/selectComponents";
 import Link from "next/link";
 import DrawerSidebar from "../shared/drawerSidebar";
 import { useRouter } from "next/router";
+import { useAppDispatch, useAppSelector } from "../../redux/app/reduxHooks";
+import { fetchWishlist } from "../../redux/features/wishlist/wishlistSlice";
+import { fetchCarts } from "../../redux/features/shoppingCart/shoppingCartSlice";
 
 interface Option {
   value: string;
@@ -31,12 +34,23 @@ const options: Option[] = [
 const MiddleHeader1 = () => {
   const [selectedOption, setSelectedOption] = useState<Option | null>(null);
   const [toggle, setToggle] = useState<boolean>(false);
+  const { wishlist, cart } = useAppSelector((state) => state);
+  const dispatch = useAppDispatch();
   const router = useRouter();
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<FromData>();
+
+  useEffect(() => {
+    dispatch(fetchWishlist());
+    dispatch(fetchCarts());
+  }, [dispatch]);
+
+  if (wishlist.isLoading || cart.isLoading) {
+    return <div>Loading...</div>;
+  }
 
   const onSubmit = handleSubmit((data) => console.log(data));
   return (

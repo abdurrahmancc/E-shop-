@@ -13,17 +13,23 @@ export type BreadcrumbModel = {
 export interface ProductModel {
   _id: string
   name: string
+  fullName: string
   price: number
   regularPrice: number
   quantity: number
   reviewQuantity: number
-  category: number
+  category: string
   subCategory: string
   date?: string
   status: string
-  img: string
+  img: string[]
+  review: number
   description: string
   badge: string
   updatedAt: string
   createdAt: string
+  model: string
+  SKU: string
+  shortFeatures: string[]
+  Specification: any[]
 }

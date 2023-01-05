@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { HiArrowSmUp } from "react-icons/hi";
 import { HiOutlineArrowUp } from "react-icons/hi2";
 
 const ScrollUpBtn = () => {

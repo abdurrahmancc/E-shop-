@@ -11,6 +11,8 @@ import "../styles/swiperSlider.css";
 import "../styles/home.css";
 import "../styles/pagination.css";
 import "../styles/shop.css";
+import { Provider } from "react-redux";
+import { store } from "../redux/app/store";
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -35,7 +37,9 @@ export default function App({ Component, pageProps }: AppProps) {
         progress={progress}
         onLoaderFinished={() => setProgress(0)}
       />
-      <Component {...pageProps} />
+      <Provider store={store}>
+        <Component {...pageProps} />
+      </Provider>
     </>
   );
 }

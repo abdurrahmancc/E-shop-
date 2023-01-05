@@ -6,9 +6,16 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { ProductModel } from "../../../types/types";
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
-const TopSellingProducts = () => {
+interface Products {
+  products: ProductModel[];
+}
+
+const TopSellingProducts = ({ products }: Products) => {
+  const productItems = products?.slice(0, 12);
+
   return (
     <>
       <div className="w-full">
@@ -69,42 +76,12 @@ const TopSellingProducts = () => {
             },
           }}
         >
-          <SwiperSlide>
-            <ProductCard1 />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard1 />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard1 />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard1 />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard1 />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard1 />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard1 />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard1 />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard1 />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard1 />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard1 />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard1 />
-          </SwiperSlide>
+          {productItems &&
+            productItems.map((product) => (
+              <SwiperSlide key={product._id}>
+                <ProductCard1 product={product} />
+              </SwiperSlide>
+            ))}
         </Swiper>
       </div>
     </>

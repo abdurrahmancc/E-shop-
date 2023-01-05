@@ -6,6 +6,7 @@ import { BsInstagram, BsTwitter } from "react-icons/bs";
 import { FaFacebookF } from "react-icons/fa";
 import { SiMinutemailer } from "react-icons/si";
 import { TiArrowSortedUp } from "react-icons/ti";
+import { ProductModel } from "../../types/types";
 import { Rating5 } from "../shared/Ratings/Ratings";
 
 const shortFeatures = [
@@ -16,7 +17,11 @@ const shortFeatures = [
   "Radeon Pro 560X 4GB Graphics",
 ];
 
-const TopProductDetails = () => {
+interface Product {
+  product: ProductModel;
+}
+
+const TopProductDetails = ({ product }: Product) => {
   const [quantity, setQuantity] = useState<number>(1);
 
   const handleQuantity = (data: number): void => {
@@ -27,44 +32,45 @@ const TopProductDetails = () => {
   return (
     <div className="pt-7">
       <div className="text-[16px] flex justify-center items-center w-[86px] h-[36px] bg-[#F0F9F4] text-[#00A046] rounded-[6px] leading-[24px] ">
-        In Stock
+        {product?.status}
       </div>
       <h4 className="text-info 2xl:text-[42px] xl:text-[32px] sm:text-[28px] text-[20px] my-3 2xl:leading-[63px] xl:leading-[48px] leading-[36px] font-[600]">
-        Apple iMac 21.5-inch Full HD Display
+        {product?.name}
       </h4>
       <div className="flex gap-[8px] flex-col sm:flex-row sm:items-center">
         <div className="flex sm:justify-center sm:items-center gap-[8px]">
           <div className="flex gap-[2px] items-center justify-center">
             <Rating5 />
           </div>
-          <span className="text-[16px] text-[#6A6A6A] leading-[24px]">(15)</span>
+          <span className="text-[16px] text-[#6A6A6A] leading-[24px]">({product?.review})</span>
         </div>
         <div className="w-[1px] h-4 bg-[#B9B9B9] hidden sm:block"></div>
         <div className="flex gap-[8px] items-center">
           <span className="sm:text-[16px] text-sm leading-[24px] text-[#6A6A6A]">
-            Model: MYL92LL/A
+            Model: {product?.model}
           </span>{" "}
           <div className="w-[1px] h-4 bg-[#B9B9B9]"></div>
           <span className="sm:text-[16px] text-sm leading-[24px] text-[#6A6A6A]">
-            SKU: BE45VGRT
+            SKU: {product?.SKU}
           </span>
         </div>
       </div>
       <p className="2xl:text-[42px] xl:text-[32px] sm:text-[28px] text-[20px] sm:my-6 my-4 font-[600] text-primary 2xl:leading-[63px] xl:leading-[48px] leading-9">
-        $300.00
+        ${product?.price.toFixed(2)}
       </p>
       <div>
         <ul className="flex flex-col gap-2">
-          {shortFeatures.map((feature, i) => {
-            return (
-              <li key={i} className={"flex gap-2"}>
-                <TiArrowSortedUp className="text-info sm:text-[24px] text-[20px] rotate-90" />
-                <span className="text-[#424242] sm:text-[16px] text-sm leading-[24px] ">
-                  {feature}
-                </span>
-              </li>
-            );
-          })}
+          {product &&
+            product?.shortFeatures.map((feature, i) => {
+              return (
+                <li key={i} className={"flex gap-2"}>
+                  <TiArrowSortedUp className="text-info sm:text-[24px] text-[20px] rotate-90" />
+                  <span className="text-[#424242] sm:text-[16px] text-sm leading-[24px] ">
+                    {feature}
+                  </span>
+                </li>
+              );
+            })}
         </ul>
       </div>
       <div className="flex my-6 gap-x-5">

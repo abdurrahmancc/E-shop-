@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import Features1 from "../components/features/Features1";
 import BottomHeader1 from "../components/headers/BottomHeader1";
 import MiddleHeader1 from "../components/headers/MiddleHeader1";
@@ -15,8 +14,15 @@ import SpecialSec from "../components/home/home1/specialSec/SpecialSec";
 import Newsletter1 from "../components/shared/newsletter/Newsletter1";
 import Footer1 from "../components/shared/footer/Footer1";
 import ScrollUpBtn from "../components/shared/ScrollUpBtn";
+import { GetStaticProps } from "next";
+import { productsData } from "../database/data";
+import { ProductModel } from "../types/types";
 
-export default function Home() {
+interface Products {
+  products: ProductModel[];
+}
+
+export default function Home({ products }: Products) {
   return (
     <>
       <Head>
@@ -50,7 +56,7 @@ export default function Home() {
         {/* ============= features end =========== */}
         {/* ============= Trending Products start =========== */}
         <section className="max-w-[1443px] mt-20 lg:mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
-          <TrendingProducts />
+          <TrendingProducts products={products} />
         </section>
         {/* ============= Trending Products end =========== */}
         {/* ============= card banner start =========== */}
@@ -60,7 +66,7 @@ export default function Home() {
         {/* ============= card banner end =========== */}
         {/* ============= Special Products start =========== */}
         <section className="max-w-[1443px] mt-20 lg:mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
-          <SpecialProducts />
+          <SpecialProducts products={products} />
         </section>
         {/* ============= Special Products end =========== */}
         {/* ============= Special Sec start =========== */}
@@ -70,7 +76,7 @@ export default function Home() {
         {/* ============= Special Sec end =========== */}
         {/* ============= Featured Products start =========== */}
         <section className="max-w-[1443px] mt-20 lg:mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
-          <FeaturedProducts />
+          <FeaturedProducts products={products} />
         </section>
         {/* ============= Featured Products end =========== */}
 
@@ -81,7 +87,7 @@ export default function Home() {
         {/* ============= newsletter end =========== */}
         {/* ============= Top Selling Products start =========== */}
         <section className="max-w-[1443px] mt-20 lg:mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
-          <TopSellingProducts />
+          <TopSellingProducts products={products} />
         </section>
         {/* ============= Top Selling Products end =========== */}
         {/* ======== scroll up button start ======= */}
@@ -94,3 +100,12 @@ export default function Home() {
     </>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  const products = productsData;
+  return {
+    props: {
+      products,
+    },
+  };
+};

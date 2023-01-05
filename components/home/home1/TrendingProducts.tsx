@@ -2,11 +2,19 @@ import React, { useState } from "react";
 import { BiArrowBack, BiArrowToRight } from "react-icons/bi";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { HiOutlineArrowRight } from "react-icons/hi2";
+import { ProductModel } from "../../../types/types";
 import ProductCard1 from "../../shared/cards/ProductCard1";
 import HomeFilter1 from "./HomeFilter1";
 
-const TrendingProducts = () => {
+interface Products {
+  products: ProductModel[];
+}
+
+const TrendingProducts = ({ products }: Products) => {
   const [activeProducts, setActiveProducts] = useState<string>("newProducts");
+
+  const productItems = products?.slice(0, 8);
+
   return (
     <>
       <div className="w-full">
@@ -72,14 +80,8 @@ const TrendingProducts = () => {
           {/*============= filter end ============*/}
           <div className="flex-grow">
             <div className="xs-responsive grid grid-cols-2 max-w-[550px] lg:max-w-full  mx-auto lg:grid-cols-3 xl:grid-cols-4 gap-y-[17px] gap-3 sm:gap-x-5 2xl:gap-x-[30px]">
-              <ProductCard1 />
-              <ProductCard1 />
-              <ProductCard1 />
-              <ProductCard1 />
-              <ProductCard1 />
-              <ProductCard1 />
-              <ProductCard1 />
-              <ProductCard1 />
+              {productItems &&
+                productItems.map((product) => <ProductCard1 key={product._id} product={product} />)}
             </div>
           </div>
         </div>

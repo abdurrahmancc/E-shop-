@@ -5,8 +5,6 @@ import MiddleHeader1 from "../../components/headers/MiddleHeader1";
 import TopHeader1 from "../../components/headers/TopHeader1";
 import Breadcrumb from "../../components/shared/breadcrumb/Breadcrumb";
 import { ProductModel } from "../../types/types";
-import { TbGridDots } from "react-icons/tb";
-import { VscThreeBars } from "react-icons/vsc";
 import Pagination from "../../components/shared/pagination/Pagination";
 import Footer1 from "../../components/shared/footer/Footer1";
 import ScrollUpBtn from "../../components/shared/ScrollUpBtn";

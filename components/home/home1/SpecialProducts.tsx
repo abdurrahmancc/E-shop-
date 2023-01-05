@@ -2,13 +2,16 @@ import Image from "next/image";
 import React from "react";
 import { HiOutlineArrowRight } from "react-icons/hi2";
 import ProductCard1 from "../../shared/cards/ProductCard1";
-import watch from "../../../assets/product-Image/product-3.png";
-import { BiGitCompare, BiSearch } from "react-icons/bi";
-import { AiOutlineHeart } from "react-icons/ai";
-import { Rating5 } from "../../shared/Ratings/Ratings";
 import SpecialProductCard from "../../shared/cards/SpecialProductCard1";
+import { ProductModel } from "../../../types/types";
 
-const SpecialProducts = () => {
+interface Products {
+  products: ProductModel[];
+}
+
+const SpecialProducts = ({ products }: Products) => {
+  const productItems = products?.slice(0, 6);
+
   return (
     <div className="flex lg:flex-row flex-col items-center lg:items-start gap-y-8 gap-x-5 2xl:gap-x-[30px]">
       <div className="2xl:w-[558px] lg:order-1 mt-5 lg:mt-0 order-2 xl:w-[420px] md:w-[558px] sm:w-[500px] max-h-[1017px] h-[1017px] bg-[#F8F8F8]">
@@ -35,12 +38,8 @@ const SpecialProducts = () => {
         <div className="mt-[50px]">
           <div className="flex-grow">
             <div className="grid xs-responsive grid-cols-2 md:grid-cols-3 lg:grid-cols-2 max-w-[550px] md:max-w-[834px] lg:max-w-[558px] xl:max-w-full  mx-auto xl:grid-cols-3 gap-y-[17px] gap-3 sm:gap-x-5 lg:gap-x-[30px]">
-              <ProductCard1 />
-              <ProductCard1 />
-              <ProductCard1 />
-              <ProductCard1 />
-              <ProductCard1 />
-              <ProductCard1 />
+              {productItems &&
+                productItems.map((product) => <ProductCard1 key={product._id} product={product} />)}
             </div>
           </div>
         </div>

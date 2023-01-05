@@ -3,16 +3,27 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { AiOutlineHeart } from "react-icons/ai";
 import { BiGitCompare, BiSearch } from "react-icons/bi";
+import { toast } from "react-toastify";
 import img1 from "../../../assets/product-Image/product-1.png";
 import img2 from "../../../assets/product-Image/product-2.png";
+import { useAppDispatch } from "../../../redux/app/reduxHooks";
+import { addToCart } from "../../../redux/features/shoppingCart/shoppingCartSlice";
+import { addToWishlist } from "../../../redux/features/wishlist/wishlistSlice";
 import { Rating5 } from "../Ratings/Ratings";
 
-interface ExtraStyle {
-  extraStyle?: string;
-}
-
-const ProductCard1 = ({ extraStyle }: ExtraStyle) => {
+const ProductCard1 = ({ product }: any) => {
   const [isHover, setIsHover] = useState<boolean>(false);
+  const dispatch = useAppDispatch();
+
+  const handleAddToCart = (id: string) => {
+    dispatch(addToCart(id));
+    toast.success("Add To cart", { autoClose: 1000 });
+  };
+
+  const handleAddToWishlist = (id: string) => {
+    dispatch(addToWishlist(id));
+    toast.success("Add To wishlist", { autoClose: 1000 });
+  };
 
   return (
     <div
@@ -22,11 +33,11 @@ const ProductCard1 = ({ extraStyle }: ExtraStyle) => {
     >
       <div className="border border-[#fff0] h-full ease-linear duration-300 transition-all  hover:border-primary">
         <div className="w-full overflow-hidden relative bg-[#F8F8F8] h-[298px] flex justify-center items-center">
-          <Link href={`/shop/product-details/${1}`} className={""}>
+          <Link href={`/shop/product-details/${product?._id}`} className={""}>
             <figure className="max-w-[212px] max-h-[212px] overflow-hidden">
               {isHover ? (
                 <Image
-                  src={img2}
+                  src={product?.img[1] || img2}
                   className={`transition-all duration-300 ease-linear scale-100 ${
                     isHover ? "scale-110" : ""
                   }`}
@@ -39,7 +50,7 @@ const ProductCard1 = ({ extraStyle }: ExtraStyle) => {
                   className={`transition-all duration-300 ease-linear scale-100 ${
                     isHover ? "scale-110" : ""
                   }`}
-                  src={img1}
+                  src={product?.img[0] || img1}
                   width={212}
                   height={212}
                   alt="product image"
@@ -52,7 +63,10 @@ const ProductCard1 = ({ extraStyle }: ExtraStyle) => {
               <li className="w-8 transition-all duration-300 ease-linear text-[#031424] hover:bg-primary hover:text-[#000000] rounded-full h-8 flex items-center justify-center border border-primary">
                 <BiSearch className="text-[16px] " />
               </li>
-              <li className="w-8 transition-all duration-300 ease-linear text-[#031424] hover:bg-primary hover:text-[#000000] rounded-full h-8 flex items-center justify-center border border-primary">
+              <li
+                onClick={() => handleAddToWishlist(product?._id)}
+                className="w-8 cursor-pointer transition-all duration-300 ease-linear text-[#031424] hover:bg-primary hover:text-[#000000] rounded-full h-8 flex items-center justify-center border border-primary"
+              >
                 <AiOutlineHeart className="text-[16px]" />
               </li>
               <li className="w-8 transition-all duration-300 ease-linear text-[#031424] hover:bg-primary hover:text-[#000000] rounded-full h-8 flex items-center justify-center border border-primary">
@@ -63,7 +77,9 @@ const ProductCard1 = ({ extraStyle }: ExtraStyle) => {
         </div>
         <div className="pt-5 px-[10px]">
           <h3 className="text-lg leading-[27px] text-center font-[600] text-info">
-            <Link href={`/shop/product-details/${1}`}>Apple Watch Series 6 A2292 (M00D3)</Link>
+            <Link href={`/shop/product-details/${product?._id}`}>
+              {product?.name ? product?.name : "Apple Watch Series 6 A2292 (M00D3)"}
+            </Link>
           </h3>
           <div className="relative mt-[5px]">
             <div className={`${isHover ? "scale-0" : "scale-100"}`}>
@@ -72,11 +88,11 @@ const ProductCard1 = ({ extraStyle }: ExtraStyle) => {
                   <Rating5 />
                 </div>
                 <span className="2xl:text-[16px] text-[14px] text-[#808080] font-[500]  leading-[24px]">
-                  (15 reviews)
+                  ( {product?.review ? product?.review : "34"} reviews)
                 </span>
               </div>
               <p className="text-[16px] mt-[5px] leading-6 font-[500] text-[#FD8D03] text-center">
-                $320.00
+                {product?.price ? `$${product?.price.toFixed(2)}` : "  $320.00"}
               </p>
             </div>
             <div
