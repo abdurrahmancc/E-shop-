@@ -34,7 +34,7 @@ const CartTable = ({ products }: Product) => {
         <Table className="w-full">
           <Thead className=" sm:border-b-2 sm:border-b-primary bg-[#F0F0F0]">
             <Tr className="text-[#424242]">
-              <Th className="font-[500] 2xl:w-[600px] xl:w-[470px] lg:w-[300px] md:w-[400px] sm:w-[330px] col-span-2 text-start py-[20px] pl-[27px] leading-[26px] xl:text-[20px] lg:text-lg text-[16px]">
+              <Th className="font-[500] 2xl:w-[540px] xl:w-[470px] lg:w-[300px] md:w-[400px] sm:w-[330px] col-span-2 text-start py-[20px] pl-[27px] leading-[26px] xl:text-[20px] lg:text-lg text-[16px]">
                 Product
               </Th>
               <Th className="font-[500] col-span-1 text-center py-[20px] leading-[28px] xl:text-[20px] lg:text-lg text-[16px]">

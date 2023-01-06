@@ -15,6 +15,7 @@ import { useRouter } from "next/router";
 import { useAppDispatch, useAppSelector } from "../../redux/app/reduxHooks";
 import { fetchWishlist } from "../../redux/features/wishlist/wishlistSlice";
 import { fetchCarts } from "../../redux/features/shoppingCart/shoppingCartSlice";
+import { fetchCompare } from "../../redux/features/compare/compareSlice";
 
 interface Option {
   value: string;
@@ -34,7 +35,7 @@ const options: Option[] = [
 const MiddleHeader1 = () => {
   const [selectedOption, setSelectedOption] = useState<Option | null>(null);
   const [toggle, setToggle] = useState<boolean>(false);
-  const { wishlist, cart } = useAppSelector((state) => state);
+  const { wishlist, cart, compare } = useAppSelector((state) => state);
   const dispatch = useAppDispatch();
   const router = useRouter();
   const {
@@ -46,6 +47,7 @@ const MiddleHeader1 = () => {
   useEffect(() => {
     dispatch(fetchWishlist());
     dispatch(fetchCarts());
+    dispatch(fetchCompare());
   }, [dispatch]);
 
   if (wishlist.isLoading || cart.isLoading) {
@@ -105,7 +107,7 @@ const MiddleHeader1 = () => {
             <li>
               <div className="flex items-center gap-2">
                 <div className="indicator">
-                  <Link href={"/wishlist"} className="  rounded-full" aria-label="shopping cart">
+                  <Link href={"/compare"} className="  rounded-full" aria-label="shopping cart">
                     <VscGitCompare
                       className={` ${
                         router?.pathname == "/home/home2" ? "text-[#424242]" : "text-[#FFFFFF]"
@@ -113,7 +115,7 @@ const MiddleHeader1 = () => {
                     />
                   </Link>
                   <div className="flex justify-center items-center p-1 h-[22px] w-[21px] rounded-full bg-primary  text-[#031424] cursor-pointer indicator-item top-1 right-1 text-[0.6875rem]">
-                    <span className="text-xs">{4}</span>
+                    <span className="text-xs">{compare?.compare.length}</span>
                   </div>
                 </div>
               </div>

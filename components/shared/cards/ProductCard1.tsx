@@ -7,6 +7,7 @@ import { toast } from "react-toastify";
 import img1 from "../../../assets/product-Image/product-1.png";
 import img2 from "../../../assets/product-Image/product-2.png";
 import { useAppDispatch } from "../../../redux/app/reduxHooks";
+import { addToCompare } from "../../../redux/features/compare/compareSlice";
 import { addToCart } from "../../../redux/features/shoppingCart/shoppingCartSlice";
 import { addToWishlist } from "../../../redux/features/wishlist/wishlistSlice";
 import { Rating5 } from "../Ratings/Ratings";
@@ -18,6 +19,10 @@ const ProductCard1 = ({ product }: any) => {
   const handleAddToCart = (id: string) => {
     dispatch(addToCart(id));
     toast.success("Add To cart", { autoClose: 1000 });
+  };
+  const handleAddToCompare = (id: string) => {
+    dispatch(addToCompare(id));
+    toast.success("Add To compare", { autoClose: 1000 });
   };
 
   const handleAddToWishlist = (id: string) => {
@@ -69,7 +74,10 @@ const ProductCard1 = ({ product }: any) => {
               >
                 <AiOutlineHeart className="text-[16px]" />
               </li>
-              <li className="w-8 transition-all duration-300 ease-linear text-[#031424] hover:bg-primary hover:text-[#000000] rounded-full h-8 flex items-center justify-center border border-primary">
+              <li
+                onClick={() => handleAddToCompare(product?._id)}
+                className="w-8 transition-all duration-300 ease-linear text-[#031424] hover:bg-primary hover:text-[#000000] rounded-full h-8 flex items-center justify-center border border-primary"
+              >
                 <BiGitCompare className="rotate-90 text-[16px]" />
               </li>
             </ul>
