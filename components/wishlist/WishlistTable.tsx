@@ -58,7 +58,7 @@ const WishlistTable = ({ products }: Product) => {
           </Tbody>
         </Table>
       )}
-      {wishlist.length ? (
+      {wishlist.length >= 1 ? (
         <div className="flex items-center justify-end gap-6 mt-5">
           <button className="lg:text-[18px] md:text-[15px] text-sm text-[#000000] leading-[30px] bg-primary w-[180px] h-[40px] md:w-[220px] md:h-[42px] xl:w-[243px] xl:h-[50px] rounded-[8px]">
             Add Selected to cart

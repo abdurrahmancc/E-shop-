@@ -99,7 +99,10 @@ const ProductCard1 = ({ product }: any) => {
               className={`absolute bottomToTop w-full
              mx-auto ${isHover ? "bottomToTopAnimate" : ""} `}
             >
-              <button className="text-[#000000] flex justify-center items-center h-[42px] rounded-[32px] mx-auto max-w-[158px] w-full bg-gradient-to-r from-[#f9c536] to-[#f9c536] btn-animate  bg-primary text-[16px] leading-[24px] ">
+              <button
+                onClick={() => handleAddToCart(product?._id)}
+                className="text-[#000000] flex justify-center items-center h-[42px] rounded-[32px] mx-auto max-w-[158px] w-full bg-gradient-to-r from-[#f9c536] to-[#f9c536] btn-animate  bg-primary text-[16px] leading-[24px] "
+              >
                 Add to cart
               </button>
             </div>

@@ -129,7 +129,7 @@ const MiddleHeader1 = () => {
                     />
                   </Link>
                   <div className="flex justify-center items-center p-1 h-[22px] w-[21px] rounded-full bg-primary  text-[#031424] cursor-pointer indicator-item top-1 right-1 text-[0.6875rem]">
-                    <span className="text-xs">{4}</span>
+                    <span className="text-xs">{wishlist?.wishlist.length}</span>
                   </div>
                 </div>
               </div>
@@ -137,11 +137,7 @@ const MiddleHeader1 = () => {
             <li>
               <div className="flex items-center gap-[18px]">
                 <div className="indicator">
-                  <Link
-                    href={"/shoppingCart"}
-                    className="  rounded-full"
-                    aria-label="shopping cart"
-                  >
+                  <Link href={"/cart"} className="rounded-full" aria-label="shopping cart">
                     <HiOutlineShoppingBag
                       className={` ${
                         router?.pathname == "/home/home2" ? "text-[#424242]" : "text-[#FFFFFF]"
@@ -149,7 +145,7 @@ const MiddleHeader1 = () => {
                     />
                   </Link>
                   <div className="flex justify-center items-center p-1 h-[22px] w-[21px] rounded-full bg-primary  text-[#031424] cursor-pointer indicator-item top-1 right-1 text-[0.6875rem]">
-                    <span className="text-xs">{4}</span>
+                    <span className="text-xs">{cart?.carts.length}</span>
                   </div>
                 </div>
                 <div className="flex flex-col">
