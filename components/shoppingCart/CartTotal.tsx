@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import payment_img from "../../assets/icons/payment-method.png";
 
@@ -9,6 +10,7 @@ type TotalPriceModel = {
 
 const CartTotal = ({ totalPrice, prices }: TotalPriceModel) => {
   const [isChecked, setIsChecked] = useState<boolean>(false);
+  const router = useRouter();
 
   let Shipping = 15;
   Shipping = prices.length * Shipping;
@@ -84,7 +86,8 @@ const CartTotal = ({ totalPrice, prices }: TotalPriceModel) => {
           <div className="mt-5">
             <button
               disabled={!isChecked}
-              className="disabled:bg-primary font-[500] disabled:opacity-80 rounded-[8px] btn-animate text-[20px] capitalize leading-[30px] bg-primary h-16 w-full text-[#031424]"
+              onClick={() => router.push("/checkout")}
+              className="disabled:bg-primary disabled:cursor-not-allowed font-[500] disabled:opacity-80 rounded-[8px] btn-animate text-[20px] capitalize leading-[30px] bg-primary h-16 w-full text-[#031424]"
             >
               proceed to checkout
             </button>

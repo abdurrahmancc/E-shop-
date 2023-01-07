@@ -41,7 +41,6 @@ const CartPage = ({ products }: Products) => {
           }
         });
       });
-
     setsCart(result);
   }, [products, cart.carts, cart.shoppingCartQuantity]);
 

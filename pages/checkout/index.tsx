@@ -4,44 +4,58 @@ import BottomHeader1 from "../../components/headers/BottomHeader1";
 import MiddleHeader1 from "../../components/headers/MiddleHeader1";
 import TopHeader1 from "../../components/headers/TopHeader1";
 import Breadcrumb from "../../components/shared/breadcrumb/Breadcrumb";
-import { ProductModel } from "../../types/types";
 import Footer1 from "../../components/shared/footer/Footer1";
 import ScrollUpBtn from "../../components/shared/ScrollUpBtn";
 import Newsletter4 from "../../components/shared/newsletter/Newsletter4";
+import { useForm } from "react-hook-form";
+import BillingDetailsForm from "../../components/checkout/BillingDetailsForm";
+import CheckoutTable from "../../components/checkout/CheckoutTable";
+import { useRouter } from "next/router";
+import { useAppSelector } from "../../redux/app/reduxHooks";
 import { GetStaticProps } from "next";
 import { productsData } from "../../database/data";
-import CompareTable from "../../components/compare/CompareTable";
-import { useAppSelector } from "../../redux/app/reduxHooks";
+import { ProductModel } from "../../types/types";
 
 const breadcrumbData = [
   { label: "home", value: "/" },
-  { label: "compare", value: "/compare" },
+  { label: "cart", value: "/cart" },
+  { label: "checkout", value: "/checkout" },
 ];
+
+type FromData = {
+  searchItems: string;
+};
 
 interface Products {
   products: ProductModel[];
 }
 
-const ComparePage = ({ products }: Products) => {
-  const { compare: keys } = useAppSelector((state) => state);
-  const [compare, setCompare] = useState<ProductModel[]>([]);
+const CheckoutPage = ({ products }: Products) => {
+  const { cart } = useAppSelector((state) => state);
+  const [items, setItems] = useState<ProductModel[]>([]);
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FromData>();
 
   useEffect(() => {
     let result: ProductModel[] = [];
     products &&
       products.forEach((product: ProductModel) => {
-        keys.compare.filter((key: any) => {
+        cart.carts.filter((key: string) => {
+          let quantity: any = cart.shoppingCartQuantity;
           if (product._id == key) {
+            product.quantity = quantity[key];
             result.push(product);
           }
         });
       });
-    setCompare(result);
-  }, [products, keys]);
+    setItems(result);
+  }, [products, cart.carts, cart.shoppingCartQuantity]);
 
-  if (compare?.length > 4) {
-    compare.length = 4;
-  }
+  const onSubmit = handleSubmit((data) => console.log(data));
 
   return (
     <>
@@ -67,21 +81,26 @@ const ComparePage = ({ products }: Products) => {
       </header>
       <main>
         <section className="max-w-[1443px] mt-10 lg:mt-20 container w-full mx-auto px-4 lg:px-10 2xl:px-0">
-          {compare?.length >= 1 ? (
-            <CompareTable compare={compare} />
-          ) : (
-            <div className="min-h-[calc(100vh-820px)] h-[60vh] flex flex-col justify-center gap-y-10 items-center">
-              <h4 className="md:text-4xl text-xl font-bold">
-                There are 0 products in your compare
-              </h4>
-              <button
-                onClick={() => window.history.back()}
-                className="text-[#000000] duration-300 transition-all ease-in-out flex items-center gap-3 bg-gradient-to-r from-[#f9c536] to-[#f9c536] btn-animate  bg-primary rounded-full font-[500] uppercase py-4 mx-auto text-center text-lg px-8"
-              >
-                Return to back
-              </button>
+          <form onSubmit={onSubmit}>
+            <div className="flex md:flex-row flex-col gap-y-10 gap-[30px]">
+              <div className="max-w-[950px] w-full">
+                <h3 className="bg-[#F0F0F0] text-[20px] text-center leading-[30px] font-[500] pl-5 py-[18px] text-[#262626]">
+                  Billing Address
+                </h3>
+                <div className="mt-[30px]">
+                  <BillingDetailsForm register={register} errors={errors} />
+                </div>
+              </div>
+              <div className="md:max-w-[460px] w-full">
+                <h3 className="bg-[#F0F0F0] text-[20px] text-center leading-[30px] font-[500] pl-5 py-[18px] text-[#262626]">
+                  Your Order
+                </h3>
+                <div className="mt-[30px]">
+                  <CheckoutTable cartProducts={items} onSubmit={onSubmit} />
+                </div>
+              </div>
             </div>
-          )}
+          </form>
         </section>
 
         <section className="mt-20 lg:mt-[120px]">
@@ -98,7 +117,7 @@ const ComparePage = ({ products }: Products) => {
   );
 };
 
-export default ComparePage;
+export default CheckoutPage;
 
 export const getStaticProps: GetStaticProps = async () => {
   const products = productsData;
