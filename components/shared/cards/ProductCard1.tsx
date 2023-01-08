@@ -10,6 +10,7 @@ import { useAppDispatch } from "../../../redux/app/reduxHooks";
 import { addToCompare } from "../../../redux/features/compare/compareSlice";
 import { addToCart } from "../../../redux/features/shoppingCart/shoppingCartSlice";
 import { addToWishlist } from "../../../redux/features/wishlist/wishlistSlice";
+import QuickView from "../../modals/QuickView";
 import { Rating5 } from "../Ratings/Ratings";
 
 const ProductCard1 = ({ product }: any) => {
@@ -66,7 +67,9 @@ const ProductCard1 = ({ product }: any) => {
           <div className={`absolute bottomToTop ${isHover ? "bottomToTopAnimate" : ""} `}>
             <ul className="flex gap-[10px] items-center">
               <li className="w-8 transition-all duration-300 ease-linear text-[#031424] hover:bg-primary hover:text-[#000000] rounded-full h-8 flex items-center justify-center border border-primary">
-                <BiSearch className="text-[16px] " />
+                <label htmlFor="quick-view">
+                  <BiSearch className="text-[16px] " />
+                </label>
               </li>
               <li
                 onClick={() => handleAddToWishlist(product?._id)}
@@ -117,6 +120,7 @@ const ProductCard1 = ({ product }: any) => {
           </div>
         </div>
       </div>
+      <QuickView product={product} />
     </div>
   );
 };

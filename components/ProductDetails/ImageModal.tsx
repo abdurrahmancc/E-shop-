@@ -16,7 +16,9 @@ const ImageModal = ({ images, selectImage }: Props) => {
           <div className="relative mx-auto">
             <div className="w-full h-full">
               <figure>
-                <Image src={images[selectImage]} height={600} width={600} alt="product image" />
+                {images && (
+                  <Image src={images[selectImage]} height={600} width={600} alt="product image" />
+                )}
               </figure>
             </div>
           </div>
