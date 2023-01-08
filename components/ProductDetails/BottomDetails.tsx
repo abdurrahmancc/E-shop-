@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import { ProductModel } from "../../types/types";
 import ProductDescription from "./ProductDescription";
 import ProductSpecification from "./ProductSpecification";
+import Reviews from "./Reviews";
 
 interface Product {
   product: ProductModel;
 }
 
 const BottomDetails = ({ product }: Product) => {
-  const [isActive, setIsActive] = useState<string>("description");
+  const [isActive, setIsActive] = useState<string>("specification");
 
   return (
     <div>
@@ -16,7 +17,7 @@ const BottomDetails = ({ product }: Product) => {
         <ul className="flex items-center gap-7 border-b border-[#AEAEAE]">
           <li
             onClick={() => setIsActive("description")}
-            className={` text-[20px] border-b-[5px] cursor-pointer pb-[12px] leading-8 font-[500] ${
+            className={` lg:text-[20px] sm:text-[18px] text-[16px] border-b-[5px] cursor-pointer pb-[12px] leading-8 font-[500] ${
               isActive == "description"
                 ? "text-info border-primary"
                 : "text-[#031424] border-[#ffffff00]"
@@ -26,7 +27,7 @@ const BottomDetails = ({ product }: Product) => {
           </li>
           <li
             onClick={() => setIsActive("specification")}
-            className={` text-[20px] border-b-[5px] cursor-pointer pb-[12px] leading-8 font-[500] ${
+            className={` lg:text-[20px] sm:text-[18px] text-[16px] border-b-[5px] cursor-pointer pb-[12px] leading-8 font-[500] ${
               isActive == "specification"
                 ? "text-info border-primary"
                 : "text-[#031424] border-[#ffffff00]"
@@ -36,23 +37,13 @@ const BottomDetails = ({ product }: Product) => {
           </li>
           <li
             onClick={() => setIsActive("reviews")}
-            className={` text-[20px] border-b-[5px] cursor-pointer pb-[12px] leading-8 font-[500] ${
+            className={` lg:text-[20px] sm:text-[18px] text-[16px] border-b-[5px] cursor-pointer pb-[12px] leading-8 font-[500] ${
               isActive == "reviews"
                 ? "text-info border-primary"
                 : "text-[#031424] border-[#ffffff00]"
             }`}
           >
             Reviews (12)
-          </li>
-          <li
-            onClick={() => setIsActive("askQuestion")}
-            className={` text-[20px] border-b-[5px] cursor-pointer pb-[12px] leading-8 font-[500] ${
-              isActive == "askQuestion"
-                ? "text-info border-primary"
-                : "text-[#031424] border-[#ffffff00]"
-            }`}
-          >
-            Ask Question
           </li>
         </ul>
       </div>
@@ -61,6 +52,7 @@ const BottomDetails = ({ product }: Product) => {
         {isActive == "specification" && (
           <ProductSpecification SpecificationInfo={product?.Specification} />
         )}
+        {isActive == "reviews" && <Reviews />}
       </div>
     </div>
   );

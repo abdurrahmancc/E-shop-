@@ -8,8 +8,12 @@ interface Product {
 const ProductDescription = ({ product }: Product) => {
   return (
     <div>
-      <h5 className="text-[#031424] leading-[30px] font-[500] text-[20px]">{product?.fullName}</h5>
-      <p className="text-[16px] leading-8 mt-4 text-[#424242]">{product?.description}</p>
+      <h5 className="text-[#031424] leading-[30px] font-[500] lg:text-[20px] sm:text-[18px] text-[16px]">
+        {product?.fullName}
+      </h5>
+      <p className="lg:text-[16px] text-sm lg:leading-8 leading-7 mt-4 text-[#424242]">
+        {product?.description}
+      </p>
     </div>
   );
 };
