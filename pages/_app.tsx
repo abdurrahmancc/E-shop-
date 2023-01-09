@@ -11,6 +11,7 @@ import "../styles/selectComponents.css";
 import "../styles/swiperSlider.css";
 import "../styles/home.css";
 import "../styles/pagination.css";
+import "../styles/about.css";
 import "../styles/shop.css";
 import { Provider } from "react-redux";
 import { store } from "../redux/app/store";

@@ -95,4 +95,33 @@
   }
   /* ================ #smart-banner-swiper-slider ================ */
 
+  /* =============== happy-client-slider start ============= */
+  #happy-client-slider .swiper-pagination-bullet {
+    height: 8px;
+    width: 8px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    opacity: 100%;
+    border-radius: 50%;
+    background: #D9D9D9;
+  }
+
+  #happy-client-slider .swiper-pagination-bullets{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   
+  #happy-client-slider .swiper-pagination-bullet-active {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background: #FCB700;
+  }
+
+  #happy-client-slider .swiper-pagination-bullets  {
+    bottom: 0; 
+  }
+
+  /* =============== happy-client-slider end ============= */

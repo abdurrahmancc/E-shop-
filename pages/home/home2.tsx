@@ -1,7 +1,7 @@
 import Head from "next/head";
 import React from "react";
 import CardBanner2 from "../../components/Banner/CardBanner2";
-import SmartBanner3 from "../../components/Banner/SmartBanner2";
+import SmartBanner2 from "../../components/Banner/SmartBanner2";
 import SmartBannerSlider from "../../components/Banner/SmartBannerSlider";
 import TopBannerSlider2 from "../../components/Banner/TopBannerSlider2";
 import TopCardBanner from "../../components/Banner/TopCardBanner";
@@ -85,7 +85,7 @@ const Home2 = () => {
         {/* ============= Top Trending Recently Group Sec end =========== */}
         {/* ============= smart banner start =========== */}
         <section className="max-w-[1443px] mt-20 lg:mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
-          <SmartBanner3 />
+          <SmartBanner2 />
         </section>
         {/* ============= smart banner end =========== */}
         {/* ============= Featured Products start =========== */}

@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { CiDiscount1 } from "react-icons/ci";
 import { FaUser } from "react-icons/fa";
+import LoginSlider from "../modals/login/LoginSlider";
 import NavContent from "./NavContent";
 
 const BottomHeader3 = () => {
@@ -14,8 +15,18 @@ const BottomHeader3 = () => {
             <div className="flex gap-2 items-center">
               <FaUser className="w-[14px] h-[14px] text-primary" />
               <div className="flex items-center text-neutral gap-1">
-                <button className="text-[16px] leading-6 text-neutral">Login</button> /{" "}
-                <button className="text-[16px] leading-6 text-neutral">Register</button>
+                <button className="text-[16px]  leading-6 text-neutral">
+                  <label htmlFor="signUp" className="cursor-pointer">
+                    Login
+                  </label>
+                </button>{" "}
+                /{" "}
+                <button className="text-[16px] cursor-pointer leading-6 text-neutral">
+                  {" "}
+                  <label htmlFor="signUp" className="cursor-pointer">
+                    Register
+                  </label>
+                </button>
               </div>
             </div>
             <div className="w-[1px] h-[30px] bg-[rgba(255,255,255,0.24)]"></div>
@@ -28,6 +39,7 @@ const BottomHeader3 = () => {
           </div>
         </div>
       </div>
+      <LoginSlider />
     </div>
   );
 };
