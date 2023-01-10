@@ -1,4 +1,6 @@
-import { CategoryItemsTypes, ProductModel } from "../types/types";
+import { CategoryItemsTypes, ProductModel, BlogsModel } from "../types/types";
+import blog1 from "../assets/blogs/blog-1.png";
+import blog2 from "../assets/blogs/blog-2.png";
 
 export const categories: CategoryItemsTypes[] = [
   {
@@ -1032,5 +1034,35 @@ export const productsData: ProductModel[] = [
     ],
     updatedAt: "2022-12-08T13:09:29.764Z",
     createdAt: "2022-12-08T13:09:29.764Z",
+  },
+];
+
+export const blogsData: BlogsModel[] = [
+  {
+    _id: "1",
+    title: "What is Compliance Testing?",
+    img: blog1,
+    category: "development",
+    tags: ["development", "Enterprise", "startups"],
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ipsum vitae debitis, quam, dolore eligendi molestiae amet quasi quas quos vero odio. Ipsam commodi similique natus, corporis est dicta quae in non blanditiis velit consectetur deserunt. Lorem ipsum dolor sit amet consectetur adipisicing elit",
+  },
+  {
+    _id: "2",
+    title: "What is Compliance Testing?",
+    img: blog2,
+    category: "development",
+    tags: ["development", "Enterprise", "startups"],
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ipsum vitae debitis, quam, dolore eligendi molestiae amet quasi quas quos vero odio. Ipsam commodi similique natus, corporis est dicta quae in non blanditiis velit consectetur deserunt. Lorem ipsum dolor sit amet consectetur adipisicing elit",
+  },
+  {
+    _id: "3",
+    title: "What is Compliance Testing?",
+    img: blog2,
+    category: "development",
+    tags: ["development", "Enterprise", "startups"],
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ipsum vitae debitis, quam, dolore eligendi molestiae amet quasi quas quos vero odio. Ipsam commodi similique natus, corporis est dicta quae in non blanditiis velit consectetur deserunt. Lorem ipsum dolor sit amet consectetur adipisicing elit",
   },
 ];

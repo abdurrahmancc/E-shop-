@@ -33,3 +33,12 @@ export interface ProductModel {
   shortFeatures: string[]
   Specification: any[]
 }
+
+export interface BlogsModel {
+  _id: String
+  title: String
+  category: String
+  img: any
+  tags: String[]
+  description: String
+}

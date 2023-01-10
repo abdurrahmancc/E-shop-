@@ -7,14 +7,11 @@ import Breadcrumb from "../../components/shared/breadcrumb/Breadcrumb";
 import Footer1 from "../../components/shared/footer/Footer1";
 import ScrollUpBtn from "../../components/shared/ScrollUpBtn";
 import Newsletter4 from "../../components/shared/newsletter/Newsletter4";
-import { GetStaticProps } from "next";
-import { productsData } from "../../database/data";
-import Blogs from "../../components/blogs/blogs1/Blogs";
 import Blogs2 from "../../components/blogs/blogs2/Blogs2";
 
 const breadcrumbData = [
   { label: "home", value: "/" },
-  { label: "Blogs", value: "/blogs" },
+  { label: "Blogs2", value: "/blogs" },
 ];
 
 const BlogsPage2 = () => {
@@ -60,12 +57,3 @@ const BlogsPage2 = () => {
 };
 
 export default BlogsPage2;
-
-export const getStaticProps: GetStaticProps = async () => {
-  const products = productsData;
-  return {
-    props: {
-      products,
-    },
-  };
-};

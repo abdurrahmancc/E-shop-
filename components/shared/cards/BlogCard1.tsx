@@ -1,22 +1,13 @@
 import React from "react";
-import { FC } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { CiUser } from "react-icons/ci";
 import { CgCalendarDates } from "react-icons/cg";
 import { TiMessages } from "react-icons/ti";
-
-interface Blogs {
-  _id: String;
-  title: String;
-  description: String;
-  category: String;
-  img: any;
-  tags: String[];
-}
+import { BlogsModel } from "../../../types/types";
 
 interface BlogModel {
-  blog: Blogs;
+  blog: BlogsModel;
 }
 
 const BlogCard1 = ({ blog }: BlogModel) => {
@@ -58,7 +49,7 @@ const BlogCard1 = ({ blog }: BlogModel) => {
         <div className="card-actions justify-start pt-5">
           {" "}
           <Link
-            href={`/blog-details/${blog?._id}`}
+            href={`/blogs/${blog?._id}`}
             className="capitalize leading-6 font-[500] text-[16px] text-info"
           >
             read more...

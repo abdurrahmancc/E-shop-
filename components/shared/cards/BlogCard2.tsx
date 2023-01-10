@@ -2,7 +2,6 @@ import Image from "next/image";
 import React from "react";
 import { CgCalendarDates } from "react-icons/cg";
 import { CiUser } from "react-icons/ci";
-import { HiOutlineUser } from "react-icons/hi2";
 import { TiMessages } from "react-icons/ti";
 import blog1 from "../../../assets/blogs/blogs-2.1.png";
 

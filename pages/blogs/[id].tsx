@@ -7,14 +7,24 @@ import Breadcrumb from "../../components/shared/breadcrumb/Breadcrumb";
 import Footer1 from "../../components/shared/footer/Footer1";
 import ScrollUpBtn from "../../components/shared/ScrollUpBtn";
 import Newsletter4 from "../../components/shared/newsletter/Newsletter4";
+import { GetStaticPaths, GetStaticProps } from "next";
+import { blogsData, productsData } from "../../database/data";
 import Blogs from "../../components/blogs/blogs1/Blogs";
+import Blogs2 from "../../components/blogs/blogs2/Blogs2";
+import { BlogsModel } from "../../types/types";
+import BlogDetails from "../../components/blogs/blogsDetails/BlogDetails";
 
 const breadcrumbData = [
   { label: "home", value: "/" },
-  { label: "Blogs1", value: "/blogs" },
+  { label: "Blog", value: "/blogs/blogs2" },
+  { label: "Blog details", value: "/blogs" },
 ];
 
-const BlogsPage1 = () => {
+type BlogType = {
+  blog: BlogsModel;
+};
+
+const BlogsPage2 = ({ blog }: BlogType) => {
   return (
     <>
       <Head>
@@ -39,7 +49,7 @@ const BlogsPage1 = () => {
       </header>
       <main>
         <section className="max-w-[1443px] mt-20 lg:mt-[124px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
-          <Blogs />
+          <BlogDetails blog={blog} />
         </section>
 
         <section className="mt-20 lg:mt-[120px]">
@@ -56,4 +66,28 @@ const BlogsPage1 = () => {
   );
 };
 
-export default BlogsPage1;
+export default BlogsPage2;
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const blogs = blogsData;
+  const paths = blogs.map((blog: any) => ({
+    params: {
+      id: blog._id,
+    },
+  }));
+  return {
+    paths,
+    fallback: false,
+  };
+};
+
+export const getStaticProps: GetStaticProps = async ({ params }: any) => {
+  const { id } = params;
+  const blogs = blogsData;
+  const blog = blogs.find((prod) => prod?._id === id);
+  return {
+    props: {
+      blog,
+    },
+  };
+};

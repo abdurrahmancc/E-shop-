@@ -1,48 +1,8 @@
 import React, { useState } from "react";
-import blog1 from "../../../assets/blogs/blog-1.png";
-import blog2 from "../../../assets/blogs/blog-2.png";
+import { blogsData } from "../../../database/data";
 import BlogCard1 from "../../shared/cards/BlogCard1";
 import Pagination from "../../shared/pagination/Pagination";
 import BlogSidebar from "../BlogSidebar";
-
-interface Blogs {
-  _id: String;
-  title: String;
-  category: String;
-  img: any;
-  tags: String[];
-  description: String;
-}
-
-const blogs: Blogs[] = [
-  {
-    _id: "1",
-    title: "What is Compliance Testing?",
-    img: blog1,
-    category: "development",
-    tags: ["development", "Enterprise", "startups"],
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ipsum vitae debitis, quam, dolore eligendi molestiae amet quasi quas quos vero odio. Ipsam commodi similique natus, corporis est dicta quae in non blanditiis velit consectetur deserunt. Lorem ipsum dolor sit amet consectetur adipisicing elit",
-  },
-  {
-    _id: "2",
-    title: "What is Compliance Testing?",
-    img: blog2,
-    category: "development",
-    tags: ["development", "Enterprise", "startups"],
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ipsum vitae debitis, quam, dolore eligendi molestiae amet quasi quas quos vero odio. Ipsam commodi similique natus, corporis est dicta quae in non blanditiis velit consectetur deserunt. Lorem ipsum dolor sit amet consectetur adipisicing elit",
-  },
-  {
-    _id: "3",
-    title: "What is Compliance Testing?",
-    img: blog2,
-    category: "development",
-    tags: ["development", "Enterprise", "startups"],
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ipsum vitae debitis, quam, dolore eligendi molestiae amet quasi quas quos vero odio. Ipsam commodi similique natus, corporis est dicta quae in non blanditiis velit consectetur deserunt. Lorem ipsum dolor sit amet consectetur adipisicing elit",
-  },
-];
 
 const Blogs = () => {
   const [page, setPage] = useState<number>(4);
@@ -111,7 +71,7 @@ const Blogs = () => {
       <div className="flex mt-[50px] flex-col sm:flex-row gap-x-[30px] gap-y-[50px]">
         <div className="max-w-[1146px]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-[35px] gap-[30px]">
-            {blogs.map((blog, i) => {
+            {blogsData.map((blog, i) => {
               return <BlogCard1 key={i} blog={blog} />;
             })}
           </div>
