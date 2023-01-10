@@ -1,14 +1,19 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 import React from "react";
-import img from "../../assets/banner/full-width-banner-2.png";
+import img1 from "../../assets/banner/full-width-banner-2.png";
+import img2 from "../../assets/banner/full-width-banner-2-2.png";
 const { Fade } = require("react-reveal");
 
 const SmartBanner2 = () => {
+  const { pathname } = useRouter();
+  const isAboutPage = pathname.includes("about");
+
   return (
     <div className="relative">
       <Image
-        src={img}
-        width={1438}
+        src={isAboutPage ? img1 : img2}
+        width={isAboutPage ? 1922 : 1438}
         height={262}
         className=" min-h-[170px] md:min-h-[230px]"
         alt="discount banner"

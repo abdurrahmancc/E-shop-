@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { BiArrowBack, BiArrowToRight } from "react-icons/bi";
-import { HiArrowNarrowRight } from "react-icons/hi";
 import { HiOutlineArrowRight } from "react-icons/hi2";
 import { ProductModel } from "../../../types/types";
 import ProductCard1 from "../../shared/cards/ProductCard1";

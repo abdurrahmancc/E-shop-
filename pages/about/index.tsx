@@ -8,10 +8,16 @@ import Features3 from "../../components/features/Features3";
 import BottomHeader1 from "../../components/headers/BottomHeader1";
 import MiddleHeader1 from "../../components/headers/MiddleHeader1";
 import TopHeader1 from "../../components/headers/TopHeader1";
+import Breadcrumb from "../../components/shared/breadcrumb/Breadcrumb";
 import Footer1 from "../../components/shared/footer/Footer1";
 import Newsletter1 from "../../components/shared/newsletter/Newsletter1";
 import Newsletter4 from "../../components/shared/newsletter/Newsletter4";
 import ScrollUpBtn from "../../components/shared/ScrollUpBtn";
+
+const breadcrumbData = [
+  { label: "home", value: "/" },
+  { label: "About", value: "/about" },
+];
 
 const AboutPage = () => {
   return (
@@ -32,6 +38,9 @@ const AboutPage = () => {
             {/* ============= top header end ============== */}
           </div>
         </div>
+        {/* =========== breadcrumb start ======== */}
+        <Breadcrumb breadcrumbData={breadcrumbData} />
+        {/* =========== breadcrumb end ======== */}
       </header>
       <main>
         {/* ============= Who We Are start =========== */}
@@ -53,7 +62,7 @@ const AboutPage = () => {
         </section>
         {/* ============= Our Clients end =========== */}
         {/* ============= smart banner start =========== */}
-        <section className="max-w-[1443px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
+        <section className="w-full">
           <SmartBanner2 />
         </section>
         {/* ============= smart banner end =========== */}

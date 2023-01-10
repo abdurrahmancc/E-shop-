@@ -2,6 +2,7 @@ import React from "react";
 import OurTeamCard from "../shared/cards/OurTeamCard";
 
 const OurTeam = () => {
+  const users: number[] = [0, 1, 2, 3, 4];
   return (
     <div className="">
       <div className="flex items-center justify-center gap-[11px]">
@@ -21,11 +22,9 @@ const OurTeam = () => {
       </p>
       <div className="mt-[60px]">
         <div className="grid grid-cols-2 gap-y-8 md:grid-cols-3 justify-center lg:grid-cols-5 mx-auto gap-5 xl:gap-[30px] sm:max-w-[548px] md:max-w-[832px] lg:max-w-full">
-          <OurTeamCard />
-          <OurTeamCard />
-          <OurTeamCard />
-          <OurTeamCard />
-          <OurTeamCard />
+          {users.map((user, i) => (
+            <OurTeamCard key={i} user={user} />
+          ))}
         </div>
       </div>
     </div>
