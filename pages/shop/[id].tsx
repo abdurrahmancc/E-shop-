@@ -15,6 +15,7 @@ import ShopVertical from "../../components/shop/ShopVertical";
 import ShopBanner1 from "../../components/shop/ShopBanner1";
 import ShopTopFilter from "../../components/shop/ShopTopFilter";
 import { useRouter } from "next/router";
+import Header1 from "../../components/headers/Header1";
 
 interface ProductTypes {
   product: ProductModel;
@@ -41,15 +42,7 @@ const Shop = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header>
-        <div className="bg-[#041E42]">
-          <div className="max-w-[1443px] w-full mx-auto container px-4 lg:px-10 2xl:px-0">
-            {/* ============= top header start ============== */}
-            <TopHeader1 />
-            <MiddleHeader1 />
-            <BottomHeader1 />
-            {/* ============= top header end ============== */}
-          </div>
-        </div>
+        <Header1 />
         {/* =========== breadcrumb start ======== */}
         <Breadcrumb breadcrumbData={breadcrumbData} />
         {/* =========== breadcrumb end ======== */}

@@ -1,10 +1,7 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { CgSearch } from "react-icons/cg";
-import img1 from "../../assets/product-Image/product-2.png";
-import img2 from "../../assets/product-Image/product-3.png";
-import img3 from "../../assets/product-Image/product-4.png";
 import { ProductModel } from "../../types/types";
 import ImageModal from "./ImageModal";
 
@@ -18,9 +15,9 @@ const ProductImage = ({ product }: Product) => {
   const isDetailsPage = router.pathname.includes("product-details");
 
   return (
-    <div className="">
+    <div id="product-details-images">
       <div
-        className={`mx-auto relative flex justify-center items-center bg-[#F8F8F8] ${
+        className={`mx-auto relative display-image-frame flex justify-center items-center bg-[#F8F8F8] ${
           isDetailsPage
             ? "xl:w-[612px] w-[420px] xl:h-[572px] h-[360px]"
             : "2xl:w-[535.18px] xl:w-[380px] 2xl:h-[500.2px] xl:h-[360px]"
@@ -34,7 +31,7 @@ const ProductImage = ({ product }: Product) => {
             alt="product image"
             className={`${
               isDetailsPage
-                ? "max-w-[376px] max-h-[376]"
+                ? "max-w-[376px] display-image max-h-[376]"
                 : "2xl:max-w-[328px] 2xl:max-h-[328px] xl:max-w-[300px] xl:max-h-[300px]"
             }`}
           />
@@ -50,7 +47,7 @@ const ProductImage = ({ product }: Product) => {
         )}
       </div>
       <div
-        className={`flex mx-auto justify-between xl:mt-5 mt-3 ${
+        className={`flex product-details-images mx-auto justify-between xl:mt-5 mt-3 ${
           isDetailsPage ? "xl:w-[612px] w-[420px]" : "2xl:w-[535.18px] xl:w-[380px] mx-auto"
         }`}
       >

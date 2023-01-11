@@ -52,4 +52,29 @@
     align-items: center;
     justify-content: center;
   }
+
+
+
+  @media only screen and (max-width: 500px) {
+
+  }
+  
+  @media only screen and (max-width: 450px) {
+  
+  }
+  
+  @media only screen and (max-width: 400px) {
+  
+  }
+  
+  @media only screen and (max-width: 350px) {
+  
+  }
+  
+  
+  @media only screen and (max-width: 1120px) {
+  #bottom-Header-2 .is-hidden{
+    display: none;
+  }
+  }
  

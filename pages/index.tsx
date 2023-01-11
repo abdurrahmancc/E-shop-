@@ -13,6 +13,7 @@ import { GetStaticProps } from "next";
 import { productsData } from "../database/data";
 import { ProductModel } from "../types/types";
 import Header1 from "../components/headers/Header1";
+import TopCategoriesBanner1 from "../components/home/home1/TopCategoriesBanner1";
 
 interface Products {
   products: ProductModel[];
@@ -29,6 +30,7 @@ export default function Home({ products }: Products) {
       </Head>
       <header>
         <Header1 />
+        <TopCategoriesBanner1 />
       </header>
       <main className="pt-10 lg:pt-[50px]">
         {/* ============= features start =========== */}

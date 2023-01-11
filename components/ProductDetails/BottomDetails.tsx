@@ -12,7 +12,7 @@ const BottomDetails = ({ product }: Product) => {
   const [isActive, setIsActive] = useState<string>("specification");
 
   return (
-    <div>
+    <div id="product-Bottom-Details">
       <div className="bg-[#ffffff] p-5">
         <ul className="flex items-center gap-7 border-b border-[#AEAEAE]">
           <li

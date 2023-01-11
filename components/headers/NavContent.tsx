@@ -138,22 +138,7 @@ const NavContent: FC<PropsWithChildren<Props>> = ({ children: textColor }) => {
             </span>
           </Link>
         </li>
-        <li className="flex hover:bg-inherit gap-[10px] items-center">
-          <Link
-            href={"/blogs"}
-            className={`focus:bg-inherit p-0 hover:bg-inherit ${textColor} px-0 flex gap-1 xl:gap-2 items-center`}
-          >
-            <span
-              className={` inline-block pb-1  text-[15px] leading-[26px] ${
-                router.pathname == "/blog"
-                  ? "border-primary font-[500] border-b-2"
-                  : "border-animate font-[400]"
-              }`}
-            >
-              Blog
-            </span>
-          </Link>
-        </li>
+
         <li className="hover:bg-inherit" tabIndex={0}>
           <Link
             href={"/blogs/blogs1"}

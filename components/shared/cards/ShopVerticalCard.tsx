@@ -8,7 +8,7 @@ import { Rating5 } from "../Ratings/Ratings";
 const ShopVerticalCard = () => {
   return (
     <div className="border py-[17px] pl-5 pr-[25px] border-[#D9D9D9] hover:border-primary">
-      <div className="flex items-center gap-5">
+      <div className="flex sm:flex-row flex-col items-center gap-5">
         <div className="md:w-[226px] w-[210px] flex justify-center items-center md:h-[262px] h-[240px] bg-[#F8F8F8]">
           <figure>
             <Image
@@ -29,7 +29,7 @@ const ShopVerticalCard = () => {
               (12)
             </span>
           </div>
-          <h2 className="text-[#0070DC] mt-1 md:text-[24px] text-[20px] md:leading-[36px] leading-[28px] font-[600]">
+          <h2 className="text-[#0070DC] mt-1 md:text-[24px] text-[18px] sm:text-[20px] md:leading-[36px] leading-[28px] font-[600]">
             Apple iMac 21.5-inch Full HD Display
           </h2>
           <p className="md:text-[20px] text-[16px] w-full md:leading-[30px] leading-6 border-b border-[#D2D2D2] md:pb-5 pb-3 md:mt-3 mt-2 text-[#FD8D03] font-[500]">

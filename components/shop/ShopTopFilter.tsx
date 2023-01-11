@@ -44,7 +44,7 @@ const ShopTopFilter = ({ toggleCard, setToggleCard }: Props) => {
       <span className="text-[16px] order-2 md:order-1 leading-8 text-[#424242]">
         Showing 16 of 87 results
       </span>
-      <div className="flex order-1 md:order-2 items-center gap-5">
+      <div className="flex flex-wrap order-1 md:order-2 items-center gap-5">
         <div className="flex items-center gap-3">
           <div
             onClick={() => setToggleCard(!toggleCard)}

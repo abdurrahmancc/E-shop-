@@ -54,7 +54,7 @@ const TopProductDetails = ({ product }: Product) => {
   };
 
   return (
-    <div className={`${isDetailsPage ? "pt-7" : ""}`}>
+    <div id="top-Product-Details" className={`${isDetailsPage ? "pt-7" : ""}`}>
       <div
         className={`text-[16px] flex justify-center items-center w-[86px] h-[36px] bg-[#F0F9F4] text-[#00A046] rounded-[6px] leading-[24px]`}
       >
@@ -111,12 +111,12 @@ const TopProductDetails = ({ product }: Product) => {
             })}
         </ul>
       </div>
-      <div className="flex my-6 gap-x-5">
+      <div className="flex my-6 gap-x-3 sm:gap-x-5">
         <div
-          className={`${
+          className={`cart-quantity-frame ${
             isDetailsPage
-              ? "flex xl:w-[161px] w-[130px] min-w-[130px] px-[21px] justify-between items-center xl:h-[64px] h-[52px] border border-[#D9D9D9] rounded-[44px] "
-              : "flex 2xl:w-[161px] w-[130px] min-w-[130px] px-[21px] justify-between items-center 2xl:h-[64px] h-[52px] border border-[#D9D9D9] rounded-[44px] "
+              ? "flex xl:w-[161px] w-[130px] sm:min-w-[130px] px-[21px] justify-between items-center xl:h-[64px] h-[52px] border border-[#D9D9D9] rounded-[44px] "
+              : "flex 2xl:w-[161px] w-[130px] sm:min-w-[130px] px-[21px] justify-between items-center 2xl:h-[64px] h-[52px] border border-[#D9D9D9] rounded-[44px] "
           }`}
         >
           <button onClick={() => handleQuantity(quantity - 1)}>
@@ -131,14 +131,15 @@ const TopProductDetails = ({ product }: Product) => {
           <li>
             <button
               onClick={() => handleAddToCart(product?._id)}
-              className={`bg-gradient-to-r from-[#f9c536] to-[#f9c536] btn-animate bg-primary
+              className={`bg-gradient-to-r from-[#f9c536] to-[#f9c536] btn-animate bg-primary product-details-shopping-cart
               ${
                 isDetailsPage
                   ? "text-[#000000] xl:h-[64px] h-[52px] rounded-[32px] 2xl:w-[281px] xl:w-[220px] sm:w-[180px] w-[140px]  xl:text-[24px] sm:text-[20px] text-[18px] leading-[36px]"
                   : "text-[#000000] 2xl:h-[64px] h-[52px] rounded-[32px] 2xl:w-[281px] xl:w-[180px] sm:w-[180px] w-[140px]  2xl:text-[24px] hidden sm:block sm:text-[20px] text-[18px] leading-[36px]"
               }`}
             >
-              Add to cart
+              <span>Add to cart</span>
+              <HiOutlineShoppingBag className="hidden text-[24px] mx-auto" />
             </button>
           </li>
           {!isDetailsPage && (
