@@ -6,7 +6,10 @@ import banner3 from "../../assets/banner/card-banner-6.png";
 
 const CardBanner2 = () => {
   return (
-    <div className="flex 2xl:gap-[26px] justify-center xl:gap-5 gap-4">
+    <div
+      id="xs-responsive-card-banner"
+      className="flex 2xl:gap-[26px] justify-center xl:gap-5 gap-2 sm:gap-3 md:gap-4"
+    >
       <Image
         src={banner1}
         width={460}

@@ -10,7 +10,7 @@ const HotNewArrivals = () => {
     <>
       <div className="w-full">
         <div className="flex items-center justify-between pb-4">
-          <h2 className="text-[#031424]  lg:text-[28px] lg:leading-[42px] text-[24px] leading-8 font-[600]">
+          <h2 className="text-[#031424] lg:text-[28px] lg:leading-[42px] sm:text-[24px] text-[18px] leading-8 font-[600]">
             Hot New Arrivals
           </h2>
           <ul className="flex items-center gap-[24px] lg:gap-[37px]">

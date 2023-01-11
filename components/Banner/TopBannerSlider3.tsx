@@ -36,13 +36,13 @@ const TopBannerSlider3 = () => {
               className={`w-full h-full min-h-[300px] md:min-h-[400px] 2xl:min-h-[758px]`}
               alt="banner"
             />
-            <div className="absolute top-0 right-10 xl:right-[104px] h-full">
+            <div className="absolute top-0 right-3 sm:right-10 xl:right-[104px] h-full">
               <div className="flex gap-[10px] items-center flex-col justify-center h-full">
-                <button className="w-[54.81px] custom_prev border rounded-full flex justify-center items-center opacity-[50%] hover:opacity-[100%] h-[54.81px]">
-                  <BsArrowRight className="w-[21.92px] rounded-full text-[#FFFFFF] h-[21.92px]" />
+                <button className="custom_prev border rounded-full flex justify-center items-center opacity-[50%] hover:opacity-[100%] h-10 w-10 md:h-[54.81px] md:w-[54.81px]">
+                  <BsArrowRight className="w-[16px] md:w-[21.92px] rounded-full text-[#FFFFFF] h-[16px] md:h-[21.92px]" />
                 </button>
-                <button className="w-[54.81px] border custom_next rounded-full flex justify-center items-center opacity-[50%] hover:opacity-[100%] h-[54.81px]">
-                  <BsArrowRight className="w-[21.92px] rotate-180 rounded-full text-[#FFFFFF] h-[21.92px]" />
+                <button className="border custom_next rounded-full flex justify-center items-center opacity-[50%] hover:opacity-[100%] h-10 w-10 md:h-[54.81px] md:w-[54.81px]">
+                  <BsArrowRight className="rotate-180 w-[16px] md:w-[21.92px] rounded-full text-[#FFFFFF] h-[16px] md:h-[21.92px]" />
                 </button>
               </div>
             </div>
@@ -50,12 +50,15 @@ const TopBannerSlider3 = () => {
               <div className="absolute top-0 h-full flex items-center">
                 <div className="text-start max-w-[300px] sm:max-w-[400px] md:max-w-[450px] lg:max-w-[580px]">
                   <Fade top delay={300}>
-                    <span className="font-[500] py-2 bg-white px-6 rounded-[60px] inline-block text-[16px] text-[#313131] leading-[24px]">
-                      BIG SAVING
-                    </span>
+                    <div className="flex gap-4 items-center">
+                      <div className="w-[82px] h-[1px] bg-[#000000]"></div>
+                      <span className="text-[16px] leading-[24px] font-[500] text-[#031424]">
+                        BIG SAVING
+                      </span>
+                    </div>
                   </Fade>
                   <Fade left>
-                    <h2 className="2xl:text-[68px] text-2xl lg:text-[50px] sm:text-[24px] md:text-[36px] mt-5 text-start font-[600] 2xl:leading-[79px] lg:leading-[60px] sm:leading-[32px] md:leading-[48px] capitalize text-[#FFFFFF] ">
+                    <h2 className="2xl:text-[68px] text-2xl lg:text-[50px] sm:text-[24px] md:text-[36px] mt-4 text-start font-[600] 2xl:leading-[79px] lg:leading-[60px] sm:leading-[32px] md:leading-[48px] capitalize text-[#FFFFFF] ">
                       Put your headphones on and relax
                     </h2>
                   </Fade>

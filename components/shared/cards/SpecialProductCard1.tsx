@@ -7,8 +7,8 @@ import Image from "next/image";
 
 const SpecialProductCard1 = () => {
   return (
-    <div>
-      <figure className="">
+    <div id="special-Product-Card">
+      <figure>
         <Image
           src={watch}
           width={382}
@@ -31,14 +31,17 @@ const SpecialProductCard1 = () => {
         </ul>
       </div>
       <div className="mt-10">
-        <h3 className="2xl:text-[34px] xl:text-[28px] text-[34px] leading-[52px] font-[600] text-center text-[#1E1E20] ">
+        <h3 className="2xl:text-[34px] xl:text-[28px] text-[28px] sm:text-[34px] leading-[52px] font-[600] text-center text-[#1E1E20] ">
           Smart Watch OS 3
         </h3>
         <div className="flex justify-center mt-[10px] items-center gap-[10px]">
           <div className="flex items-center justify-center">
-            <Rating5 height={"2xl:h-[30.86px] h-[28px]  "} width={"2xl:w-[30.86px] w-[28px] "} />
+            <Rating5
+              height={"2xl:h-[30.86px] sm:h-[28px] h-[24px] "}
+              width={"2xl:w-[30.86px] sm:w-[28px] w-[24px]"}
+            />
           </div>
-          <span className="2xl:text-[30.86px] text-[24px] text-[#808080] font-[500]  leading-[46.29px]">
+          <span className="2xl:text-[30.86px] text-[20px] sm:text-[24px] text-[#808080] font-[500]  leading-[46.29px]">
             (15 reviews )
           </span>
         </div>

@@ -38,7 +38,7 @@ const TopBannerSlider1 = () => {
               className={`w-[1114] min-h-[320px] lg:max-h-[577px] lg:min-h-[577px] h-[577px]`}
               alt="banner"
             />
-            <div className="absolute top-0 h-full flex items-center pl-10">
+            <div className="absolute top-0 h-full flex items-center md:pl-10 sm:pl-7 pl-5">
               <div className="text-start max-w-[580px]">
                 <Fade left delay={300}>
                   <span className="text-secondary rounded-[36px] inline-block py-[3px] px-[15px] bg-primary text-xs leading-5 lg:text-sm lg:leading-[26px] font-[500] ">
@@ -51,9 +51,10 @@ const TopBannerSlider1 = () => {
                   </h2>
                 </Fade>
                 <Fade bottom delay={300}>
-                  <p className="lg:text-[16px] text-xs  md:text-sm mb-5 lg:mb-10 lg:mt-4 mt-2 text-[#424242] md:leading-[26px] ">
-                    Lorem ipsum dolor sit amet consectetur. Ullamcorper <br className="xl:hidden" />{" "}
-                    enim sed <br className="xl:block hidden" /> morbi integer felis ut tristique.
+                  <p className="lg:text-[16px] text-xs  md:text-sm mb-5 lg:mb-10 lg:mt-4 mt-2 max-w-[320px] sm:max-w-full text-[#424242] md:leading-[26px] ">
+                    Lorem ipsum dolor sit amet consectetur. Ullamcorper{" "}
+                    <br className="xl:hidden sm:block hidden" /> enim sed{" "}
+                    <br className="xl:block hidden" /> morbi integer felis ut tristique.
                   </p>
                 </Fade>
                 <Fade bottom delay={600}>

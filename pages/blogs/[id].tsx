@@ -8,9 +8,7 @@ import Footer1 from "../../components/shared/footer/Footer1";
 import ScrollUpBtn from "../../components/shared/ScrollUpBtn";
 import Newsletter4 from "../../components/shared/newsletter/Newsletter4";
 import { GetStaticPaths, GetStaticProps } from "next";
-import { blogsData, productsData } from "../../database/data";
-import Blogs from "../../components/blogs/blogs1/Blogs";
-import Blogs2 from "../../components/blogs/blogs2/Blogs2";
+import { blogsData } from "../../database/data";
 import { BlogsModel } from "../../types/types";
 import BlogDetails from "../../components/blogs/blogsDetails/BlogDetails";
 

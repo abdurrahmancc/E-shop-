@@ -13,14 +13,14 @@ const TrendingProducts = () => {
     <>
       <div className="w-full">
         <div className="flex items-center justify-between pb-4">
-          <h2 className="text-[#031424]  lg:text-[28px] lg:leading-[42px] text-[24px] leading-8 font-[600]">
+          <h2 className="text-[#031424] lg:text-[28px] lg:leading-[42px] sm:text-[24px] text-[18px] leading-8 font-[600]">
             Trending Products
           </h2>
           <div className="flex items-center gap-3">
-            <button className="hover:text-white custom_prev transition-all duration-300 ease-linear hover:bg-info justify-center text-info border border-info rounded-full text-ing flex items-center gap-3 w-[36px] h-[36px] leading-[24px] font-[500]">
+            <button className="hover:text-white custom_prev transition-all duration-300 ease-linear hover:bg-info justify-center text-info border border-info rounded-full text-ing flex items-center gap-3 md:w-[36px] md:h-[36px] w-7 h-7 leading-[24px] font-[500]">
               <HiOutlineArrowLeft className="w-[13.71px] h-[13.71px] " />
             </button>
-            <button className="hover:text-white custom_next transition-all duration-300 ease-linear hover:bg-info justify-center border text-info border-info rounded-full text-ing flex items-center gap-3 w-[36px] h-[36px] leading-[24px] font-[500]">
+            <button className="hover:text-white custom_prev transition-all duration-300 ease-linear hover:bg-info justify-center text-info border border-info rounded-full text-ing flex items-center gap-3 md:w-[36px] md:h-[36px] w-7 h-7 leading-[24px] font-[500]">
               <HiOutlineArrowRight className="w-[13.71px] h-[13.71px] " />
             </button>
           </div>

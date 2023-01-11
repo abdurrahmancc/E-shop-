@@ -17,7 +17,7 @@ const TrendingProducts = ({ products }: Products) => {
     <>
       <div className="w-full">
         <div className="flex items-center justify-between pb-4">
-          <h2 className="text-[#031424]  lg:text-[28px] lg:leading-[42px] text-[24px] leading-8 font-[600]">
+          <h2 className="text-[#031424] lg:text-[28px] lg:leading-[42px] sm:text-[24px] text-[18px] leading-8 font-[600]">
             Trending Products
           </h2>
           <ul className="flex items-center gap-[24px] lg:gap-[37px]">
@@ -70,14 +70,14 @@ const TrendingProducts = ({ products }: Products) => {
         </div>
       </div>
       <div className="mt-[50px]">
-        <div className="flex md:flex-row flex-col gap-y-8 gap-x-5 2xl:gap-x-[30px]">
+        <div className="flex lg:flex-row flex-col gap-y-8 gap-x-5 2xl:gap-x-[30px]">
           {/*============= filter start ============*/}
-          <div className="pt-2 bg-[#F8F8F8] flex-grow-0 md:min-w-[264px] md:w-[264px] pb-7 pl-6 h-full max-h-[905px]">
+          <div className="pt-2 lg:order-1 order-2 order- bg-[#F8F8F8] flex-grow-0 lg:min-w-[264px] lg:w-[264px] pb-7 pl-6 h-full max-h-[905px]">
             <HomeFilter1 />
           </div>
           {/*============= filter end ============*/}
-          <div className="flex-grow">
-            <div className="xs-responsive grid grid-cols-2 max-w-[550px] lg:max-w-full  mx-auto lg:grid-cols-3 xl:grid-cols-4 gap-y-[17px] gap-3 sm:gap-x-5 2xl:gap-x-[30px]">
+          <div className="flex-grow lg:order-2 order-1">
+            <div className="xs-responsive grid grid-cols-2 max-w-[550px] md:max-w-[832px] lg:max-w-full mx-auto md:grid-cols-3 xl:grid-cols-4 gap-y-[17px] gap-3 sm:gap-x-5 2xl:gap-x-[30px]">
               {productItems &&
                 productItems.map((product) => <ProductCard1 key={product._id} product={product} />)}
             </div>

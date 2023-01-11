@@ -10,7 +10,7 @@ const BottomHeader2 = () => {
   const [toggle, setToggle] = useState<boolean>(true);
 
   return (
-    <div className=" bg-[#041E42] hidden lg:block">
+    <div id="bottom-Header-2" className=" bg-[#041E42] hidden lg:block">
       <div className="max-w-[1443px] w-full mx-auto container px-4 lg:px-10 2xl:px-0">
         <div className="flex items-center justify-between">
           <div className=" max-w-[250px] xl:max-w-[290px] w-full">
@@ -35,13 +35,13 @@ const BottomHeader2 = () => {
           </div>
           {/* ========== nav link end ========= */}
           <div>
-            <div className="flex items-center gap-[20px]">
+            <div className="flex items-center gap-3 xl:gap-[20px]">
               <div className="flex gap-2 items-center">
                 <IoMdStarHalf className="w-[20px] h-[20px] text-white" />
                 <span className="text-[15px] leading-[22px] text-white">Best Offer</span>
               </div>
-              <div className="h-8 bg-white w-[1px]"></div>
-              <div className="flex gap-2 items-center">
+              <div className="h-8 is-hidden bg-white w-[1px]"></div>
+              <div className="flex gap-2 is-hidden items-center">
                 <HiLocationMarker className="w-[20px] h-[20px] text-white" />
                 <span className="text-[15px] leading-[22px] text-white">Order Tracking</span>
               </div>

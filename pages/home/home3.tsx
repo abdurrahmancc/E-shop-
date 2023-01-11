@@ -19,6 +19,7 @@ import Footer3 from "../../components/shared/footer/Footer3";
 import Newsletter3 from "../../components/shared/newsletter/Newsletter3";
 import ScrollUpBtn from "../../components/shared/ScrollUpBtn";
 import HotNewArrivals2 from "../../components/home/Home3/HotNewArrivals2";
+import Header3 from "../../components/headers/Header3";
 
 const home3 = () => {
   return (
@@ -30,17 +31,7 @@ const home3 = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header>
-        {/* ============= top header start ============== */}
-        <TopHeader3 />
-        <MiddleHeader3 />
-        <BottomHeader3 />
-        {/* ============= top header end ============== */}
-
-        {/*============ banner start =============== */}
-        <div>
-          <TopBannerSlider3 />
-        </div>
-        {/*============ banner end =============== */}
+        <Header3 />
       </header>
       <main>
         {/* ============= features start =========== */}

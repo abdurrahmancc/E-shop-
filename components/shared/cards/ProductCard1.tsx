@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { AiOutlineHeart } from "react-icons/ai";
 import { BiGitCompare, BiSearch } from "react-icons/bi";
@@ -15,6 +16,8 @@ import { Rating5 } from "../Ratings/Ratings";
 
 const ProductCard1 = ({ product }: any) => {
   const [isHover, setIsHover] = useState<boolean>(false);
+  const router = useRouter();
+  const isProductCard3 = router.pathname.includes("home3");
   const dispatch = useAppDispatch();
 
   const handleAddToCart = (id: string) => {
@@ -37,8 +40,16 @@ const ProductCard1 = ({ product }: any) => {
       onMouseLeave={() => setIsHover(false)}
       className="max-w-[265px] mx-auto overflow-hidden w-full h-[443px]"
     >
-      <div className="border border-[#fff0] h-full ease-linear duration-300 transition-all  hover:border-primary">
-        <div className="w-full overflow-hidden relative bg-[#F8F8F8] h-[298px] flex justify-center items-center">
+      <div
+        className={`border border-[#fff0] h-full ease-linear duration-300 transition-all  hover:border-primary ${
+          isProductCard3 && "rounded-[8px]"
+        }`}
+      >
+        <div
+          className={`${
+            isProductCard3 && "rounded-[8px] hover:rounded-b-none"
+          } w-full overflow-hidden relative bg-[#F8F8F8] h-[298px] flex justify-center items-center`}
+        >
           <Link href={`/shop/product-details/${product?._id}`} className={""}>
             <figure className="max-w-[212px] max-h-[212px] overflow-hidden">
               {isHover ? (

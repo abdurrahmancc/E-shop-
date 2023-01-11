@@ -22,7 +22,7 @@ const SpecialProducts = ({ products }: Products) => {
       <div className="w-full lg:max-w-[558px] xl:max-w-[852px] lg:order-2 order-1">
         <div className="w-full">
           <div className="flex items-center justify-between pb-4">
-            <h2 className="text-[#031424]  lg:text-[28px] lg:leading-[42px] text-[24px] leading-8 font-[600]">
+            <h2 className="text-[#031424] lg:text-[28px] lg:leading-[42px] sm:text-[24px] text-[18px] leading-8 font-[600]">
               Special Products
             </h2>
 

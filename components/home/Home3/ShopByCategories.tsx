@@ -8,7 +8,7 @@ const ShopByCategories = () => {
     <>
       <div className="w-full">
         <div className="flex items-center justify-between pb-4">
-          <h2 className="text-[#313131]  lg:text-[28px] lg:leading-[42px] text-[24px] leading-8 font-[600]">
+          <h2 className="text-[#031424] lg:text-[28px] lg:leading-[42px] sm:text-[24px] text-[18px] leading-8 font-[600]">
             Shop by categories
           </h2>
           <button className="text-info flex items-center gap-3 text-[16px] leading-[24px] font-[500]">

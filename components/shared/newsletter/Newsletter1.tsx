@@ -4,6 +4,7 @@ import bg from "../../../assets/bg/newsletter-1.png";
 const Newsletter1 = () => {
   return (
     <div
+      id="newsletter-1"
       style={{ backgroundImage: `url(${bg.src})` }}
       className="bg-cover bg-secondary bg-no-repeat min-h-[236px] h-[236px]"
     >
@@ -13,7 +14,7 @@ const Newsletter1 = () => {
             <h2 className="2xl:text-[38px] xl:text-[32px] lg:text-[24px] font-[600] text-neutral 2xl:leading-[50px] xl:leading-[44px] lg:leading-[36px] sm:text-[32px] sm:leading-[44px] text-center lg:text-start text-[24px] leading-[32px]">
               Subscribe Our Newsletter
             </h2>
-            <p className="xl:text-[16px] lg:text-xs xl:pt-[14px] sm:text-[16px] text-center lg:text-start mt-2 text-neutral leading-7 text-xs">
+            <p className="xl:text-[16px] lg:text-xs xl:pt-[14px] sm:text-[16px] text-center lg:text-start mt-2 text-neutral sm:leading-7 text-xs">
               {" "}
               Get E-mail updates about our latest shop and receive{" "}
               <span className="font-[600] text-primary">special offers.</span>

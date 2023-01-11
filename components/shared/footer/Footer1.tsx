@@ -164,7 +164,7 @@ const Footer1 = () => {
               src={payment}
               width={342}
               height={40}
-              className="h-10 max-w-[342.77px]"
+              className="h-10 sm:max-w-[342.77px]"
               alt="payment method"
             />
           </div>

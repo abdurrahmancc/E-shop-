@@ -1,11 +1,6 @@
 import Head from "next/head";
 import Features1 from "../components/features/Features1";
-import BottomHeader1 from "../components/headers/BottomHeader1";
-import MiddleHeader1 from "../components/headers/MiddleHeader1";
-import TopCategories from "../components/headers/TopCategories";
-import TopHeader1 from "../components/headers/TopHeader1";
 import TrendingProducts from "../components/home/home1/TrendingProducts";
-import TopBannerSlider1 from "../components/Banner/TopBannerSlider1";
 import CardBanner1 from "../components/Banner/CardBanner1";
 import SpecialProducts from "../components/home/home1/SpecialProducts";
 import FeaturedProducts from "../components/home/home1/FeaturedProducts";
@@ -17,6 +12,7 @@ import ScrollUpBtn from "../components/shared/ScrollUpBtn";
 import { GetStaticProps } from "next";
 import { productsData } from "../database/data";
 import { ProductModel } from "../types/types";
+import Header1 from "../components/headers/Header1";
 
 interface Products {
   products: ProductModel[];
@@ -32,21 +28,7 @@ export default function Home({ products }: Products) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header>
-        <div className="bg-[#041E42]">
-          <div className="max-w-[1443px] w-full mx-auto container px-4 lg:px-10 2xl:px-0">
-            {/* ============= top header start ============== */}
-            <TopHeader1 />
-            <MiddleHeader1 />
-            <BottomHeader1 />
-            {/* ============= top header end ============== */}
-          </div>
-        </div>
-        <div className="max-w-[1443px] container lg:mt-[30px] mt-5 w-full mx-auto px-4 lg:px-10 2xl:px-0">
-          <div className="flex gap-[30px] w-full">
-            <TopCategories />
-            <TopBannerSlider1 />
-          </div>
-        </div>
+        <Header1 />
       </header>
       <main className="pt-10 lg:pt-[50px]">
         {/* ============= features start =========== */}

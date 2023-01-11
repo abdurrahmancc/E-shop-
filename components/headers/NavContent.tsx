@@ -11,11 +11,11 @@ const NavContent: FC<PropsWithChildren<Props>> = ({ children: textColor }) => {
   const router = useRouter();
   return (
     <nav className="h-full">
-      <ul className="flex menu menu-horizontal gap-x-7 items-center h-full">
+      <ul className="flex menu menu-horizontal gap-x-5 xl:gap-x-7 items-center h-full">
         <li className="hover:bg-inherit" tabIndex={0}>
           <Link
             href={"/"}
-            className={`focus:bg-inherit p-0 hover:bg-inherit ${textColor} px-0 flex gap-2 items-center`}
+            className={`focus:bg-inherit p-0 hover:bg-inherit ${textColor} px-0 flex gap-1 xl:gap-2 items-center`}
           >
             <span
               className={` inline-block pb-1  text-[15px] leading-[26px] ${
@@ -58,7 +58,7 @@ const NavContent: FC<PropsWithChildren<Props>> = ({ children: textColor }) => {
         <li className="hover:bg-inherit" tabIndex={0}>
           <Link
             href={"/shop/1"}
-            className={`focus:bg-inherit p-0 hover:bg-inherit ${textColor} px-0 flex gap-2 items-center`}
+            className={`focus:bg-inherit p-0 hover:bg-inherit ${textColor} px-0 flex gap-1 xl:gap-2 items-center`}
           >
             <span
               className={` inline-block pb-1  text-[15px] leading-[26px] ${
@@ -109,7 +109,7 @@ const NavContent: FC<PropsWithChildren<Props>> = ({ children: textColor }) => {
         <li className="flex hover:bg-inherit gap-[10px] items-center">
           <Link
             href={"/about"}
-            className={`focus:bg-inherit p-0 hover:bg-inherit ${textColor} px-0 flex gap-2 items-center`}
+            className={`focus:bg-inherit p-0 hover:bg-inherit ${textColor} px-0 flex gap-1 xl:gap-2 items-center`}
           >
             <span
               className={` inline-block pb-1  text-[15px] leading-[26px] ${
@@ -125,7 +125,7 @@ const NavContent: FC<PropsWithChildren<Props>> = ({ children: textColor }) => {
         <li className="flex hover:bg-inherit gap-[10px] items-center">
           <Link
             href={"/contact"}
-            className={`focus:bg-inherit p-0 hover:bg-inherit ${textColor} px-0 flex gap-2 items-center`}
+            className={`focus:bg-inherit p-0 hover:bg-inherit ${textColor} px-0 flex gap-1 xl:gap-2 items-center`}
           >
             <span
               className={` inline-block pb-1  text-[16px] leading-[26px] ${
@@ -141,7 +141,7 @@ const NavContent: FC<PropsWithChildren<Props>> = ({ children: textColor }) => {
         <li className="flex hover:bg-inherit gap-[10px] items-center">
           <Link
             href={"/blogs"}
-            className={`focus:bg-inherit p-0 hover:bg-inherit ${textColor} px-0 flex gap-2 items-center`}
+            className={`focus:bg-inherit p-0 hover:bg-inherit ${textColor} px-0 flex gap-1 xl:gap-2 items-center`}
           >
             <span
               className={` inline-block pb-1  text-[15px] leading-[26px] ${
@@ -157,7 +157,7 @@ const NavContent: FC<PropsWithChildren<Props>> = ({ children: textColor }) => {
         <li className="hover:bg-inherit" tabIndex={0}>
           <Link
             href={"/blogs/blogs1"}
-            className={`focus:bg-inherit p-0 hover:bg-inherit ${textColor} px-0 flex gap-2 items-center`}
+            className={`focus:bg-inherit p-0 hover:bg-inherit ${textColor} px-0 flex gap-1 xl:gap-2 items-center`}
           >
             <span
               className={` inline-block pb-1  text-[15px] leading-[26px] ${
@@ -192,7 +192,7 @@ const NavContent: FC<PropsWithChildren<Props>> = ({ children: textColor }) => {
         <li className="flex hover:bg-inherit gap-[10px] items-center">
           <Link
             href={"/home"}
-            className={`focus:bg-inherit p-0 hover:bg-inherit ${textColor} px-0 flex gap-2 items-center`}
+            className={`focus:bg-inherit p-0 hover:bg-inherit ${textColor} px-0 flex gap-1 xl:gap-2 items-center`}
           >
             <span
               className={` inline-block pb-1  text-[15px] leading-[26px] ${

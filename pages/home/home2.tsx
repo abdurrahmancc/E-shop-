@@ -3,12 +3,6 @@ import React from "react";
 import CardBanner2 from "../../components/Banner/CardBanner2";
 import SmartBanner2 from "../../components/Banner/SmartBanner2";
 import SmartBannerSlider from "../../components/Banner/SmartBannerSlider";
-import TopBannerSlider2 from "../../components/Banner/TopBannerSlider2";
-import TopCardBanner from "../../components/Banner/TopCardBanner";
-import BottomHeader2 from "../../components/headers/BottomHeader2";
-import MiddleHeader1 from "../../components/headers/MiddleHeader1";
-import TopCategories from "../../components/headers/TopCategories";
-import TopHeader2 from "../../components/headers/TopHeader2";
 import FeaturedProducts2 from "../../components/home/home2/FeaturedProducts2";
 import HotNewArrivals from "../../components/home/home2/HotNewArrivals";
 import OnSaleProducts from "../../components/home/home2/OnSaleProducts";
@@ -18,6 +12,7 @@ import TrendingCategories from "../../components/home/home2/TrendingCategories";
 import ShopByCategories from "../../components/home/home2/ShopByCategories";
 import Footer2 from "../../components/shared/footer/Footer2";
 import ScrollUpBtn from "../../components/shared/ScrollUpBtn";
+import Header2 from "../../components/headers/Header2";
 
 const Home2 = () => {
   return (
@@ -29,19 +24,7 @@ const Home2 = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header>
-        {/* ============= top header start ============== */}
-        <TopHeader2 />
-        <MiddleHeader1 />
-        <BottomHeader2 />
-        {/* ============= top header end ============== */}
-
-        <div className="max-w-[1443px] container lg:mt-[30px] mt-5 w-full mx-auto px-4 lg:px-10 2xl:px-0">
-          <div className="flex gap-[30px] w-full">
-            <TopCategories />
-            <TopBannerSlider2 />
-            <TopCardBanner />
-          </div>
-        </div>
+        <Header2 />
       </header>
       <main>
         {/*======== single product banner section start ============*/}
@@ -97,7 +80,7 @@ const Home2 = () => {
         <ScrollUpBtn />
         {/* ======== scroll up button end ======= */}
       </main>
-      <footer className="mt-[146px] lg:mt-[186px] ">
+      <footer className="sm:mt-[146px] lg:mt-[186px] mt-[220px] ">
         <Footer2 />
       </footer>
     </>
