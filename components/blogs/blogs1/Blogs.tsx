@@ -1,10 +1,14 @@
 import React, { useState } from "react";
-import { blogsData } from "../../../database/data";
+import { BlogsModel } from "../../../types/types";
 import BlogCard1 from "../../shared/cards/BlogCard1";
 import Pagination from "../../shared/pagination/Pagination";
 import BlogSidebar from "../BlogSidebar";
 
-const Blogs = () => {
+type BlogsType = {
+  blogs: BlogsModel[];
+};
+
+const Blogs = ({ blogs }: BlogsType) => {
   const [page, setPage] = useState<number>(4);
   const [active, setActive] = useState<String>("all");
   const [pageCount, setPageCount] = useState<number>(4);
@@ -71,7 +75,7 @@ const Blogs = () => {
       <div className="flex mt-[50px] flex-col sm:flex-row gap-x-[30px] gap-y-[50px]">
         <div className="max-w-[1146px]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-[35px] gap-[30px]">
-            {blogsData.map((blog, i) => {
+            {blogs.map((blog, i) => {
               return <BlogCard1 key={i} blog={blog} />;
             })}
           </div>

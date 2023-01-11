@@ -8,13 +8,20 @@ import Footer1 from "../../components/shared/footer/Footer1";
 import ScrollUpBtn from "../../components/shared/ScrollUpBtn";
 import Newsletter4 from "../../components/shared/newsletter/Newsletter4";
 import Blogs2 from "../../components/blogs/blogs2/Blogs2";
+import { BlogsModel } from "../../types/types";
+import { GetStaticProps } from "next";
+import { blogsData } from "../../database/data";
 
 const breadcrumbData = [
   { label: "home", value: "/" },
   { label: "Blogs2", value: "/blogs" },
 ];
 
-const BlogsPage2 = () => {
+type BlogsType = {
+  blogs: BlogsModel[];
+};
+
+const BlogsPage2 = ({ blogs }: BlogsType) => {
   return (
     <>
       <Head>
@@ -39,7 +46,7 @@ const BlogsPage2 = () => {
       </header>
       <main>
         <section className="max-w-[1443px] mt-20 lg:mt-[124px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
-          <Blogs2 />
+          <Blogs2 blogs={blogs} />
         </section>
 
         <section className="mt-20 lg:mt-[120px]">
@@ -57,3 +64,12 @@ const BlogsPage2 = () => {
 };
 
 export default BlogsPage2;
+
+export const getStaticProps: GetStaticProps = async () => {
+  const blogs = blogsData;
+  return {
+    props: {
+      blogs,
+    },
+  };
+};

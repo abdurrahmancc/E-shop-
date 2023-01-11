@@ -154,6 +154,41 @@ const NavContent: FC<PropsWithChildren<Props>> = ({ children: textColor }) => {
             </span>
           </Link>
         </li>
+        <li className="hover:bg-inherit" tabIndex={0}>
+          <Link
+            href={"/blogs/blogs1"}
+            className={`focus:bg-inherit p-0 hover:bg-inherit ${textColor} px-0 flex gap-2 items-center`}
+          >
+            <span
+              className={` inline-block pb-1  text-[15px] leading-[26px] ${
+                router.pathname == "/blogs/blogs1"
+                  ? "border-primary font-[500] border-b-2"
+                  : "border-animate font-[400]"
+              }`}
+            >
+              Blog
+            </span>
+            <GoChevronDown className="w-3 h-3 mb-2" />
+          </Link>
+          <ul className="menu py-3 rounded-lg overflow-hidden bg-white z-50 w-[270px] shadow-xl">
+            <li>
+              <Link
+                href={"/blogs/blogs1"}
+                className={`sub-menu-animate text-[15px] py-[10px] relative text-[rgba(0,0,0,0.7)] bg-white px-0 font-semibold hover:text-primary`}
+              >
+                <span className="px-8">Blog 1</span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={"/blogs/blogs2"}
+                className={`sub-menu-animate py-[10px] text-[15px] relative text-[rgba(0,0,0,0.7)] bg-white px-0 font-semibold hover:text-primary`}
+              >
+                <span className="px-8">Blog 2</span>
+              </Link>
+            </li>
+          </ul>
+        </li>
         <li className="flex hover:bg-inherit gap-[10px] items-center">
           <Link
             href={"/home"}
