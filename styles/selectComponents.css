@@ -14,3 +14,13 @@ padding: 0;
 margin: 0;
 width: fit-content;
 }
+
+#top-header-currency-select-component  .css-1fdsijx-ValueContainer{
+    padding: 0;
+    -webkit-flex: none;
+    flex: none;
+}
+
+#top-header-language-select-component .css-1fdsijx-ValueContainer{
+    padding: 0;
+}

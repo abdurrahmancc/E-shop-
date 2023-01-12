@@ -1,16 +1,17 @@
-import Image from "next/image";
 import React from "react";
 import { HiOutlineArrowRight } from "react-icons/hi2";
 import ProductCard1 from "../../shared/cards/ProductCard1";
 import SpecialProductCard from "../../shared/cards/SpecialProductCard1";
 import { ProductModel } from "../../../types/types";
+import { useRouter } from "next/router";
 
 interface Products {
   products: ProductModel[];
 }
 
 const SpecialProducts = ({ products }: Products) => {
-  const productItems = products?.slice(0, 6);
+  const router = useRouter();
+  const productItems = products?.slice(14, 20);
 
   return (
     <div className="flex lg:flex-row flex-col items-center lg:items-start gap-y-8 gap-x-5 2xl:gap-x-[30px]">
@@ -26,7 +27,10 @@ const SpecialProducts = ({ products }: Products) => {
               Special Products
             </h2>
 
-            <button className="text-info flex items-center gap-3 text-[16px] leading-[24px] font-[500]">
+            <button
+              onClick={() => router.push("/shop/1")}
+              className="text-info flex items-center gap-3 text-[16px] leading-[24px] font-[500]"
+            >
               See All <HiOutlineArrowRight className="text-info w-5 h-5 " />
             </button>
           </div>

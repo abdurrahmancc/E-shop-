@@ -3,6 +3,10 @@ import SpecialMiniCard from "../../../shared/cards/SpecialMiniCard";
 import bg from "../../../../assets/bg/bg-1.png";
 import Image from "next/image";
 import img from "../../../../assets/product-Image/product-2.png";
+import img1 from "../../../../assets/product-Image/product-3.png";
+import img2 from "../../../../assets/product-Image/product-4.png";
+import img4 from "../../../../assets/product-Image/product-17.png";
+import img3 from "../../../../assets/product-Image/product-1.png";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
 
 const SpecialSec = () => {
@@ -13,8 +17,18 @@ const SpecialSec = () => {
     >
       <div className="2xl:pb-[85px] xl:pb-10 lg:pb-[85px] md:pb-5 pb-10  justify-center mx-auto 2xl:gap-[30px] lg:gap-5 md:gap-4 h-full flex items-end">
         <div className="2xl:gap-[25px] gap-3 flex">
-          <SpecialMiniCard style={"hidden md:flex"} />
-          <SpecialMiniCard style={"hidden xl:flex"} />
+          <SpecialMiniCard
+            price={34}
+            title="Apple Watch Series 1"
+            img={img1}
+            style={"hidden md:flex"}
+          />
+          <SpecialMiniCard
+            price={34}
+            title="Apple Watch Series 2"
+            img={img2}
+            style={"hidden xl:flex"}
+          />
         </div>
         <div
           style={{ backgroundImage: `url(${bg.src})` }}
@@ -46,8 +60,18 @@ const SpecialSec = () => {
           </div>
         </div>
         <div className="2xl:gap-[25px] gap-3 flex">
-          <SpecialMiniCard style={"hidden md:flex"} />
-          <SpecialMiniCard style={"hidden xl:flex"} />
+          <SpecialMiniCard
+            price={34}
+            title="Apple Watch Series 4"
+            img={img3}
+            style={"hidden md:flex"}
+          />
+          <SpecialMiniCard
+            price={34}
+            title="Apple Watch Series 3"
+            img={img4}
+            style={"hidden xl:flex"}
+          />
         </div>
       </div>
     </div>

@@ -22,7 +22,7 @@ const BottomHeaderCategories2 = () => {
     >
       <button
         onClick={() => setIsCategoriesOpen(!isCategoriesOpen)}
-        className=" bg-primary flex justify-between items-center px-3 text-secondary w-full h-[60px]"
+        className=" bg-primary flex justify-between items-center px-3 text-secondary w-full h-[65px]"
       >
         <span className="flex items-center gap-2">
           <HiBars3 className="w-[21px] h-[21px] " />

@@ -212,3 +212,264 @@ export const showProductsStyle = {
     padding: 0
   })
 }
+
+/* top header language select library style  */
+export const topHeaderLanguageSelectorStyle = {
+  singleValue: (provided: any) => ({
+    ...provided,
+    color: '#ffffff',
+    paddingRight: 0,
+    paddingLeft: 0
+  }),
+  control: (base: any, state: any) => ({
+    ...base,
+    color: '#ffffff',
+    border: 'none',
+    cursor: 'pointer',
+    paddingRight: 0,
+    paddingLeft: 0,
+    width: 58,
+    maxHight: 20,
+    height: 18,
+    backgroundColor: 'inherit',
+    boxShadow: state.isFocused ? null : null
+  }),
+  menu: (base: any) => ({
+    ...base,
+    borderRadius: 0,
+    marginTop: 3,
+    width: 80,
+    color: '#000',
+    zIndex: 100
+  }),
+  menuList: (base: any) => ({
+    ...base,
+    padding: 0
+  }),
+  dropdownIndicator: (base: any) => ({
+    ...base,
+    color: '#ffffff',
+    width: 12,
+    padding: 0,
+    '&:hover': {
+      color: '#ffffff'
+    }
+  }),
+  input: (base: any, state: any) => ({
+    ...base,
+    color: '#ffffff',
+    maxHight: 20,
+    padding: 0
+  }),
+  defaultValue: (base: any, state: any) => ({
+    ...base,
+    color: '#ffffff',
+    padding: 0
+  }),
+  indicatorsContainer: (base: any, state: any) => ({
+    ...base,
+    hight: 20
+  }),
+  indicatorSeparator: (styles: any) => ({ display: 'none' }),
+  placeholder: (defaultStyles: any) => {
+    return {
+      ...defaultStyles,
+      color: '#ffffff',
+      padding: 0
+    }
+  }
+}
+
+/* top header currency select library style  */
+export const topHeaderCurrencySelectorStyle = {
+  singleValue: (provided: any) => ({
+    ...provided,
+    color: '#FFFFFF'
+  }),
+  control: (base: any, state: any) => ({
+    ...base,
+    color: '#FFFFFF',
+    border: 'none',
+    cursor: 'pointer',
+    backgroundColor: 'inherit',
+    width: 40,
+    height: 18,
+    boxShadow: state.isFocused ? null : null
+  }),
+  menu: (base: any) => ({
+    ...base,
+    borderRadius: 0,
+    color: '#000',
+    marginTop: 3,
+    width: 60,
+    zIndex: 100
+  }),
+  menuList: (base: any) => ({
+    ...base,
+    padding: 0
+  }),
+  indicatorsContainer: (base: any, state: any) => ({
+    ...base,
+    hight: 20
+  }),
+  dropdownIndicator: (base: any) => ({
+    ...base,
+    color: '#FFFFFF',
+    width: 12,
+    padding: 0,
+    '&:hover': {
+      color: '#FFFFFF'
+    }
+  }),
+  input: (base: any, state: any) => ({
+    ...base,
+    color: '#FFFFFF',
+    padding: 0,
+    fontSize: 12
+  }),
+  defaultValue: (base: any, state: any) => ({
+    ...base,
+    color: '#FFFFFF',
+    padding: 0,
+    fontSize: 12
+  }),
+  indicatorSeparator: (styles: any) => ({ display: 'none' }),
+  placeholder: (defaultStyles: any) => {
+    return {
+      ...defaultStyles,
+      color: '#FFFFFF',
+      padding: 0,
+      fontSize: 12
+    }
+  }
+}
+
+/* top header language select library style  */
+export const topHeaderLanguageSelectorStyle2 = {
+  singleValue: (provided: any) => ({
+    ...provided,
+    color: '#424242',
+    paddingRight: 0,
+    paddingLeft: 0
+  }),
+  control: (base: any, state: any) => ({
+    ...base,
+    color: '#424242',
+    border: 'none',
+    cursor: 'pointer',
+    paddingRight: 0,
+    paddingLeft: 0,
+    width: 58,
+    maxHight: 20,
+    height: 18,
+    backgroundColor: 'inherit',
+    boxShadow: state.isFocused ? null : null
+  }),
+  menu: (base: any) => ({
+    ...base,
+    borderRadius: 0,
+    marginTop: 3,
+    width: 80,
+    color: '#000',
+    zIndex: 100
+  }),
+  menuList: (base: any) => ({
+    ...base,
+    padding: 0
+  }),
+  dropdownIndicator: (base: any) => ({
+    ...base,
+    color: '#424242',
+    width: 12,
+    padding: 0,
+    '&:hover': {
+      color: '#424242'
+    }
+  }),
+  input: (base: any, state: any) => ({
+    ...base,
+    color: '#424242',
+    maxHight: 20,
+    padding: 0
+  }),
+  defaultValue: (base: any, state: any) => ({
+    ...base,
+    color: '#424242',
+    padding: 0
+  }),
+  indicatorsContainer: (base: any, state: any) => ({
+    ...base,
+    hight: 20
+  }),
+  indicatorSeparator: (styles: any) => ({ display: 'none' }),
+  placeholder: (defaultStyles: any) => {
+    return {
+      ...defaultStyles,
+      color: '#424242',
+      padding: 0
+    }
+  }
+}
+/* top header currency select library style2  */
+export const topHeaderCurrencySelectorStyle2 = {
+  singleValue: (provided: any) => ({
+    ...provided,
+    color: '#424242'
+  }),
+  control: (base: any, state: any) => ({
+    ...base,
+    color: '#424242',
+    border: 'none',
+    cursor: 'pointer',
+    backgroundColor: 'inherit',
+    width: 40,
+    height: 18,
+    boxShadow: state.isFocused ? null : null
+  }),
+  menu: (base: any) => ({
+    ...base,
+    borderRadius: 0,
+    color: '#000',
+    marginTop: 3,
+    width: 60,
+    zIndex: 100
+  }),
+  menuList: (base: any) => ({
+    ...base,
+    padding: 0
+  }),
+  indicatorsContainer: (base: any, state: any) => ({
+    ...base,
+    hight: 20
+  }),
+  dropdownIndicator: (base: any) => ({
+    ...base,
+    color: '#424242',
+    width: 12,
+    padding: 0,
+    '&:hover': {
+      color: '#424242'
+    }
+  }),
+  input: (base: any, state: any) => ({
+    ...base,
+    color: '#424242',
+    padding: 0,
+    fontSize: 12
+  }),
+  defaultValue: (base: any, state: any) => ({
+    ...base,
+    color: '#424242',
+    padding: 0,
+    fontSize: 12
+  }),
+  indicatorSeparator: (styles: any) => ({ display: 'none' }),
+  placeholder: (defaultStyles: any) => {
+    return {
+      ...defaultStyles,
+      color: '#424242',
+      padding: 0,
+      fontSize: 12
+    }
+  }
+}

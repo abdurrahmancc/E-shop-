@@ -1,11 +1,33 @@
-import Image from "next/image";
-import React from "react";
-import mail from "../../assets/icons/mail.svg";
-import location from "../../assets/icons/location.svg";
+import React, { useState } from "react";
 import { FiChevronDown } from "react-icons/fi";
-import { FaShippingFast } from "react-icons/fa";
+import Select from "react-select";
+import {
+  topHeaderCurrencySelectorStyle,
+  topHeaderLanguageSelectorStyle,
+} from "../../styles/selectComponents";
+
+type Option = {
+  value: string;
+  label: string;
+};
+
+const options: Option[] = [
+  { value: "English", label: "English" },
+  { value: "Spanish", label: "Spanish" },
+  { value: "French", label: "French" },
+  { value: "Arabic", label: "Arabic" },
+];
+const optionsM: Option[] = [
+  { value: "USD", label: "USD" },
+  { value: "GBP", label: "GBP" },
+  { value: "EUR", label: "EUR" },
+  { value: "RUB", label: "RUB" },
+];
 
 const TopHeader3 = () => {
+  const [selectedOption, setSelectedOption] = useState<Option | null>(null);
+  const [selectedMoneyOption, setSelectedMoneyOption] = useState<Option | null>(null);
+
   return (
     <div className="border-b bg-[#041E42] border-[rgba(255,255,255,0.24)]">
       <div className="max-w-[1443px] w-full mx-auto container px-4 lg:px-10 2xl:px-0">
@@ -19,12 +41,30 @@ const TopHeader3 = () => {
             Free Shipping On All order Over $200
           </div>
           <ul className=" lg:flex hidden lg:gap-3 gap-1">
-            <li className="flex capitalize items-center gap-1 text-[#FFFFFF] text-xs leading-[18px]">
-              <span>USD</span> <FiChevronDown className="w-3 h-3" />
+            <li className="flex capitalize h-[24px] items-center gap-1 text-[#FFFFFF] text-xs leading-[18px]">
+              <Select
+                styles={topHeaderCurrencySelectorStyle}
+                id="top-header-currency-select-component"
+                instanceId="top-header-currency-select-component"
+                defaultValue={selectedMoneyOption}
+                onChange={setSelectedMoneyOption}
+                placeholder={"USD"}
+                options={optionsM}
+                isSearchable={false}
+              />
             </li>
             <div className="h-[25.5px] w-[1px] bg-[rgba(255,255,255,0.24)]"></div>
-            <li className="flex capitalize items-center gap-1 text-[#FFFFFF] text-xs leading-[18px]">
-              <span>English</span> <FiChevronDown className="w-3 h-3" />
+            <li className="flex capitalize h-[24px] items-center gap-1 text-[#FFFFFF] text-xs leading-[18px]">
+              <Select
+                styles={topHeaderLanguageSelectorStyle}
+                id="top-header-language-select-component"
+                instanceId="top-header-language-select-component"
+                defaultValue={selectedOption}
+                onChange={setSelectedOption}
+                placeholder={"English"}
+                options={options}
+                isSearchable={false}
+              />
             </li>
             <div className="h-[25.5px] w-[1px] bg-[rgba(255,255,255,0.24)]"></div>
             <li className="flex text-[12px] leading-[18px] text-[#FFFFFF] capitalize items-center gap-1">

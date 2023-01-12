@@ -38,7 +38,7 @@ const CartTableRow = ({ product }: Product) => {
                 height={80}
                 width={80}
                 className={"xl:h-[80px] xl:w-[80px] w-20 h-20 sm:h-[50px] sm:w-[48px]"}
-                src={`${product?.img[0]}`}
+                src={product?.img[0]}
                 alt="product-img"
               />
             </figure>

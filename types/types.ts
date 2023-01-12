@@ -22,7 +22,7 @@ export interface ProductModel {
   subCategory: string
   date?: string
   status: string
-  img: string[]
+  img: any[]
   review: number
   description: string
   badge: string

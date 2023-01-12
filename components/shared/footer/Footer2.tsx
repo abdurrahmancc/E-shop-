@@ -10,9 +10,11 @@ import { HiLocationMarker } from "react-icons/hi";
 import googleApp from "../../../assets/icons/googlePlay.png";
 import appStore from "../../../assets/icons/appStore.png";
 import payment from "../../../assets/icons/payment2.png";
+import { useRouter } from "next/router";
 
 const Footer2 = () => {
   const year = new Date().getFullYear();
+  const router = useRouter();
 
   return (
     <div
@@ -37,7 +39,7 @@ const Footer2 = () => {
         </div>
         <div className="pt-[56px] border-t border-[rgba(255,255,255,0.28)]">
           <div className="footer pb-[54px] text-base-content">
-            <div className="max-w-[323px]">
+            <div onClick={() => router.push("/")} className="max-w-[323px]">
               <Image src={logo} width={163} height={51} alt="logo" />
               <p className="text-[16px] pt-2 leading-[30px] text-neutral">
                 Lorem ipsum dolor sit amet Senectus mattis fermentum mauris orci sit.enim. Orci

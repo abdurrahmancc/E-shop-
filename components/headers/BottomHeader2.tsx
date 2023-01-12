@@ -11,7 +11,7 @@ const BottomHeader2 = () => {
   const [toggle, setToggle] = useState<boolean>(true);
 
   return (
-    <div id="bottom-Header-2" className=" bg-[#041E42] hidden lg:block">
+    <div id="bottom-Header-2" className=" bg-[#041E42] h-[65px] hidden lg:block">
       <div className="max-w-[1443px] w-full mx-auto container px-4 lg:px-10 2xl:px-0">
         <div className="flex items-center justify-between">
           <BottomHeaderCategories2 />

@@ -61,15 +61,33 @@ const MiddleHeader1 = () => {
   return (
     <div className="lg:bg-inherit bg-[#041E42]">
       <div className="max-w-[1443px] w-full mx-auto container px-4 lg:px-10 2xl:px-0">
-        <div className="py-5 flex w-full justify-between">
-          <div>
+        <div className="py-[22.5px] flex w-full justify-between">
+          <div onClick={() => router.push("/")}>
             {router.pathname.includes("/home/home2") ? (
               <>
-                <Image src={logo} width={163} height={51} className="hidden lg:block" alt="logo" />
-                <Image src={whiteLogo} width={163} height={51} className="lg:hidden " alt="logo" />
+                <Image
+                  src={logo}
+                  width={163}
+                  height={51}
+                  className="w-[163px] h-[48px] hidden lg:block"
+                  alt="logo"
+                />
+                <Image
+                  src={whiteLogo}
+                  width={163}
+                  height={51}
+                  className=" w-[163px] h-[48px] lg:hidden "
+                  alt="logo"
+                />
               </>
             ) : (
-              <Image src={whiteLogo} width={163} height={51} alt="logo" />
+              <Image
+                src={whiteLogo}
+                className={" w-[163px] h-[48px]"}
+                width={163}
+                height={51}
+                alt="logo"
+              />
             )}
           </div>
           {/*========= category search from start =========-*/}

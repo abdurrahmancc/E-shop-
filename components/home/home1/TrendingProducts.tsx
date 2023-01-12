@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { HiOutlineArrowRight } from "react-icons/hi2";
 import { ProductModel } from "../../../types/types";
@@ -10,8 +11,16 @@ interface Products {
 
 const TrendingProducts = ({ products }: Products) => {
   const [activeProducts, setActiveProducts] = useState<string>("newProducts");
+  const router = useRouter();
+  let productItems;
 
-  const productItems = products?.slice(0, 8);
+  if (activeProducts == "newProducts") {
+    productItems = products?.slice(0, 8);
+  } else if (activeProducts == "featured") {
+    productItems = products?.slice(8, 15);
+  } else if (activeProducts == "bestSeller") {
+    productItems = products?.slice(15, 22);
+  }
 
   return (
     <>
@@ -58,7 +67,10 @@ const TrendingProducts = ({ products }: Products) => {
               </button>
             </li>
             <li>
-              <button className="text-info flex items-center gap-3 text-[16px] leading-[24px] font-[500]">
+              <button
+                onClick={() => router.push("/shop/1")}
+                className="text-info flex items-center gap-3 text-[16px] leading-[24px] font-[500]"
+              >
                 See All <HiOutlineArrowRight className="text-info w-5 h-5 " />
               </button>
             </li>

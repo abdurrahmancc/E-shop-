@@ -58,7 +58,7 @@ const MiddleHeader3 = () => {
     <div className="bg-[#041E42]">
       <div className="max-w-[1443px] w-full mx-auto container px-4 lg:px-10 2xl:px-0">
         <div className="py-5 flex w-full justify-between">
-          <div>
+          <div onClick={() => router.push("/")}>
             {router.pathname.includes("/home/home2") ? (
               <Image src={logo} width={163} height={51} alt="logo" />
             ) : (

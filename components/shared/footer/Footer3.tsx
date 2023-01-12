@@ -10,10 +10,11 @@ import appStore from "../../../assets/icons/appStore.png";
 import payments from "../../../assets/icons/payments.png";
 import { BsInstagram, BsTwitter } from "react-icons/bs";
 import { SiMinutemailer } from "react-icons/si";
+import { useRouter } from "next/router";
 
 const Footer3 = () => {
   const year = new Date().getFullYear();
-
+  const router = useRouter();
   return (
     <div
       style={{ backgroundImage: `url(${bg.src})` }}
@@ -21,7 +22,7 @@ const Footer3 = () => {
     >
       <div className="pt-[129px] max-w-[1443px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
         <div className="footer md:grid-cols-3 md:grid-flow-dense lg:grid-cols-4 xl:grid-flow-col xl:grid-cols-none pb-[68px] text-base-content">
-          <div className="max-w-[323px]">
+          <div onClick={() => router.push("/")} className="max-w-[323px]">
             <Image src={logo} width={163} height={51} alt="logo" />
             <p className="text-[16px] pt-2 leading-[30px] text-neutral">
               Lorem ipsum dolor sit amet Senectus mattis fermentum mauris orci sit.enim. Orci duis.
