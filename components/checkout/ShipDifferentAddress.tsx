@@ -10,6 +10,7 @@ const ShipDifferentAddress = ({ register, errors }: any) => {
           <input
             onClick={() => setIsChecked(!isChecked)}
             type="checkbox"
+            onChange={() => {}}
             className="checkbox border-[#D9D9D9] h-5 w-5 rounded-none checkbox-xs text-white checkbox-primary"
           />
           <span className="text-[#424242] text-[15px] leading-[22px] font-[400]">

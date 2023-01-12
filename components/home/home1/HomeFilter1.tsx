@@ -65,6 +65,7 @@ const HomeFilter1 = () => {
               <label className="label p-0 justify-start gap-2 cursor-pointer">
                 <input
                   type="checkbox"
+                  onChange={() => {}}
                   className="checkbox w-[15px] h-[15px] checkbox-primary rounded-none "
                 />
                 <span className="label-text text-[#414141] text-sm leading-[22px] ">
@@ -85,6 +86,7 @@ const HomeFilter1 = () => {
               <label className="label p-0 justify-start gap-2 cursor-pointer">
                 <input
                   type="checkbox"
+                  onChange={() => {}}
                   className="checkbox w-[15px] h-[15px] checkbox-primary rounded-none "
                 />
                 <span className="label-text text-[#414141] text-sm leading-[22px] ">
@@ -105,6 +107,7 @@ const HomeFilter1 = () => {
               <label className="label p-0 justify-start gap-2 cursor-pointer">
                 <input
                   type="checkbox"
+                  onChange={() => {}}
                   className="checkbox w-[15px] h-[15px] checkbox-primary rounded-none "
                 />
                 <div className="flex w-full gap-2 items-center">
@@ -130,6 +133,7 @@ const HomeFilter1 = () => {
               <label className="label p-0 justify-start gap-2 cursor-pointer">
                 <input
                   type="checkbox"
+                  onChange={() => {}}
                   className="checkbox w-[15px] h-[15px] checkbox-primary rounded-none "
                 />
                 <span className="label-text text-[#414141] text-sm leading-[22px] ">

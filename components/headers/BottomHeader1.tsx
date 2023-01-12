@@ -3,13 +3,15 @@ import { HiBars3 } from "react-icons/hi2";
 import { IoChevronDownSharp } from "react-icons/io5";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import NavContent from "./NavContent";
+import BottomHeaderCategories1 from "./BottomHeaderCategories1";
 
 const BottomHeader1 = () => {
   const [toggle, setToggle] = useState<boolean>(true);
   return (
     <div className="pb-5 hidden lg:flex items-center justify-between">
-      <div className=" max-w-[250px] xl:max-w-[290px] w-full">
+      {/* <div className=" max-w-[250px] xl:max-w-[290px] w-full">
         <button
+          id="header-categories-dropdown"
           onClick={() => setToggle(!toggle)}
           className=" bg-primary flex justify-between items-center px-3 text-secondary w-full h-[60px]"
         >
@@ -23,7 +25,8 @@ const BottomHeader1 = () => {
             }`}
           />
         </button>
-      </div>
+      </div> */}
+      <BottomHeaderCategories1 />
       {/* ========== nav link start ========= */}
       <div className="h-full">
         <NavContent>{"text-white"}</NavContent>

@@ -12,7 +12,7 @@ const LoginSlider = () => {
   const [isLogin, setIsLogin] = useState<boolean>(true);
   return (
     <div>
-      <input type="checkbox" id="signUp" className="modal-toggle" />
+      <input type="checkbox" onChange={() => {}} id="signUp" className="modal-toggle" />
       <label htmlFor="signUp" className="modal bg-[rgba(0,0,0,0.46)]   cursor-pointer">
         <label
           className="min-h-[643px] max-h-[677px] h-full lg:max-w-[564px] md:max-w-[500px] sm:max-w-[450px] max-w-[350px] w-full bg-none relative"

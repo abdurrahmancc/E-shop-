@@ -75,6 +75,7 @@ const CartTotal = ({ totalPrice, prices }: TotalPriceModel) => {
               <input
                 onClick={() => setIsChecked(!isChecked)}
                 type="checkbox"
+                onChange={() => {}}
                 className="checkbox w-[17px] h-[17px] hover:border-[#D9D9D9]  border border-[#D9D9D9] rounded-none checkbox-xs text-white checkbox-primary"
               />
               <span className="label-text leading-[26px] text-[#424242] text-[14px]">

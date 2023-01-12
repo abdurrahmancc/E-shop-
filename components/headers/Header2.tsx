@@ -14,7 +14,8 @@ const Header2 = () => {
       <BottomHeader2 />
       <div className="max-w-[1443px] container lg:mt-[30px] mt-5 w-full mx-auto px-4 lg:px-10 2xl:px-0">
         <div className="flex gap-[30px] w-full">
-          <TopCategories />
+          {/* <TopCategories /> */}
+          <div className="xl:max-w-[290px] hidden lg:block max-w-[250px] w-full"></div>
           <TopBannerSlider2 />
           <TopCardBanner />
         </div>

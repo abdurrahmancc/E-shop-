@@ -31,6 +31,7 @@ const WishlistTableRow = ({ product }: Product) => {
         <Td className="border-r py-[14px] border-[#D9D9D9] text-center">
           <input
             type="checkbox"
+            onChange={() => {}}
             className="checkbox checkbox-primary border border-[#7C7C7C] rounded-none w-[15px] h-[15px]"
           />
         </Td>

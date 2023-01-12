@@ -7,7 +7,7 @@ type Props = {
 const ImageModal = ({ images, selectImage }: Props) => {
   return (
     <div>
-      <input type="checkbox" id="zoom-image-modal" className="modal-toggle" />
+      <input type="checkbox" onChange={() => {}} id="zoom-image-modal" className="modal-toggle" />
       <label htmlFor="zoom-image-modal" className="modal bg-[rgba(0,0,0,0.6)]  cursor-pointer">
         <label
           className="xl:h-[600px] lg:h-[500px] lg:max-w-[500px] xl:max-w-[600px] md:max-w-[500px] sm:max-w-[400px] max-w-[300px] w-full bg-none relative"

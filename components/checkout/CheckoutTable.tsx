@@ -135,6 +135,7 @@ const CheckoutTable = ({ cartProducts, onSubmit }: any) => {
             <input
               onClick={() => setIsChecked(!isChecked)}
               type="checkbox"
+              onChange={() => {}}
               className="checkbox w-[15px] mt-1 border-[#D9D9D9] h-[15px] rounded-none checkbox-primary"
             />
             <span className="text-[14px] text-[#000000] leading-[21px]">

@@ -150,6 +150,7 @@ const Register = ({ setIsLogin, isLogin }: Props) => {
                 <label className="cursor-pointer p-0 gap-3 justify-start label">
                   <input
                     type="checkbox"
+                    onChange={() => {}}
                     className="checkbox border-[#AEAEAE] rounded-none w-[14px] h-[14px] checked:checkbox-primary"
                   />
                   <span className="text-[16px] leading-[24px] text-[#676767]">Remember me</span>

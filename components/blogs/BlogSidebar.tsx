@@ -137,6 +137,7 @@ const BlogSidebar = () => {
                 <label className="label p-0 justify-start gap-2 cursor-pointer">
                   <input
                     type="checkbox"
+                    onChange={() => {}}
                     className="checkbox w-[14px] h-[14px] hover:border-[#414141] checked:border-none border-[#414141] checkbox-primary rounded-none "
                   />
                   <span className="label-text text-[#414141] text-sm leading-[22px] ">
