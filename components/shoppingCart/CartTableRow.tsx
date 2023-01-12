@@ -2,13 +2,8 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { Td, Tr } from "react-super-responsive-table";
 import { useAppDispatch } from "../../redux/app/reduxHooks";
-import { removeToWishlist } from "../../redux/features/wishlist/wishlistSlice";
-import { toast } from "react-toastify";
-import {
-  addToCart,
-  changeQuantity,
-  removeToCart,
-} from "../../redux/features/shoppingCart/shoppingCartSlice";
+
+import { changeQuantity, removeToCart } from "../../redux/features/shoppingCart/shoppingCartSlice";
 import { ProductModel } from "../../types/types";
 import { CgTrash } from "react-icons/cg";
 
@@ -37,12 +32,12 @@ const CartTableRow = ({ product }: Product) => {
     <>
       <Tr className={"sm:border-b border-[#D9D9D9]"}>
         <Td className="sm:py-[35px] py-[14px] pl-4 2xl:text-[17px] text-[13px] lg:text-[15px] leading-6 font-[600] ">
-          <div className="flex items-center gap-3 lg:gap-5">
-            <figure className="p-[18.5px] rounded-[8px] bg-[#F8F8F8]">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-3 lg:gap-5">
+            <figure className="p-[18.5px] max-w-[117px] rounded-[8px] bg-[#F8F8F8]">
               <Image
                 height={80}
                 width={80}
-                className={"xl:h-[80px] xl:w-[80px] h-[50px] w-[48px]"}
+                className={"xl:h-[80px] xl:w-[80px] w-20 h-20 sm:h-[50px] sm:w-[48px]"}
                 src={`${product?.img[0]}`}
                 alt="product-img"
               />

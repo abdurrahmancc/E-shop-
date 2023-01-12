@@ -41,12 +41,12 @@ const WishlistTableRow = ({ product }: Product) => {
           />
         </Td>
         <Td className="sm:py-[14px] py-[14px] pl-4 xl:w-[500px] lg:w-[300px] sm:w-[220px]  2xl:text-[17px] text-[13px] lg:text-[15px] leading-6 font-[500] ">
-          <div className="flex items-center gap-3 lg:gap-5 xl:gap-[30px]">
-            <figure className="p-[6px] rounded-[8px] bg-[#F8F8F8]">
+          <div className="flex sm:items-center sm:flex-row flex-col gap-3 lg:gap-5 xl:gap-[30px]">
+            <figure className="p-[6px] max-w-[92px] rounded-[8px] bg-[#F8F8F8]">
               <Image
                 height={80}
                 width={80}
-                className={"xl:h-[80px] xl:w-[80px] h-[50px] w-[48px]"}
+                className={"xl:h-[80px] xl:w-[80px] sm:h-[50px] sm:w-[48px]"}
                 src={`${product?.img[0]}`}
                 alt="product-img"
               />

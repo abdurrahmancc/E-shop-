@@ -93,14 +93,14 @@ const BlogSidebar = () => {
 
           <form className="" onSubmit={onSubmit}>
             <div className="form-control py-4">
-              <div className="relative max-w-[216px] mx-auto">
+              <div className="relative max-w-[216px] md:mx-auto pl-6 md:pl-0 ">
                 <input
                   placeholder="Search..."
                   type="text"
                   {...register("search")}
                   className="placeholder:italic w-full placeholder:text-slate-400 text-[10px] box-border max-w-[216px] h-[34px] block pr-9 shadow-sm focus:outline-none input rounded-[4px] border border-[#E0E0E0] bg-white focus:ring-0"
                 />
-                <button className=" absolute flex justify-center items-center h-[34px] w-[34px] right-0 top-0 rounded-r-lg bg-primary">
+                <button className=" absolute flex justify-center items-center h-[34px] w-[34px] right-0 top-0 rounded-r-[4px] bg-primary">
                   <FiSearch className="text-[16px] text-[#031424]" />
                 </button>
                 <button

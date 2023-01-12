@@ -16,6 +16,7 @@ import { useAppDispatch, useAppSelector } from "../../redux/app/reduxHooks";
 import { fetchWishlist } from "../../redux/features/wishlist/wishlistSlice";
 import { fetchCarts } from "../../redux/features/shoppingCart/shoppingCartSlice";
 import { fetchCompare } from "../../redux/features/compare/compareSlice";
+import { useCartDetails } from "../../hooks/useCartDetails";
 
 interface Option {
   value: string;
@@ -38,6 +39,8 @@ const MiddleHeader1 = () => {
   const { wishlist, cart, compare } = useAppSelector((state) => state);
   const dispatch = useAppDispatch();
   const router = useRouter();
+  const { totalPrice } = useCartDetails();
+
   const {
     register,
     handleSubmit,
@@ -157,7 +160,7 @@ const MiddleHeader1 = () => {
                   <div className="flex flex-col">
                     <span className="text-neutral leading-[22px] text-xs">Total</span>
                     <span className="text-neutral font-[500] text-[16px] leading-[22px]">
-                      $4580
+                      ${totalPrice}
                     </span>
                   </div>
                 </div>

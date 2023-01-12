@@ -1,19 +1,23 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { VscGitCompare, VscThreeBars } from "react-icons/vsc";
 import Select from "react-select";
 import { useForm } from "react-hook-form";
 import { BiSearch } from "react-icons/bi";
 import { AiOutlineHeart } from "react-icons/ai";
-import { HiLocationMarker, HiOutlineShoppingBag } from "react-icons/hi";
+import { HiOutlineShoppingBag } from "react-icons/hi";
 import whiteLogo from "../../assets/icons/logo-white.png";
 import logo from "../../assets/icons/logo.png";
 import { searchCategorySelected } from "../../styles/selectComponents";
 import Link from "next/link";
 import DrawerSidebar from "../shared/drawerSidebar";
 import { useRouter } from "next/router";
-import { IoMdStarHalf } from "react-icons/io";
 import { BsFillTelephoneFill } from "react-icons/bs";
+import { useAppDispatch, useAppSelector } from "../../redux/app/reduxHooks";
+import { useCartDetails } from "../../hooks/useCartDetails";
+import { fetchWishlist } from "../../redux/features/wishlist/wishlistSlice";
+import { fetchCarts } from "../../redux/features/shoppingCart/shoppingCartSlice";
+import { fetchCompare } from "../../redux/features/compare/compareSlice";
 
 interface Option {
   value: string;
@@ -33,12 +37,21 @@ const options: Option[] = [
 const MiddleHeader3 = () => {
   const [selectedOption, setSelectedOption] = useState<Option | null>(null);
   const [toggle, setToggle] = useState<boolean>(false);
+  const { wishlist, cart, compare } = useAppSelector((state) => state);
+  const dispatch = useAppDispatch();
+  const { totalPrice } = useCartDetails();
   const router = useRouter();
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<FromData>();
+
+  useEffect(() => {
+    dispatch(fetchWishlist());
+    dispatch(fetchCarts());
+    dispatch(fetchCompare());
+  }, [dispatch]);
 
   const onSubmit = handleSubmit((data) => console.log(data));
   return (
@@ -109,7 +122,7 @@ const MiddleHeader3 = () => {
               <li>
                 <div className="flex items-center gap-2">
                   <div className="indicator">
-                    <Link href={"/wishlist"} className="  rounded-full" aria-label="shopping cart">
+                    <Link href={"/compare"} className="  rounded-full" aria-label="shopping cart">
                       <VscGitCompare
                         className={` ${
                           router?.pathname == "/home/home2" ? "text-[#424242]" : "text-[#FFFFFF]"
@@ -141,11 +154,7 @@ const MiddleHeader3 = () => {
               <li>
                 <div className="flex items-center gap-[18px]">
                   <div className="indicator">
-                    <Link
-                      href={"/shoppingCart"}
-                      className="  rounded-full"
-                      aria-label="shopping cart"
-                    >
+                    <Link href={"/cart"} className="  rounded-full" aria-label="shopping cart">
                       <HiOutlineShoppingBag
                         className={` ${
                           router?.pathname == "/home/home2" ? "text-[#424242]" : "text-[#FFFFFF]"
@@ -159,7 +168,7 @@ const MiddleHeader3 = () => {
                   <div className="flex flex-col">
                     <span className="text-neutral leading-[22px] text-xs">Total</span>
                     <span className="text-neutral font-[500] text-[16px] leading-[22px]">
-                      $4580
+                      ${totalPrice}
                     </span>
                   </div>
                 </div>

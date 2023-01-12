@@ -13,9 +13,9 @@ const BlogComments = () => {
         <div className="border-b w-full border-[#AEAEAE]"></div>
       </div>
       <div>
-        <div className="p-5 mt-[30px] flex gap-5 items-center bg-[#F5F5F5]">
+        <div className="p-5 mt-[30px] flex-col sm:flex-row flex gap-5 sm:items-center bg-[#F5F5F5]">
           <figure>
-            <Image src={user1} height={110} width={110} alt="user" />
+            <Image src={user1} height={110} width={110} className={"min-w-[80px]"} alt="user" />
           </figure>
           <div className="max-w-[975px]">
             <div className="flex items-center justify-between">
@@ -37,10 +37,10 @@ const BlogComments = () => {
             </p>
           </div>
         </div>
-        <div className="mt-[30px] ml-[110px]">
-          <div className="p-5 mt-[30px] flex gap-5 items-center bg-[#F5F5F5]">
+        <div className="mt-[30px] ml-[20px] sm:ml-[110px]">
+          <div className="p-5 mt-[30px] flex-col sm:flex-row flex gap-5 sm:items-center bg-[#F5F5F5]">
             <figure>
-              <Image src={user2} height={110} width={110} alt="user" />
+              <Image src={user2} height={110} width={110} className={"min-w-[80px]"} alt="user" />
             </figure>
             <div className="max-w-[865px]">
               <div className="flex items-center justify-between">

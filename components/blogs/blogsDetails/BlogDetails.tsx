@@ -20,7 +20,10 @@ type BlogType = {
 
 const BlogDetails = ({ blog }: BlogType) => {
   return (
-    <div className="flex mt-[50px] flex-col sm:flex-row gap-x-[30px] gap-y-[50px]">
+    <div
+      id="blog-details"
+      className="flex mt-[50px] flex-col md:flex-row gap-x-[30px] gap-y-[50px]"
+    >
       <div className="max-w-[1146px]">
         {/* ============ top details start ============= */}
         <div>
@@ -30,7 +33,7 @@ const BlogDetails = ({ blog }: BlogType) => {
               <span className="text-[#031424] lg:text-[16px] text-sm font-[500] leading-[24px]">
                 Tag:
               </span>
-              <ul className="flex items-center gap-[5px] lg:text-[16px] text-sm leading-[24px]">
+              <ul className="flex flex-wrap items-center gap-[5px] lg:text-[16px] text-sm leading-[24px]">
                 <li>
                   <a href="">Apple iMac,</a>
                 </li>
@@ -43,38 +46,44 @@ const BlogDetails = ({ blog }: BlogType) => {
               </ul>
             </div>
             <div className="flex lg:gap-3 gap-[5px]">
-              <div className="bg-[#3B5998] cursor-pointer flex justify-center items-center rounded-[32.86px] lg:w-[38px] lg:h-[38px] w-[28px] h-[28px]">
-                <FaFacebookF className="text-[#ffffff] lg:text-[20px] text-[16px]" />
+              <div className="bg-[#3B5998] cursor-pointer flex justify-center items-center rounded-[32.86px] lg:w-[38px] lg:h-[38px] sm:w-[28px] sm:h-[28px] w-6 h-6">
+                <FaFacebookF className="text-[#ffffff] lg:text-[20px] sm:text-[16px] text-[14px]" />
               </div>
-              <div className="bg-[#1DA1F2] cursor-pointer flex justify-center items-center rounded-[32.86px] lg:w-[38px] lg:h-[38px] w-[28px] h-[28px]">
-                <BsTwitter className="text-[#ffffff] lg:text-[20px] text-[16px]" />
+              <div className="bg-[#1DA1F2] cursor-pointer flex justify-center items-center rounded-[32.86px] lg:w-[38px] lg:h-[38px] sm:w-[28px] sm:h-[28px] w-6 h-6">
+                <BsTwitter className="text-[#ffffff] lg:text-[20px] sm:text-[16px] text-[14px]" />
               </div>
-              <div className="bg-[#E60023] cursor-pointer flex justify-center items-center rounded-[32.86px] lg:w-[38px] lg:h-[38px] w-[28px] h-[28px]">
-                <BsInstagram className="text-[#ffffff] lg:text-[20px] text-[16px]" />
+              <div className="bg-[#E60023] cursor-pointer flex justify-center items-center rounded-[32.86px] lg:w-[38px] lg:h-[38px] sm:w-[28px] sm:h-[28px] w-6 h-6">
+                <BsInstagram className="text-[#ffffff] lg:text-[20px] sm:text-[16px] text-[14px]" />
               </div>
-              <div className="bg-[#0077B5] cursor-pointer flex justify-center items-center rounded-[32.86px] lg:w-[38px] lg:h-[38px] w-[28px] h-[28px]">
-                <SiMinutemailer className="text-[#ffffff] lg:text-[20px] text-[16px]" />
+              <div className="bg-[#0077B5] cursor-pointer flex justify-center items-center rounded-[32.86px] lg:w-[38px] lg:h-[38px] sm:w-[28px] sm:h-[28px] w-6 h-6">
+                <SiMinutemailer className="text-[#ffffff] lg:text-[20px] sm:text-[16px] text-[14px]" />
               </div>
             </div>
           </div>
           <div className="w-full bg-[#F5F5F5]">
-            <ul className="flex max-w-[984px] mx-auto py-9 items-center justify-between">
-              <li className="text-[20px] cursor-pointer flex items-center gap-2 leading-[30px] font-[500] text-[#031424]">
+            <ul className="flex 2xl:max-w-[984px] px-3 sm:px-10 2xl:px-0 mx-auto py-9 items-center justify-between">
+              <li className="md:text-[20px] text-[16px] cursor-pointer flex items-center md:gap-2 gap-1 leading-[30px] font-[500] text-[#031424]">
                 <IoIosArrowBack />
                 <span>Previous Post</span>
               </li>
-              <li className="text-[30px] cursor-pointer">
+              <li className="md:text-[30px] text-[20px] cursor-pointer">
                 <RiLayoutGridFill />
               </li>
-              <li className="text-[20px] cursor-pointer flex items-center gap-2 leading-[30px] font-[500] text-[#031424]">
+              <li className="md:text-[20px] text-[16px] cursor-pointer flex items-center md:gap-2 gap-1 leading-[30px] font-[500] text-[#031424]">
                 <span>Next Post</span>
                 <IoIosArrowForward />
               </li>
             </ul>
           </div>
-          <div className="flex bg-[#F5F5F5] mt-[50px] p-[35px] items-center gap-x-5">
+          <div className="flex bg-[#F5F5F5] flex-col sm:flex-row mt-[50px] lg:p-[35px] p-5 sm:items-center gap-y-5 gap-x-5">
             <figure>
-              <Image src={admin} height={200} width={200} alt="admin" />
+              <Image
+                src={admin}
+                height={200}
+                width={200}
+                className={"sm:max-w-[200px] w-[100px] lg:w-[120px] 2xl:w-[200px]"}
+                alt="admin"
+              />
             </figure>
             <div className="max-w-[856px]">
               <span className="text-[16px] leading-[24px] text-[#424242] ">AUTHOR</span>
@@ -100,7 +109,7 @@ const BlogDetails = ({ blog }: BlogType) => {
         </div>
         {/* ============ Comments end ============= */}
       </div>
-      <div className="sm:max-w-[264px] min-w-[264px] ">
+      <div className="md:max-w-[264px] min-w-[264px] ">
         <BlogSidebar />
       </div>
     </div>

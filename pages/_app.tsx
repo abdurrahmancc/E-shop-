@@ -15,6 +15,7 @@ import "../styles/about.css";
 import "../styles/shop.css";
 import "../styles/productDetails.css";
 import "../styles/collapsibleComponents.css";
+import "../styles/blogs.css";
 import { Provider } from "react-redux";
 import { store } from "../redux/app/store";
 

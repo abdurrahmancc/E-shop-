@@ -14,21 +14,21 @@ const TopHeader1 = () => {
           <span className="text-[#FFFFFF] text-xs leading-[18px]">info@demo.com</span>
         </li>
         <div className="h-[25.5px] w-[1px] bg-[rgba(255,255,255,0.24)]"></div>
-        <li className="flex capitalize items-center gap-1">
+        <li className="flex capitalize cursor-pointer items-center gap-1">
           <Image src={location} width={16} height={16} alt="location icons" />
           <span className="text-[#FFFFFF] text-xs leading-[18px]">Track Order</span>
         </li>
       </ul>
       <ul className="flex gap-3">
-        <li className="flex capitalize items-center gap-1 text-[#FFFFFF] text-xs leading-[18px]">
+        <li className="flex capitalize cursor-pointer items-center gap-1 text-[#FFFFFF] text-xs leading-[18px]">
           <span>USD</span> <FiChevronDown className="w-3 h-3" />
         </li>
         <div className="h-[25.5px] w-[1px] bg-[rgba(255,255,255,0.24)]"></div>
-        <li className="flex capitalize items-center gap-1 text-[#FFFFFF] text-xs leading-[18px]">
+        <li className="flex capitalize cursor-pointer items-center gap-1 text-[#FFFFFF] text-xs leading-[18px]">
           <span>English</span> <FiChevronDown className="w-3 h-3" />
         </li>
         <div className="h-[25.5px] w-[1px] bg-[rgba(255,255,255,0.24)]"></div>
-        <li className="flex capitalize items-center gap-1">
+        <li className="flex cursor-pointer capitalize items-center gap-1">
           <Image src={user} width={16} height={16} alt="user icons" />
           <span className="text-[#FFFFFF] text-xs leading-[18px]">My account</span>
         </li>

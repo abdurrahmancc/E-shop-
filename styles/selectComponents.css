@@ -1,6 +1,12 @@
 #category-select-component  .css-1fdsijx-ValueContainer{
 padding: 0;
 webkit-flex: none;
+-webkit-flex: none;
+flex: none;
+}
+#category-select-component  .css-hlgwow{
+padding: 0;
+-webkit-flex: none;
 flex: none;
 }
 #category-select-component  .css-1rosn8b-singleValue{

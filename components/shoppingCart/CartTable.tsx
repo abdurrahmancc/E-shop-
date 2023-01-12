@@ -41,10 +41,11 @@ const CartTable = ({ products }: Product) => {
                 Quantity
               </Th>
               <Th className="font-[500] col-span-1 text-center py-[20px] leading-[28px] xl:text-[20px] lg:text-lg text-[16px]">
-                Subtotal
+                <span className="text-[#424242]">Subtotal</span>
               </Th>
-              <Th className=" py-[20px]">
-                <CgTrash className="text-[#031424] cursor-pointer text-[24px]" />
+              <Th className="py-[20px]">
+                <span className="sm:hidden text-[13px] font-[600]">Removed</span>
+                <CgTrash className="text-[#031424] hidden sm:block cursor-pointer text-[24px]" />
               </Th>
             </Tr>
           </Thead>

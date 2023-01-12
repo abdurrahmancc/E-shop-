@@ -14,7 +14,7 @@ const Blogs = ({ blogs }: BlogsType) => {
   const [pageCount, setPageCount] = useState<number>(4);
 
   return (
-    <div>
+    <div id="blogs-1">
       <h2 className="text-[#343434] text-[38px] pb-[30px] font-[600] leading-[57px]">Enterprise</h2>
       <div className="inline-block">
         <ul className={`flex gap-[12px] rounded-full px-[19px] py-[14px] bg-[#F3F6FB]`}>
@@ -80,7 +80,7 @@ const Blogs = ({ blogs }: BlogsType) => {
             })}
           </div>
           <div className="flex justify-center mt-[65px]">
-            <Pagination pageCount={3} setPage={setPage} />
+            <Pagination pageCount={pageCount} setPage={setPage} />
           </div>
         </div>
         <div className="sm:max-w-[264px]">
