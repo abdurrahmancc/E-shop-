@@ -1,14 +1,12 @@
-import React, { useState } from "react";
-import { HiBars3 } from "react-icons/hi2";
-import { IoChevronDownSharp } from "react-icons/io5";
-import { BsFillTelephoneFill } from "react-icons/bs";
+import React from "react";
 import NavContent from "./NavContent";
 import { IoMdStarHalf } from "react-icons/io";
 import { HiLocationMarker } from "react-icons/hi";
 import BottomHeaderCategories2 from "./BottomHeaderCategories2";
+import { useRouter } from "next/router";
 
 const BottomHeader2 = () => {
-  const [toggle, setToggle] = useState<boolean>(true);
+  const router = useRouter();
 
   return (
     <div id="bottom-Header-2" className=" bg-[#041E42] h-[65px] hidden lg:block">
@@ -27,7 +25,10 @@ const BottomHeader2 = () => {
                 <span className="text-[15px] leading-[22px] text-white">Best Offer</span>
               </div>
               <div className="h-8 is-hidden bg-white w-[1px]"></div>
-              <div className="flex gap-2 is-hidden items-center">
+              <div
+                onClick={() => router.push("/orderTrack")}
+                className="flex cursor-pointer gap-2 is-hidden items-center"
+              >
                 <HiLocationMarker className="w-[20px] h-[20px] text-white" />
                 <span className="text-[15px] leading-[22px] text-white">Order Tracking</span>
               </div>

@@ -15,39 +15,39 @@ const AccountDetails = () => {
             <form>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-5">
                 <div className="form-control w-full">
-                  <label className="label px-0 pt-0 text-[#424242] text-[16px] leading-6">
+                  <label className="label px-0 pt-0 text-[#424242] text-sm md:text-[16px] leading-6">
                     Full Name*
                   </label>
                   <input
                     type="text"
-                    className="input input-bordered text-[16px] placeholder:text-[#424242] focus:outline-none rounded-none border-[#D9D9D9] bg-white w-full "
+                    className="input input-bordered text-[16px] placeholder:text-[#424242] h-[54px] focus:outline-none rounded-none border-[#D9D9D9] bg-white w-full "
                   />
                 </div>
                 <div className="form-control w-full">
-                  <label className="label px-0 pt-0 text-[#424242] text-[16px] leading-6">
+                  <label className="label px-0 pt-0 text-[#424242] text-sm md:text-[16px] leading-6">
                     Phone Number*
                   </label>
                   <input
                     type="text"
-                    className="input input-bordered text-[16px] placeholder:text-[#424242] focus:outline-none rounded-none border-[#D9D9D9] bg-white w-full "
+                    className="input input-bordered text-[16px] placeholder:text-[#424242] h-[54px]  focus:outline-none rounded-none border-[#D9D9D9] bg-white w-full "
                   />
                 </div>
                 <div className="form-control w-full">
-                  <label className="label px-0 pt-0 text-[#424242] text-[16px] leading-6">
+                  <label className="label px-0 pt-0 text-[#424242] text-sm md:text-[16px] leading-6">
                     James_Smith
                   </label>
                   <input
                     type="text"
-                    className="input input-bordered text-[16px] placeholder:text-[#424242] focus:outline-none rounded-none border-[#D9D9D9] bg-white w-full "
+                    className="input input-bordered text-[16px] placeholder:text-[#424242] h-[54px]  focus:outline-none rounded-none border-[#D9D9D9] bg-white w-full "
                   />
                 </div>
                 <div className="form-control w-full">
-                  <label className="label px-0 pt-0 text-[#424242] text-[16px] leading-6">
+                  <label className="label px-0 pt-0 text-[#424242] text-sm md:text-[16px] leading-6">
                     Email address*
                   </label>
                   <input
                     type="text"
-                    className="input input-bordered text-[16px] placeholder:text-[#424242] focus:outline-none rounded-none border-[#D9D9D9] bg-white w-full "
+                    className="input input-bordered text-[16px] placeholder:text-[#424242] h-[54px]  focus:outline-none rounded-none border-[#D9D9D9] bg-white w-full "
                   />
                 </div>
               </div>
@@ -63,30 +63,30 @@ const AccountDetails = () => {
             <form>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-5">
                 <div className="form-control w-full">
-                  <label className="label px-0 pt-0 text-[#424242] text-[16px] leading-6">
+                  <label className="label px-0 pt-0 text-[#424242] text-sm md:text-[16px] leading-6">
                     Current password
                   </label>
                   <input
                     type="password"
-                    className="input input-bordered text-[16px] placeholder:text-[#424242] focus:outline-none rounded-none border-[#D9D9D9] bg-white w-full "
+                    className="input input-bordered text-[16px] placeholder:text-[#424242] h-[54px]  focus:outline-none rounded-none border-[#D9D9D9] bg-white w-full "
                   />
                 </div>
                 <div className="form-control w-full">
-                  <label className="label px-0 pt-0 text-[#424242] text-[16px] leading-6">
+                  <label className="label px-0 pt-0 text-[#424242] text-sm md:text-[16px] leading-6">
                     New password
                   </label>
                   <input
                     type="password"
-                    className="input input-bordered text-[16px] placeholder:text-[#424242] focus:outline-none rounded-none border-[#D9D9D9] bg-white w-full "
+                    className="input input-bordered text-[16px] placeholder:text-[#424242] h-[54px] focus:outline-none rounded-none border-[#D9D9D9] bg-white w-full "
                   />
                 </div>
                 <div className="form-control w-full">
-                  <label className="label px-0 pt-0 text-[#424242] text-[16px] leading-6">
+                  <label className="label px-0 pt-0 text-[#424242] text-sm md:text-[16px] leading-6">
                     Confirm new password
                   </label>
                   <input
                     type="password"
-                    className="input input-bordered text-[16px] placeholder:text-[#424242] focus:outline-none rounded-none border-[#D9D9D9] bg-white w-full "
+                    className="input input-bordered text-[16px] placeholder:text-[#424242] h-[54px] focus:outline-none rounded-none border-[#D9D9D9] bg-white w-full "
                   />
                 </div>
               </div>

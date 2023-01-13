@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { FiChevronDown } from "react-icons/fi";
 import Select from "react-select";
@@ -25,6 +26,7 @@ const optionsM: Option[] = [
 ];
 
 const TopHeader3 = () => {
+  const router = useRouter();
   const [selectedOption, setSelectedOption] = useState<Option | null>(null);
   const [selectedMoneyOption, setSelectedMoneyOption] = useState<Option | null>(null);
 
@@ -35,7 +37,12 @@ const TopHeader3 = () => {
           <ul className="lg:flex items-center lg:gap-3 gap-1 hidden">
             <li className="text-[#FFFFFF] text-xs leading-[18px]">Eshop@gmail.com</li>
             <div className="h-[25.5px] w-[1px] bg-[rgba(255,255,255,0.24)]"></div>
-            <li className="text-[#FFFFFF] text-xs leading-[18px]">Order Tracking</li>
+            <li
+              onClick={() => router.push("/orderTrack")}
+              className="text-[#FFFFFF] cursor-pointer text-xs leading-[18px]"
+            >
+              Order Tracking
+            </li>
           </ul>
           <div className="text-[12px] mx-auto leading-[18px] text-[#FFFFFF]">
             Free Shipping On All order Over $200

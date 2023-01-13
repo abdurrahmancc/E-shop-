@@ -9,6 +9,7 @@ import {
   topHeaderCurrencySelectorStyle,
   topHeaderLanguageSelectorStyle,
 } from "../../styles/selectComponents";
+import { useRouter } from "next/router";
 
 type Option = {
   value: string;
@@ -29,6 +30,7 @@ const optionsM: Option[] = [
 ];
 
 const TopHeader1 = () => {
+  const router = useRouter();
   const [selectedOption, setSelectedOption] = useState<Option | null>(null);
   const [selectedMoneyOption, setSelectedMoneyOption] = useState<Option | null>(null);
 
@@ -40,7 +42,10 @@ const TopHeader1 = () => {
           <span className="text-[#FFFFFF] text-xs leading-[18px]">info@demo.com</span>
         </li>
         <div className="h-[25.5px] w-[1px] bg-[rgba(255,255,255,0.24)]"></div>
-        <li className="flex capitalize cursor-pointer items-center gap-1">
+        <li
+          onClick={() => router.push("/orderTrack")}
+          className="flex capitalize cursor-pointer items-center gap-1"
+        >
           <Image src={location} width={16} height={16} alt="location icons" />
           <span className="text-[#FFFFFF] text-xs leading-[18px]">Track Order</span>
         </li>
