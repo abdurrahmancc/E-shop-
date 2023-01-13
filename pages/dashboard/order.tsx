@@ -7,7 +7,7 @@ import Breadcrumb from "../../components/shared/breadcrumb/Breadcrumb";
 import Footer1 from "../../components/shared/footer/Footer1";
 import ScrollUpBtn from "../../components/shared/ScrollUpBtn";
 import Newsletter4 from "../../components/shared/newsletter/Newsletter4";
-import UserOrders from "../../components/dashboard/userOrders";
+import UserOrders from "../../components/dashboard/UserOrders";
 
 const breadcrumbData = [
   { label: "home", value: "/" },
