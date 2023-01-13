@@ -77,7 +77,10 @@ const TopHeader1 = () => {
           />
         </li>
         <div className="h-[25.5px] w-[1px] bg-[rgba(255,255,255,0.24)]"></div>
-        <li className="flex cursor-pointer capitalize items-center gap-1">
+        <li
+          onClick={() => router.push("/dashboard/userDashboard")}
+          className="flex cursor-pointer capitalize items-center gap-1"
+        >
           <Image src={user} width={16} height={16} alt="user icons" />
           <span className="text-[#FFFFFF] text-xs leading-[18px]">My account</span>
         </li>

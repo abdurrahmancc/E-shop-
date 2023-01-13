@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { type } from "os";
 import React from "react";
+import { MdEdit } from "react-icons/md";
 import user from "../../assets/users/user.png";
 
 type MenuItems = {
@@ -25,9 +26,14 @@ const DashboardSidebar = () => {
   return (
     <div className="lg:w-[305px] lg:min-w-[305px] sm:w-[250px] min-w-[250px] h-[747px] bg-[#F2F4F8] rounded-[12px]">
       <div className="pt-[25px] pb-[16px] border-b border-[#D1D1D1]">
-        <figure>
-          <Image src={user} width={104} className={"mx-auto"} height={104} alt="user" />
-        </figure>
+        <div className="relative w-[104px] h-[104px] mx-auto">
+          <div className="w-[20px] bottom-2 right-1  absolute border-[2px] border-[#ffffff] h-[20px] bg-primary rounded-full flex items-center justify-center">
+            <MdEdit className="text-[8px] text-[#031424]" />
+          </div>
+          <figure>
+            <Image src={user} width={104} className={"mx-auto"} height={104} alt="user" />
+          </figure>
+        </div>
         <h5 className="text-[20px] text-center mt-[9px] leading-[35px] text-[#031424]">
           James_Smith
         </h5>
