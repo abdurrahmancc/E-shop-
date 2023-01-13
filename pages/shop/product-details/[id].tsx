@@ -23,9 +23,10 @@ const breadcrumbData = [
 
 interface Product {
   product: ProductModel;
+  products: ProductModel[];
 }
 
-const Details = ({ product }: Product) => {
+const Details = ({ product, products }: Product) => {
   return (
     <>
       <Head>
@@ -64,7 +65,7 @@ const Details = ({ product }: Product) => {
         {/* ============= Bottom Details end =========== */}
         {/* ============= Related Products start =========== */}
         <section className="max-w-[1443px] mt-20 lg:mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
-          <RelatedProducts />
+          <RelatedProducts products={products} />
         </section>
         {/* ============= Related Products end =========== */}
         <section className="mt-[120px]">
@@ -103,6 +104,7 @@ export const getStaticProps: GetStaticProps = async ({ params }: any) => {
   return {
     props: {
       product,
+      products,
     },
   };
 };
