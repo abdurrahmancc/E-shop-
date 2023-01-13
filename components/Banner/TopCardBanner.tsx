@@ -8,7 +8,7 @@ const TopCardBanner = () => {
   return (
     <div className="max-w-[281px] hidden xl:flex w-full flex-col gap-[30px]">
       <Image src={img1} alt="banner" width={281} height={171} className="w-full " />
-      <Image src={img2} alt="banner" width={281} height={171} className="w-full " />
+      <Image src={img2} alt="banner" width={281} height={171} className="w-full h-full" />
       <Image src={img3} alt="banner" width={281} height={171} className="w-full " />
     </div>
   );

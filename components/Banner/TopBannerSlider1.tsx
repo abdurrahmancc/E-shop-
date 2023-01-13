@@ -58,7 +58,7 @@ const TopBannerSlider1 = () => {
                   </p>
                 </Fade>
                 <Fade bottom delay={600}>
-                  <button className="lg:h-[62px] lg:max-w-[159px] h-[44px] max-w-[110px] md:h-[52px] md:max-w-[130px] w-full flex items-center lg:text-[20px] lg:leading-[30px] text-[16px] md:text-lg font-[500] justify-center text-white bg-info ">
+                  <button className="lg:h-[62px] lg:max-w-[159px] h-[44px] max-w-[110px] md:h-[52px] md:max-w-[130px] w-full flex items-center lg:text-[20px] lg:leading-[30px] text-[16px] md:text-lg font-[500] justify-center text-white bg-info bg-gradient-to-r from-[#027aea] to-[#2387e5] btn-animate">
                     Shop Now
                   </button>
                 </Fade>

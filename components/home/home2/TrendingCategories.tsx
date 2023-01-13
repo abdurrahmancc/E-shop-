@@ -5,9 +5,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { TfiAngleLeft, TfiAngleRight } from "react-icons/tfi";
-import ProductCard1 from "../../shared/cards/ProductCard1";
 import CategoriesCard from "../../shared/cards/CategoriesCard";
+import { trendingCategoriesData } from "../../../database/data";
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 const TrendingCategories = () => {
@@ -22,7 +21,7 @@ const TrendingCategories = () => {
             <button className="hover:text-white custom_prev transition-all duration-300 ease-linear hover:bg-info justify-center text-info border border-info rounded-full text-ing flex items-center gap-3 md:w-[36px] md:h-[36px] w-7 h-7 leading-[24px] font-[500]">
               <HiOutlineArrowLeft className="w-[13.71px] h-[13.71px] " />
             </button>
-            <button className="hover:text-white custom_prev transition-all duration-300 ease-linear hover:bg-info justify-center text-info border border-info rounded-full text-ing flex items-center gap-3 md:w-[36px] md:h-[36px] w-7 h-7 leading-[24px] font-[500]">
+            <button className="hover:text-white custom_next transition-all duration-300 ease-linear hover:bg-info justify-center text-info border border-info rounded-full text-ing flex items-center gap-3 md:w-[36px] md:h-[36px] w-7 h-7 leading-[24px] font-[500]">
               <HiOutlineArrowRight className="w-[13.71px] h-[13.71px]" />
             </button>
           </div>
@@ -71,24 +70,12 @@ const TrendingCategories = () => {
             },
           }}
         >
-          <SwiperSlide>
-            <CategoriesCard />
-          </SwiperSlide>
-          <SwiperSlide>
-            <CategoriesCard />
-          </SwiperSlide>
-          <SwiperSlide>
-            <CategoriesCard />
-          </SwiperSlide>
-          <SwiperSlide>
-            <CategoriesCard />
-          </SwiperSlide>
-          <SwiperSlide>
-            <CategoriesCard />
-          </SwiperSlide>
-          <SwiperSlide>
-            <CategoriesCard />
-          </SwiperSlide>
+          {trendingCategoriesData &&
+            trendingCategoriesData.map((category) => (
+              <SwiperSlide key={category?._id}>
+                <CategoriesCard category={category} />
+              </SwiperSlide>
+            ))}
         </Swiper>
       </div>
     </>

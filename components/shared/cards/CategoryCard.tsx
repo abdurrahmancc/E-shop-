@@ -21,7 +21,7 @@ const CategoryCard = ({ category }: CategoryModel) => {
             </li>
           ))}
           <li
-            onClick={() => push("/shop")}
+            onClick={() => push("/shop/1")}
             className="text-[12px] gap-2 cursor-pointer flex items-center mt-[10px] font-[600] text-info leading-[22px]"
           >
             See All {category?.name} <BsArrowRight className="text-[20px]" />{" "}

@@ -17,9 +17,9 @@ const TrendingProducts = ({ products }: Products) => {
   if (activeProducts == "newProducts") {
     productItems = products?.slice(0, 8);
   } else if (activeProducts == "featured") {
-    productItems = products?.slice(8, 15);
+    productItems = products?.slice(8, 16);
   } else if (activeProducts == "bestSeller") {
-    productItems = products?.slice(15, 22);
+    productItems = products?.slice(12, 20);
   }
 
   return (

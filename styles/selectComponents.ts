@@ -95,12 +95,14 @@ export const sortByStyle = {
     borderRadius: 0,
     top: 30,
     left: 0,
+    fontSize: 14,
     width: 141,
     zIndex: 100
   }),
   menuList: (base: any) => ({
     ...base,
     padding: 0,
+    fontSize: 14,
     color: '#031424'
   }),
   dropdownIndicator: (base: any) => ({
@@ -169,11 +171,13 @@ export const showProductsStyle = {
     top: 30,
     left: 0,
     width: 53,
+    fontSize: 14,
     zIndex: 100
   }),
   menuList: (base: any) => ({
     ...base,
     padding: 0,
+    fontSize: 14,
     color: '#031424'
   }),
   dropdownIndicator: (base: any) => ({

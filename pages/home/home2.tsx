@@ -13,8 +13,15 @@ import ShopByCategories from "../../components/home/home2/ShopByCategories";
 import Footer2 from "../../components/shared/footer/Footer2";
 import ScrollUpBtn from "../../components/shared/ScrollUpBtn";
 import Header2 from "../../components/headers/Header2";
+import { GetStaticProps } from "next";
+import { productsData } from "../../database/data";
+import { ProductModel } from "../../types/types";
 
-const Home2 = () => {
+interface Products {
+  products: ProductModel[];
+}
+
+const Home2 = ({ products }: Products) => {
   return (
     <>
       <Head>
@@ -34,12 +41,12 @@ const Home2 = () => {
         {/*======== single product banner section end ==============*/}
         {/* ============= Trending Products start =========== */}
         <section className="max-w-[1443px] mt-20 lg:mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
-          <HotNewArrivals />
+          <HotNewArrivals products={products} />
         </section>
         {/* ============= Trending Products end =========== */}
         {/* ============= Special Products start =========== */}
         <section className="max-w-[1443px] mt-20 lg:mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
-          <SpecialProducts2 />
+          <SpecialProducts2 products={products} />
         </section>
         {/* ============= Special Products end =========== */}
         {/* ============= Trending Categories start =========== */}
@@ -54,7 +61,7 @@ const Home2 = () => {
         {/* ============= smart banner end =========== */}
         {/* ============= On Sale Products start =========== */}
         <section className="max-w-[1443px] mt-20 lg:mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
-          <OnSaleProducts />
+          <OnSaleProducts products={products} />
         </section>
         {/* ============= On Sale Products end =========== */}
         {/* ============= card banner start =========== */}
@@ -63,7 +70,7 @@ const Home2 = () => {
         </section>
         {/* ============= Top Trending Recently Group Sec start =========== */}
         <section className="max-w-[1443px] mt-20 lg:mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
-          <TopTrendingRecentlyGroupSec />
+          <TopTrendingRecentlyGroupSec products={products} />
         </section>
         {/* ============= Top Trending Recently Group Sec end =========== */}
         {/* ============= smart banner start =========== */}
@@ -73,7 +80,7 @@ const Home2 = () => {
         {/* ============= smart banner end =========== */}
         {/* ============= Featured Products start =========== */}
         <section className="max-w-[1443px] mt-20 lg:mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
-          <FeaturedProducts2 />
+          <FeaturedProducts2 products={products} />
         </section>
         {/* ============= Featured Products end =========== */}
         {/* ======== scroll up button start ======= */}
@@ -88,3 +95,12 @@ const Home2 = () => {
 };
 
 export default Home2;
+
+export const getStaticProps: GetStaticProps = async () => {
+  const products = productsData;
+  return {
+    props: {
+      products,
+    },
+  };
+};

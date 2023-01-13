@@ -4,8 +4,17 @@ import ProductCard2 from "../../shared/cards/ProductCard2";
 import HomeFilter2 from "./HomeFilter2";
 import banner from "../../../assets/banner/full-width-banner-1.png";
 import { HiOutlineArrowRight } from "react-icons/hi2";
+import { ProductModel } from "../../../types/types";
+import { useRouter } from "next/router";
 
-const SpecialProducts2 = () => {
+interface Products {
+  products: ProductModel[];
+}
+
+const SpecialProducts2 = ({ products }: Products) => {
+  const router = useRouter();
+  const productItems = products?.slice(10, 14);
+
   return (
     <div className="mt-[50px]">
       <div className="flex lg:flex-row flex-col gap-y-8 gap-x-5 2xl:gap-x-[30px]">
@@ -23,7 +32,10 @@ const SpecialProducts2 = () => {
               <h2 className="text-[#031424] lg:text-[28px] lg:leading-[42px] sm:text-[24px] text-[18px] leading-8 font-[600]">
                 Special Products
               </h2>
-              <button className="text-info flex items-center gap-3 text-[16px] leading-[24px] font-[500]">
+              <button
+                onClick={() => router.push("/shop/1")}
+                className="text-info flex items-center gap-3 text-[16px] leading-[24px] font-[500]"
+              >
                 See All <HiOutlineArrowRight className="text-info w-5 h-5 " />
               </button>
             </div>
@@ -33,10 +45,8 @@ const SpecialProducts2 = () => {
             </div>
           </div>
           <div className="xs-responsive grid grid-cols-2 max-w-[550px] lg:max-w-full  mx-auto lg:grid-cols-3 xl:grid-cols-4 gap-y-[17px] gap-3 sm:gap-x-5 2xl:gap-x-[30px]">
-            <ProductCard2 />
-            <ProductCard2 />
-            <ProductCard2 />
-            <ProductCard2 />
+            {productItems &&
+              productItems.map((product) => <ProductCard2 product={product} key={product?._id} />)}
           </div>
         </div>
       </div>

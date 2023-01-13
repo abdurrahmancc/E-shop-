@@ -10,6 +10,12 @@ export type BreadcrumbModel = {
   value: string
 }
 
+export type TrendingCategoryType = {
+  _id: string
+  name: string
+  img: any
+}
+
 export interface ProductModel {
   _id: string
   name: string

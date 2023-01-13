@@ -6,9 +6,16 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { ProductModel } from "../../../types/types";
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
-const TopRatedItems = () => {
+interface Products {
+  products: ProductModel[];
+}
+
+const TopRatedItems = ({ products }: Products) => {
+  const productItems = products?.slice(3, 15);
+
   return (
     <>
       <div className="w-full">
@@ -20,7 +27,7 @@ const TopRatedItems = () => {
             <button className="hover:text-white custom_prev transition-all duration-300 ease-linear hover:bg-info justify-center text-info border border-info rounded-full text-ing flex items-center gap-3 md:w-[36px] md:h-[36px] w-7 h-7 leading-[24px] font-[500]">
               <HiOutlineArrowLeft className="w-[13.71px] h-[13.71px] " />
             </button>
-            <button className="hover:text-white custom_prev transition-all duration-300 ease-linear hover:bg-info justify-center text-info border border-info rounded-full text-ing flex items-center gap-3 md:w-[36px] md:h-[36px] w-7 h-7 leading-[24px] font-[500]">
+            <button className="hover:text-white custom_next transition-all duration-300 ease-linear hover:bg-info justify-center text-info border border-info rounded-full text-ing flex items-center gap-3 md:w-[36px] md:h-[36px] w-7 h-7 leading-[24px] font-[500]">
               <HiOutlineArrowRight className="w-[13.71px] h-[13.71px] " />
             </button>
           </div>
@@ -69,42 +76,12 @@ const TopRatedItems = () => {
             },
           }}
         >
-          <SwiperSlide>
-            <ProductCard1 />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard1 />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard1 />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard1 />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard1 />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard1 />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard1 />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard1 />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard1 />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard1 />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard1 />
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProductCard1 />
-          </SwiperSlide>
+          {productItems &&
+            productItems.map((product) => (
+              <SwiperSlide key={product?._id}>
+                <ProductCard1 product={product} />
+              </SwiperSlide>
+            ))}
         </Swiper>
       </div>
     </>

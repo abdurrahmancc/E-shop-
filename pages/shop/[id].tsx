@@ -1,8 +1,5 @@
 import Head from "next/head";
 import React, { useState } from "react";
-import BottomHeader1 from "../../components/headers/BottomHeader1";
-import MiddleHeader1 from "../../components/headers/MiddleHeader1";
-import TopHeader1 from "../../components/headers/TopHeader1";
 import Breadcrumb from "../../components/shared/breadcrumb/Breadcrumb";
 import { ProductModel } from "../../types/types";
 import Pagination from "../../components/shared/pagination/Pagination";
@@ -16,9 +13,10 @@ import ShopBanner1 from "../../components/shop/ShopBanner1";
 import ShopTopFilter from "../../components/shop/ShopTopFilter";
 import { useRouter } from "next/router";
 import Header1 from "../../components/headers/Header1";
+import { GetStaticPaths, GetStaticProps } from "next";
+import { productsData } from "../../database/data";
 
 interface ProductTypes {
-  product: ProductModel;
   products: ProductModel[];
 }
 
@@ -27,7 +25,7 @@ const breadcrumbData = [
   { label: "shop", value: "/shop" },
 ];
 
-const Shop = () => {
+const Shop = ({ products }: ProductTypes) => {
   const router = useRouter();
   const [page, setPage] = useState<number>(4);
   const [toggleCard, setToggleCard] = useState<boolean>(true);
@@ -80,14 +78,14 @@ const Shop = () => {
               {/* ============ product card toggle start ============ */}
               {router.query.id == "4" ? (
                 toggleCard ? (
-                  <ShopVertical />
+                  <ShopVertical products={products} />
                 ) : (
-                  <ShopHorizontal />
+                  <ShopHorizontal products={products} />
                 )
               ) : toggleCard ? (
-                <ShopHorizontal />
+                <ShopHorizontal products={products} />
               ) : (
-                <ShopVertical />
+                <ShopVertical products={products} />
               )}
 
               {/* ============= product card toggle end ============== */}
@@ -118,3 +116,25 @@ const Shop = () => {
 };
 
 export default Shop;
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const products = productsData;
+  const paths = products.map((product: any) => ({
+    params: {
+      id: product._id,
+    },
+  }));
+  return {
+    paths,
+    fallback: false,
+  };
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  const products = productsData;
+  return {
+    props: {
+      products,
+    },
+  };
+};

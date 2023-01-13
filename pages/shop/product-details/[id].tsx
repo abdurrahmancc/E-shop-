@@ -11,7 +11,6 @@ import Newsletter4 from "../../../components/shared/newsletter/Newsletter4";
 import ScrollUpBtn from "../../../components/shared/ScrollUpBtn";
 import BottomDetails from "../../../components/ProductDetails/BottomDetails";
 import TopProductDetails from "../../../components/ProductDetails/TopProductDetails";
-import { useRouter } from "next/router";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { productsData } from "../../../database/data";
 import { ProductModel } from "../../../types/types";

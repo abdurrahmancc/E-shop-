@@ -11,10 +11,15 @@ import { useAppDispatch } from "../../../redux/app/reduxHooks";
 import { addToCompare } from "../../../redux/features/compare/compareSlice";
 import { addToCart } from "../../../redux/features/shoppingCart/shoppingCartSlice";
 import { addToWishlist } from "../../../redux/features/wishlist/wishlistSlice";
+import { ProductModel } from "../../../types/types";
 import QuickView from "../../modals/QuickView";
 import { Rating5 } from "../Ratings/Ratings";
 
-const ProductCard1 = ({ product }: any) => {
+type PropsData = {
+  product: ProductModel;
+};
+
+const ProductCard1 = ({ product }: PropsData) => {
   const [isHover, setIsHover] = useState<boolean>(false);
   const router = useRouter();
   const isProductCard3 = router.pathname.includes("home3");
@@ -50,7 +55,7 @@ const ProductCard1 = ({ product }: any) => {
             isProductCard3 && "rounded-[8px] hover:rounded-b-none"
           } w-full overflow-hidden relative bg-[#F8F8F8] h-[298px] flex justify-center items-center`}
         >
-          <Link href={`/shop/product-details/${product?._id}`} className={""}>
+          <Link href={`/shop/product-details/${product?._id}`}>
             <figure className="max-w-[212px] max-h-[212px] overflow-hidden">
               {isHover ? (
                 <Image
@@ -77,9 +82,12 @@ const ProductCard1 = ({ product }: any) => {
           </Link>
           <div className={`absolute bottomToTop ${isHover ? "bottomToTopAnimate" : ""} `}>
             <ul className="flex gap-[10px] items-center">
-              <li className="w-8 transition-all duration-300 ease-linear text-[#031424] hover:bg-primary hover:text-[#000000] rounded-full h-8 flex items-center justify-center border border-primary">
-                <label htmlFor="quick-view">
-                  <BiSearch className="text-[16px] " />
+              <li className="w-8 cursor-pointer transition-all duration-300 ease-linear text-[#031424] hover:bg-primary hover:text-[#000000] rounded-full h-8  border border-primary">
+                <label
+                  htmlFor="quick-view"
+                  className="w-8 h-8 flex items-center justify-center cursor-pointer"
+                >
+                  <BiSearch className="text-[16px]" />
                 </label>
               </li>
               <li
@@ -90,7 +98,7 @@ const ProductCard1 = ({ product }: any) => {
               </li>
               <li
                 onClick={() => handleAddToCompare(product?._id)}
-                className="w-8 transition-all duration-300 ease-linear text-[#031424] hover:bg-primary hover:text-[#000000] rounded-full h-8 flex items-center justify-center border border-primary"
+                className="w-8 cursor-pointer transition-all duration-300 ease-linear text-[#031424] hover:bg-primary hover:text-[#000000] rounded-full h-8 flex items-center justify-center border border-primary"
               >
                 <BiGitCompare className="rotate-90 text-[16px]" />
               </li>

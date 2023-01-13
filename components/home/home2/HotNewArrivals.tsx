@@ -1,11 +1,28 @@
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { HiOutlineArrowRight } from "react-icons/hi2";
+import { ProductModel } from "../../../types/types";
 import ProductCard2 from "../../shared/cards/ProductCard2";
 import SpecialProductCard from "../../shared/cards/SpecialProductCard1";
 import SpecialProductCard2 from "../../shared/cards/SpecialProductCard2";
 
-const HotNewArrivals = () => {
-  const [activeProducts, setActiveProducts] = useState<string>("newProducts");
+interface Products {
+  products: ProductModel[];
+}
+
+const HotNewArrivals = ({ products }: Products) => {
+  const [activeProducts, setActiveProducts] = useState<string>("trending");
+  const router = useRouter();
+  let productItems;
+
+  if (activeProducts == "trending") {
+    productItems = products?.slice(0, 6);
+  } else if (activeProducts == "bestSelling") {
+    productItems = products?.slice(8, 14);
+  } else if (activeProducts == "hotSelling") {
+    productItems = products?.slice(14, 20);
+  }
+
   return (
     <>
       <div className="w-full">
@@ -51,8 +68,12 @@ const HotNewArrivals = () => {
               </button>
             </li>
             <li>
-              <button className="text-info flex items-center gap-3 text-[16px] leading-[24px] font-[500]">
-                See All <HiOutlineArrowRight className="text-info w-5 h-5 " />
+              <button
+                onClick={() => router.push("/shop/1")}
+                className="text-info flex items-center gap-3 text-[16px] leading-[24px] font-[500]"
+              >
+                See All
+                <HiOutlineArrowRight className="text-info w-5 h-5 " />
               </button>
             </li>
           </ul>
@@ -71,12 +92,9 @@ const HotNewArrivals = () => {
 
         <div className="flex-grow lg:order-2 order-1 ">
           <div className="grid xs-responsive grid-cols-2 md:grid-cols-3 lg:grid-cols-2 max-w-[550px] md:max-w-[834px] lg:max-w-[558px] xl:max-w-full  mx-auto xl:grid-cols-3 gap-y-[30px] gap-3 sm:gap-x-5 lg:gap-x-[30px]">
-            <ProductCard2 />
-            <ProductCard2 />
-            <ProductCard2 />
-            <ProductCard2 />
-            <ProductCard2 />
-            <ProductCard2 />
+            {productItems?.map((product) => (
+              <ProductCard2 key={product?._id} product={product} />
+            ))}
           </div>
         </div>
       </div>

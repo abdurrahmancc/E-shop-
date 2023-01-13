@@ -1,6 +1,14 @@
-import { CategoryItemsTypes, ProductModel, BlogsModel } from "../types/types";
+import { CategoryItemsTypes, ProductModel, BlogsModel, TrendingCategoryType } from "../types/types";
 import blog1 from "../assets/blogs/blog-1.png";
 import blog2 from "../assets/blogs/blog-2.png";
+import category1 from "../assets/categories-img/computer.png";
+import category2 from "../assets/categories-img/headphone.png";
+import category3 from "../assets/categories-img/laptop.png";
+import category4 from "../assets/categories-img/phone.png";
+import category5 from "../assets/categories-img/tablets.png";
+import category6 from "../assets/categories-img/watch.png";
+import category7 from "../assets/categories-img/computer.png";
+import category8 from "../assets/categories-img/laptop.png";
 import product1 from "../assets/product-Image/product-1.png";
 import product2 from "../assets/product-Image/product-2.png";
 import product3 from "../assets/product-Image/product-3.png";
@@ -91,6 +99,17 @@ export const categories2: CategoryItemsTypes[] = [
     features: ["Smart Watch", "Ear Phone", "Power Bank", "Drones"],
     img: "https://i.ibb.co/xj684k9/watch.png",
   },
+];
+
+export const trendingCategoriesData: TrendingCategoryType[] = [
+  { _id: "1", img: category1, name: "computer" },
+  { _id: "2", img: category2, name: "headphone" },
+  { _id: "3", img: category3, name: "laptop" },
+  { _id: "4", img: category4, name: "phone" },
+  { _id: "5", img: category5, name: "tablets" },
+  { _id: "6", img: category6, name: "watch" },
+  { _id: "7", img: category7, name: "computer" },
+  { _id: "8", img: category8, name: "laptop" },
 ];
 
 export const productsData: ProductModel[] = [

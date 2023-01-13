@@ -3,11 +3,7 @@ import React from "react";
 import CardBanner3 from "../../components/Banner/cardBanner3";
 import SmartBanner3 from "../../components/Banner/SmartBanner2";
 import SmartBanner4 from "../../components/Banner/SmartBanner4";
-import TopBannerSlider3 from "../../components/Banner/TopBannerSlider3";
 import Features3 from "../../components/features/Features3";
-import BottomHeader3 from "../../components/headers/BottomHeader3";
-import MiddleHeader3 from "../../components/headers/MiddleHeader3";
-import TopHeader3 from "../../components/headers/TopHeader3";
 import TrendingCategories from "../../components/home/home2/TrendingCategories";
 import FeaturedProducts3 from "../../components/home/Home3/FeaturedProducts3";
 import ShopByCategories from "../../components/home/Home3/ShopByCategories";
@@ -20,8 +16,15 @@ import Newsletter3 from "../../components/shared/newsletter/Newsletter3";
 import ScrollUpBtn from "../../components/shared/ScrollUpBtn";
 import HotNewArrivals2 from "../../components/home/Home3/HotNewArrivals2";
 import Header3 from "../../components/headers/Header3";
+import { ProductModel } from "../../types/types";
+import { GetStaticProps } from "next";
+import { productsData } from "../../database/data";
 
-const home3 = () => {
+interface Products {
+  products: ProductModel[];
+}
+
+const home3 = ({ products }: Products) => {
   return (
     <>
       <Head>
@@ -46,7 +49,7 @@ const home3 = () => {
         {/* ============= features end =========== */}
         {/* ============= Top Selling Products start =========== */}
         <section className="max-w-[1443px] mt-20 lg:mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
-          <TopSellingProducts />
+          <TopSellingProducts products={products} />
         </section>
         {/* ============= Top Selling Products end =========== */}
         {/* ============= Smart Banner start =========== */}
@@ -56,12 +59,12 @@ const home3 = () => {
         {/* ============= Smart Banner  end =========== */}
         {/* ============= Trending Products start =========== */}
         <section className="max-w-[1443px] mt-20 lg:mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
-          <TrendingProducts />
+          <TrendingProducts products={products} />
         </section>
         {/* ============= Trending Products end =========== */}
         {/* ============= Hot New Arrivals start =========== */}
         <section className="max-w-[1443px] mt-20 lg:mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
-          <HotNewArrivals2 />
+          <HotNewArrivals2 products={products} />
         </section>
         {/* ============= Hot New Arrivals end =========== */}
         {/* ============= Categories start =========== */}
@@ -77,7 +80,7 @@ const home3 = () => {
 
         {/* ============= Top Rated Items start =========== */}
         <section className="max-w-[1443px] mt-20 lg:mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
-          <TopRatedItems />
+          <TopRatedItems products={products} />
         </section>
         {/* ============= Top Rated Items end =========== */}
         {/* ============= Card Banner start =========== */}
@@ -87,7 +90,7 @@ const home3 = () => {
         {/* ============= Card Banner end =========== */}
         {/* ============= Special Products start =========== */}
         <section className="max-w-[1443px] mt-20 lg:mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
-          <SpecialProducts3 />
+          <SpecialProducts3 products={products} />
         </section>
         {/* ============= Special Products end =========== */}
         {/* ============= Newsletter start =========== */}
@@ -97,7 +100,7 @@ const home3 = () => {
         {/* ============= Newsletter end =========== */}
         {/* ============= Featured Products  start =========== */}
         <section className="max-w-[1443px] mt-20 lg:mt-[120px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
-          <FeaturedProducts3 />
+          <FeaturedProducts3 products={products} />
         </section>
         {/* ============= Featured Products end =========== */}
         {/* ======== scroll up button start ======= */}
@@ -112,3 +115,12 @@ const home3 = () => {
 };
 
 export default home3;
+
+export const getStaticProps: GetStaticProps = async () => {
+  const products = productsData;
+  return {
+    props: {
+      products,
+    },
+  };
+};

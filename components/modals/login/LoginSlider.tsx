@@ -23,6 +23,7 @@ const LoginSlider = () => {
               spaceBetween={16}
               slidesPerView={1}
               cssMode={true}
+              autoplay={false}
               navigation={{
                 nextEl: ".custom_next",
                 prevEl: ".custom_prev",

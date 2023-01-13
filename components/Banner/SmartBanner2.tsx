@@ -6,7 +6,7 @@ import img2 from "../../assets/banner/full-width-banner-2-2.png";
 const { Fade } = require("react-reveal");
 
 const SmartBanner2 = () => {
-  const { pathname } = useRouter();
+  const { pathname, push } = useRouter();
   const isAboutPage = pathname.includes("about");
 
   return (
@@ -31,7 +31,10 @@ const SmartBanner2 = () => {
             </h5>
           </Fade>
           <Fade bottom delay={600}>
-            <button className="bg-[#FCB700] mx-auto xl:w-[123px] w-[100px] h-[36px] text-[#313131] bg-gradient-to-r from-[#f9c536] to-[#f9c536] btn-animate text-sm xl:text-[16px] leading-6 rounded-[37px] flex font-[500] justify-center capitalize items-center xl:h-[46px]">
+            <button
+              onClick={() => push("/shop/1")}
+              className="bg-[#FCB700] mx-auto xl:w-[123px] w-[100px] h-[36px] text-[#313131] bg-gradient-to-r from-[#f9c536] to-[#f9c536] btn-animate text-sm xl:text-[16px] leading-6 rounded-[37px] flex font-[500] justify-center capitalize items-center xl:h-[46px]"
+            >
               shop now
             </button>
           </Fade>

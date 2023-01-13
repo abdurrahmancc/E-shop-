@@ -69,21 +69,21 @@ const MiddleHeader1 = () => {
                   src={logo}
                   width={163}
                   height={51}
-                  className="w-[163px] h-[48px] hidden lg:block"
+                  className="w-[163px] h-[51px] hidden lg:block"
                   alt="logo"
                 />
                 <Image
                   src={whiteLogo}
                   width={163}
                   height={51}
-                  className=" w-[163px] h-[48px] lg:hidden "
+                  className=" w-[163px] h-[51px] lg:hidden "
                   alt="logo"
                 />
               </>
             ) : (
               <Image
                 src={whiteLogo}
-                className={" w-[163px] h-[48px]"}
+                className={" w-[163px] h-[51 px]"}
                 width={163}
                 height={51}
                 alt="logo"
