@@ -7,15 +7,15 @@ import Breadcrumb from "../../components/shared/breadcrumb/Breadcrumb";
 import Footer1 from "../../components/shared/footer/Footer1";
 import ScrollUpBtn from "../../components/shared/ScrollUpBtn";
 import Newsletter4 from "../../components/shared/newsletter/Newsletter4";
-import Faq from "../../components/faq/Faq";
-import FaqContactForm from "../../components/faq/FaqContactForm";
+import UserOrders from "../../components/dashboard/userOrders";
 
 const breadcrumbData = [
   { label: "home", value: "/" },
-  { label: "FAQ", value: "/faq" },
+  { label: "Dashboard", value: "/dashboard/userDashboard" },
+  { label: "Order", value: "/dashboard/order" },
 ];
 
-const FaqPage = () => {
+const OrdersPage = () => {
   return (
     <>
       <Head>
@@ -40,13 +40,10 @@ const FaqPage = () => {
       </header>
       <main>
         <section className="max-w-[1443px] mt-10 lg:mt-20 container w-full mx-auto px-4 lg:px-10 2xl:px-0">
-          <FaqContactForm />
-        </section>
-        <section className="mt-20 lg:mt-[120px] bg-[#F2F4F8]">
-          <Faq />
+          <UserOrders />
         </section>
 
-        <section>
+        <section className="lg:mt-[120px] mt-20">
           <Newsletter4 />
         </section>
         {/* ======== scroll up button start ======= */}
@@ -60,4 +57,4 @@ const FaqPage = () => {
   );
 };
 
-export default FaqPage;
+export default OrdersPage;

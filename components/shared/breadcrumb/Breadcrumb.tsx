@@ -12,7 +12,7 @@ const Breadcrumb = ({ breadcrumbData }: breadModel) => {
 
   return (
     <div className="bg-[#F8F8F8] py-9">
-      <ul className="flex items-center justify-center text-[16px] leading-[26px] text-[#031424]">
+      <ul className="flex items-center justify-center text-sm md:text-[16px] leading-[26px] text-[#031424]">
         {breadcrumbData.map((bread: any, index: any) => {
           return (
             <li key={index} className={"flex capitalize items-center"}>
@@ -21,7 +21,7 @@ const Breadcrumb = ({ breadcrumbData }: breadModel) => {
               ) : (
                 <div className="flex items-center">
                   <Link href={`${bread?.value}`}>{bread?.label}</Link>
-                  <HiOutlineChevronRight className="mx-[10px] text-[#7D7D7D] text-[12px]" />
+                  <HiOutlineChevronRight className="md:mx-[10px] mx-1 text-[#7D7D7D] text-[12px]" />
                 </div>
               )}
             </li>
