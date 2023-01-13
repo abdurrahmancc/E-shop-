@@ -61,8 +61,8 @@ const MiddleHeader1 = () => {
   return (
     <div className="lg:bg-inherit bg-[#041E42]">
       <div className="max-w-[1443px] w-full mx-auto container px-4 lg:px-10 2xl:px-0">
-        <div className="py-[22.5px] flex w-full justify-between">
-          <div onClick={() => router.push("/")}>
+        <div className="py-[22.5px]  flex w-full justify-between">
+          <Link href={"/"}>
             {router.pathname.includes("/home/home2") ? (
               <>
                 <Image
@@ -89,7 +89,7 @@ const MiddleHeader1 = () => {
                 alt="logo"
               />
             )}
-          </div>
+          </Link>
           {/*========= category search from start =========-*/}
           <div className="h-full hidden w-full lg:block">
             <form onSubmit={onSubmit} className="flex justify-center w-full h-full relative">

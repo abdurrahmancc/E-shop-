@@ -58,13 +58,13 @@ const MiddleHeader3 = () => {
     <div className="bg-[#041E42]">
       <div className="max-w-[1443px] w-full mx-auto container px-4 lg:px-10 2xl:px-0">
         <div className="py-5 flex w-full justify-between">
-          <div onClick={() => router.push("/")}>
+          <Link href={"/"}>
             {router.pathname.includes("/home/home2") ? (
               <Image src={logo} width={163} height={51} alt="logo" />
             ) : (
               <Image src={whiteLogo} width={163} height={51} alt="logo" />
             )}
-          </div>
+          </Link>
           {/*========= category search from start =========-*/}
           <div className="h-full max-w-[550px] xl:max-w-[750px] w-full hidden lg:block">
             <form onSubmit={onSubmit} className="flex justify-center w-full h-full relative">
