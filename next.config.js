@@ -10,9 +10,15 @@ const nextConfig = {
       },
     ],
   },
-  // images: {
-  //   domains: ["i.ibb.co"],
-  // },
+  async redirects() {
+    return [
+      {
+        source: "/shop",
+        destination: "/shop/1",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;

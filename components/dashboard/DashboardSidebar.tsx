@@ -43,13 +43,13 @@ const DashboardSidebar = () => {
           {menuItems.map((item) => (
             <li
               key={item?.id}
-              className={`py-[10px] transition-all duration-150 ease-in-out text-[#031424] text-lg lg:text-[20px] leading-8 pl-6 ${
+              className={`transition-all duration-150 ease-in-out text-[#031424] text-lg lg:text-[20px] leading-8 pl-6 ${
                 pathname == item?.value
                   ? "bg-info text-[#ffffff]"
                   : "hover:text-[#ffffff] hover:bg-info"
               }`}
             >
-              <Link href={`${item?.value}`} className="block">
+              <Link href={`${item?.value}`} className="block py-[10px]">
                 {" "}
                 {item?.label}
               </Link>

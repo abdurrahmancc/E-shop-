@@ -174,14 +174,14 @@ const NavContent: FC<PropsWithChildren<Props>> = ({ children: textColor }) => {
             </li>
           </ul>
         </li>
-        <li className="flex hover:bg-inherit gap-[10px] items-center">
+        <li className="hover:bg-inherit" tabIndex={0}>
           <Link
-            href={"/home"}
+            href={"/contact"}
             className={`focus:bg-inherit p-0 hover:bg-inherit ${textColor} px-0 flex gap-1 xl:gap-2 items-center`}
           >
             <span
               className={` inline-block pb-1  text-[15px] leading-[26px] ${
-                router.pathname == "/pages"
+                router.pathname == "/"
                   ? "border-primary font-[500] border-b-2"
                   : "border-animate font-[400]"
               }`}
@@ -190,6 +190,48 @@ const NavContent: FC<PropsWithChildren<Props>> = ({ children: textColor }) => {
             </span>
             <GoChevronDown className="w-3 h-3 mb-2" />
           </Link>
+          <ul className="menu py-3 rounded-lg overflow-hidden bg-white z-50 w-[270px] shadow-xl">
+            <li>
+              <Link
+                href={"/contact"}
+                className={`sub-menu-animate text-[15px] py-[10px] relative text-[rgba(0,0,0,0.7)] bg-white px-0 font-semibold hover:text-primary`}
+              >
+                <span className="px-8">Contact</span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={"/home/home2"}
+                className={`sub-menu-animate py-[10px] text-[15px] relative text-[rgba(0,0,0,0.7)] bg-white px-0 font-semibold hover:text-primary`}
+              >
+                <span className="px-8">About Us</span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={"/orderTrack"}
+                className={`sub-menu-animate py-[10px] text-[15px] relative text-[rgba(0,0,0,0.7)] bg-white px-0 font-semibold hover:text-primary`}
+              >
+                <span className="px-8">Order Track</span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={"/dashboard/userDashboard"}
+                className={`sub-menu-animate py-[10px] text-[15px] relative text-[rgba(0,0,0,0.7)] bg-white px-0 font-semibold hover:text-primary`}
+              >
+                <span className="px-8">Dashboard</span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={"/404"}
+                className={`sub-menu-animate py-[10px] text-[15px] relative text-[rgba(0,0,0,0.7)] bg-white px-0 font-semibold hover:text-primary`}
+              >
+                <span className="px-8">404 page</span>
+              </Link>
+            </li>
+          </ul>
         </li>
       </ul>
     </nav>

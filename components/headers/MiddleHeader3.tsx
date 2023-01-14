@@ -18,6 +18,7 @@ import { useCartDetails } from "../../hooks/useCartDetails";
 import { fetchWishlist } from "../../redux/features/wishlist/wishlistSlice";
 import { fetchCarts } from "../../redux/features/shoppingCart/shoppingCartSlice";
 import { fetchCompare } from "../../redux/features/compare/compareSlice";
+import Loading from "../loading/Loading";
 
 interface Option {
   value: string;
@@ -52,6 +53,10 @@ const MiddleHeader3 = () => {
     dispatch(fetchCarts());
     dispatch(fetchCompare());
   }, [dispatch]);
+
+  if (wishlist.isLoading || cart.isLoading || compare.isLoading) {
+    return <Loading />;
+  }
 
   const onSubmit = handleSubmit((data) => console.log(data));
   return (

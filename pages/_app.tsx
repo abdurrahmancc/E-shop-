@@ -16,6 +16,7 @@ import "../styles/shop.css";
 import "../styles/productDetails.css";
 import "../styles/collapsibleComponents.css";
 import "../styles/blogs.css";
+import "../styles/loading.css";
 import { Provider } from "react-redux";
 import { store } from "../redux/app/store";
 
@@ -37,7 +38,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <ToastContainer />
       <LoadingBar
         waitingTime={100}
-        color="#643001"
+        color="#FCB700"
         height={3}
         progress={progress}
         onLoaderFinished={() => setProgress(0)}
