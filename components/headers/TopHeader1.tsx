@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import mail from "../../assets/icons/mail.svg";
 import location from "../../assets/icons/location.svg";
 import user from "../../assets/icons/user.svg";
-import { FiChevronDown } from "react-icons/fi";
 import Select from "react-select";
 import {
   topHeaderCurrencySelectorStyle,

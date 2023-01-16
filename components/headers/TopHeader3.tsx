@@ -1,6 +1,5 @@
 import { useRouter } from "next/router";
 import React, { useState } from "react";
-import { FiChevronDown } from "react-icons/fi";
 import Select from "react-select";
 import {
   topHeaderCurrencySelectorStyle,

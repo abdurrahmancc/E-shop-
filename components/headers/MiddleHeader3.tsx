@@ -6,11 +6,10 @@ import { useForm } from "react-hook-form";
 import { BiSearch } from "react-icons/bi";
 import { AiOutlineHeart } from "react-icons/ai";
 import { HiOutlineShoppingBag } from "react-icons/hi";
-import whiteLogo from "../../assets/icons/logo-white.png";
-import logo from "../../assets/icons/logo.png";
 import { searchCategorySelected } from "../../styles/selectComponents";
 import Link from "next/link";
-import DrawerSidebar from "../shared/drawerSidebar";
+import whiteLogo from "../../assets/icons/logo-white.png";
+import logo from "../../assets/icons/logo.png";
 import { useRouter } from "next/router";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { useAppDispatch, useAppSelector } from "../../redux/app/reduxHooks";
@@ -19,6 +18,7 @@ import { fetchWishlist } from "../../redux/features/wishlist/wishlistSlice";
 import { fetchCarts } from "../../redux/features/shoppingCart/shoppingCartSlice";
 import { fetchCompare } from "../../redux/features/compare/compareSlice";
 import Loading from "../loading/Loading";
+import DrawerSidebar from "../shared/DrawerSidebar";
 
 interface Option {
   value: string;

@@ -1,4 +1,4 @@
-import React, { useState, Dispatch, SetStateAction } from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import Collapsible from "react-collapsible";
 import { BsChevronDown } from "react-icons/bs";
 import { useForm } from "react-hook-form";
@@ -6,6 +6,8 @@ import { BiSearchAlt } from "react-icons/bi";
 import { IoMdClose } from "react-icons/io";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import Image from "next/image";
+import logo from "../../assets/icons/logo.png";
 
 type FormData = {
   search: string;
@@ -18,35 +20,16 @@ interface Props {
 
 const DrawerSidebar = ({ toggle, setToggle }: Props) => {
   const router = useRouter();
-  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const {
     register,
-    reset,
-    setValue,
     handleSubmit,
     formState: { errors },
   } = useForm<FormData>();
 
   const onSubmit = handleSubmit(async (data) => {
-    let info = { inputData: data.search };
-    try {
-      setIsLoading(true);
-      // const { data } = await axiosPrivet.post("product/search", info);
-      // console.log(data);
-      // dispatch(setSearchProducts(data?.result));
-      reset();
-      router.push("/shop");
-      setIsLoading(false);
-    } catch (error) {
-      // console.log(error?.message);
-      setIsLoading(false);
-    }
+    console.log();
   });
-
-  if (isLoading) {
-    //   return <Loading />;
-  }
 
   return (
     <div
@@ -65,8 +48,7 @@ const DrawerSidebar = ({ toggle, setToggle }: Props) => {
       <div id="mobile-top" className="px-6 py-[15px] border-b flex justify-between items-center">
         <div>
           <Link href={"/"}>
-            <div className="text-[24px] text-black  font-semibold leading-[40px] ">LOGO</div>
-            {/* <Image src={logo} className="w-24" alt="logo" /> */}
+            <Image src={logo} width={100} height={36} className="w-[100px] h-auto" alt="logo" />
           </Link>
         </div>
         <div>

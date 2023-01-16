@@ -181,7 +181,9 @@ const NavContent: FC<PropsWithChildren<Props>> = ({ children: textColor }) => {
           >
             <span
               className={` inline-block pb-1  text-[15px] leading-[26px] ${
-                router.pathname == "/"
+                router.pathname.includes("/dashboard") ||
+                router.pathname.includes("/orderTrack") ||
+                router.pathname.includes("/404")
                   ? "border-primary font-[500] border-b-2"
                   : "border-animate font-[400]"
               }`}

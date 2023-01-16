@@ -23,9 +23,9 @@ const CategoriesContent = () => {
     <ul
       className={`category-subMenu-slide ${
         isHome1
-          ? "top-[110px] border-x bg-white"
+          ? "top-[120px] border-x bg-white"
           : isHome2
-          ? "top-[95px] bg-[#F8F8F8] rounded-[8px]"
+          ? "top-[105px] bg-[#F8F8F8] rounded-[8px]"
           : "top-20 border-x bg-white"
       } max-w-[292.5px] lg:max-w-[250.5px] xl:max-w-[292.5px] absolute z-[100]`}
     >

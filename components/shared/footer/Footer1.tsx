@@ -4,19 +4,17 @@ import bg from "../../../assets/bg/footer-1.png";
 import payment from "../../../assets/icons/payment.png";
 import { FaFacebookF, FaPhoneAlt } from "react-icons/fa";
 import { HiLocationMarker } from "react-icons/hi";
-import { MdOutlineWatchLater } from "react-icons/md";
-import { IoIosMail } from "react-icons/io";
 import googleApp from "../../../assets/icons/googlePlay.png";
 import appStore from "../../../assets/icons/appStore.png";
 import logo from "../../../assets/icons/logo-white.png";
 import { SiMinutemailer } from "react-icons/si";
 import { BsInstagram, BsTwitter } from "react-icons/bs";
-import { useRouter } from "next/router";
 import Link from "next/link";
+import { IoIosMail } from "react-icons/io";
 
 const Footer1 = () => {
   const year = new Date().getFullYear();
-  const router = useRouter();
+
   return (
     <div
       style={{ backgroundImage: `url(${bg.src})` }}
