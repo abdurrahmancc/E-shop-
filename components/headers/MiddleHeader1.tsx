@@ -17,7 +17,7 @@ import { fetchCarts } from "../../redux/features/shoppingCart/shoppingCartSlice"
 import { fetchCompare } from "../../redux/features/compare/compareSlice";
 import Loading from "../loading/Loading";
 import { useCartDetails } from "../../hooks/useCartDetails";
-import DrawerSidebar from "../shared/DrawerSideBar";
+import MobileSidebar from "../shared/MobileSidebar";
 
 interface Option {
   value: string;
@@ -187,7 +187,7 @@ const MiddleHeader1 = () => {
             </ul>
           </div>
           {/* ========= compare wishlist cart end ========= */}
-          <DrawerSidebar toggle={toggle} setToggle={setToggle} />
+          <MobileSidebar toggle={toggle} setToggle={setToggle} />
         </div>
       </div>
     </div>

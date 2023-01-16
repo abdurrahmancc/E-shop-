@@ -18,7 +18,7 @@ interface Props {
   setToggle: Dispatch<SetStateAction<boolean>>;
 }
 
-const DrawerSidebar = ({ toggle, setToggle }: Props) => {
+const MobileSidebar = ({ toggle, setToggle }: Props) => {
   const router = useRouter();
 
   const {
@@ -325,4 +325,4 @@ const DrawerSidebar = ({ toggle, setToggle }: Props) => {
   );
 };
 
-export default DrawerSidebar;
+export default MobileSidebar;
