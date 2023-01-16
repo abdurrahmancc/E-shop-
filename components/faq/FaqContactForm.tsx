@@ -14,7 +14,7 @@ const FaqContactForm = () => {
       </p>
       <div className="lg:mt-20 mt-10 gap-x-[30px] gap-y-10 flex lg:flex-row flex-col">
         <form className="lg:order-1 order-2">
-          <div className="grid grid-cols-2 gap-5">
+          <div className="grid sm:grid-cols-2 grid-cols-1 gap-5">
             <div className="form-control w-full">
               <label className="label px-0 pt-0">
                 <span className="text-[16px] leading-6 font-[500] text-[#545454]">Your Name*</span>
@@ -67,7 +67,7 @@ const FaqContactForm = () => {
           </button>
         </form>
         <figure className="lg:order-2 order-1">
-          <Image src={contact} width={705} height={585} alt="contact" />
+          <Image src={contact} width={705} height={585} className="mx-auto" alt="contact" />
         </figure>
       </div>
     </div>

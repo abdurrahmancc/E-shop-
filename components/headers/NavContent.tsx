@@ -195,18 +195,10 @@ const NavContent: FC<PropsWithChildren<Props>> = ({ children: textColor }) => {
           <ul className="menu py-3 rounded-lg overflow-hidden bg-white z-50 w-[270px] shadow-xl">
             <li>
               <Link
-                href={"/contact"}
+                href={"/faq"}
                 className={`sub-menu-animate text-[15px] py-[10px] relative text-[rgba(0,0,0,0.7)] bg-white px-0 font-semibold hover:text-primary`}
               >
-                <span className="px-8">Contact</span>
-              </Link>
-            </li>
-            <li>
-              <Link
-                href={"/home/home2"}
-                className={`sub-menu-animate py-[10px] text-[15px] relative text-[rgba(0,0,0,0.7)] bg-white px-0 font-semibold hover:text-primary`}
-              >
-                <span className="px-8">About Us</span>
+                <span className="px-8">FAQ</span>
               </Link>
             </li>
             <li>

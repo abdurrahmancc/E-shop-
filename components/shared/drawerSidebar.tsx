@@ -119,12 +119,22 @@ const DrawerSidebar = ({ toggle, setToggle }: Props) => {
                   </li>
                   <li>
                     <Link
-                      href={"/home2"}
+                      href={"/home/home2"}
                       className={
                         "pl-[10px] inline-block py-2 text-[#444] text-[14px] font-semibold"
                       }
                     >
                       Home 2
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href={"/home/home3"}
+                      className={
+                        "pl-[10px] inline-block py-2 text-[#444] text-[14px] font-semibold"
+                      }
+                    >
+                      Home 3
                     </Link>
                   </li>
                 </ul>
@@ -149,22 +159,22 @@ const DrawerSidebar = ({ toggle, setToggle }: Props) => {
                 <ul className="pt-[9px] pb-[5px]">
                   <li>
                     <Link
-                      href={"/shop"}
+                      href={"/shop/1"}
                       className={
                         "pl-[10px] inline-block py-2 text-[#444] text-[14px] font-semibold"
                       }
                     >
-                      Shop default
+                      Shop Default
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href={"/shop/fullwidth"}
+                      href={"/shop/2"}
                       className={
                         "pl-[10px] inline-block py-2 text-[#444] text-[14px] font-semibold"
                       }
                     >
-                      Shop Wide
+                      Right Filter Shop
                     </Link>
                   </li>
                   <li>
@@ -174,7 +184,72 @@ const DrawerSidebar = ({ toggle, setToggle }: Props) => {
                         "pl-[10px] inline-block py-2 text-[#444] text-[14px] font-semibold"
                       }
                     >
-                      Shop 3
+                      Shop Wide
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href={"/shop/4"}
+                      className={
+                        "pl-[10px] inline-block py-2 text-[#444] text-[14px] font-semibold"
+                      }
+                    >
+                      Shop List
+                    </Link>
+                  </li>
+                </ul>
+              </Collapsible>
+            </div>
+          </li>
+          {/*-------------- contact -------------- */}
+          <li id="menu-item" className="inline-block border-b py-[6px] text-black list-none w-full">
+            <Link href={"/contact"} className="leading-9 font-semibold text-[15px] text-[#444]">
+              Contact
+            </Link>
+          </li>
+          {/*-------------- about -------------- */}
+          <li id="menu-item" className="inline-block border-b py-[6px] text-black list-none w-full">
+            <Link href={"/about"} className="leading-9 font-semibold text-[15px] text-[#444]">
+              About
+            </Link>
+          </li>
+          {/*-------------- blogs -------------- */}
+          <li className="inline-block border-b py-[6px] text-black list-none w-full">
+            <div>
+              <Collapsible
+                id="sidebarSubMenu-shop"
+                className="w-full"
+                trigger={
+                  <span
+                    id="mobile-collapsible-shop"
+                    className="flex text-[#444] text-[15px] py-[6px] items-center justify-between font-semibold w-full"
+                  >
+                    {[
+                      `Blogs`,
+                      <BsChevronDown key="brands-trigger" id="sidebarSubMenu-shopItems" />,
+                    ]}
+                  </span>
+                }
+              >
+                <ul className="pt-[9px] pb-[5px]">
+                  <li>
+                    <Link
+                      href={"/blogs/blogs1"}
+                      className={
+                        "pl-[10px] inline-block py-2 text-[#444] text-[14px] font-semibold"
+                      }
+                    >
+                      Blog 1
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href={"/blogs/blogs2"}
+                      className={
+                        "pl-[10px] inline-block py-2 text-[#444] text-[14px] font-semibold"
+                      }
+                    >
+                      Blog 2
                     </Link>
                   </li>
                 </ul>
@@ -202,37 +277,7 @@ const DrawerSidebar = ({ toggle, setToggle }: Props) => {
                 <ul className="pt-[9px] pb-[5px]">
                   <li>
                     <Link
-                      href={"/about"}
-                      className={
-                        "pl-[10px] inline-block py-2 text-[#444] text-[14px] font-semibold"
-                      }
-                    >
-                      About
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href={"/contact"}
-                      className={
-                        "pl-[10px] inline-block py-2 text-[#444] text-[14px] font-semibold"
-                      }
-                    >
-                      Contact
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href={"/blogs"}
-                      className={
-                        "pl-[10px] inline-block py-2 text-[#444] text-[14px] font-semibold"
-                      }
-                    >
-                      Blogs
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href={"/FAQ"}
+                      href={"/faq"}
                       className={
                         "pl-[10px] inline-block py-2 text-[#444] text-[14px] font-semibold"
                       }
@@ -240,27 +285,39 @@ const DrawerSidebar = ({ toggle, setToggle }: Props) => {
                       FAQ
                     </Link>
                   </li>
+                  <li>
+                    <Link
+                      href={"/orderTrack"}
+                      className={
+                        "pl-[10px] inline-block py-2 text-[#444] text-[14px] font-semibold"
+                      }
+                    >
+                      Order Track
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href={"/dashboard/userDashboard"}
+                      className={
+                        "pl-[10px] inline-block py-2 text-[#444] text-[14px] font-semibold"
+                      }
+                    >
+                      Dashboard
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href={"/404"}
+                      className={
+                        "pl-[10px] inline-block py-2 text-[#444] text-[14px] font-semibold"
+                      }
+                    >
+                      404
+                    </Link>
+                  </li>
                 </ul>
               </Collapsible>
             </div>
-          </li>
-          {/*-------------- contact -------------- */}
-          <li id="menu-item" className="inline-block border-b py-[6px] text-black list-none w-full">
-            <Link href={"/contact"} className="leading-9 font-semibold text-[15px] text-[#444]">
-              Contact
-            </Link>
-          </li>
-          {/*-------------- about -------------- */}
-          <li id="menu-item" className="inline-block border-b py-[6px] text-black list-none w-full">
-            <Link href={"/about"} className="leading-9 font-semibold text-[15px] text-[#444]">
-              About
-            </Link>
-          </li>
-          {/*-------------- blogs -------------- */}
-          <li id="menu-item" className="inline-block border-b py-[6px] text-black list-none w-full">
-            <Link href={"/blogs"} className="leading-9 font-semibold text-[15px] text-[#444]">
-              Blogs
-            </Link>
           </li>
         </ul>
       </div>
