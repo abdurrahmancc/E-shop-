@@ -13,12 +13,12 @@ import logo from "../../assets/icons/logo.png";
 import { useRouter } from "next/router";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { useAppDispatch, useAppSelector } from "../../redux/app/reduxHooks";
-import { useCartDetails } from "../../hooks/useCartDetails";
 import { fetchWishlist } from "../../redux/features/wishlist/wishlistSlice";
 import { fetchCarts } from "../../redux/features/shoppingCart/shoppingCartSlice";
 import { fetchCompare } from "../../redux/features/compare/compareSlice";
 import Loading from "../loading/Loading";
-import DrawerSidebar from "../shared/DrawerSidebar";
+import DrawerSidebar from "../shared/DrawerSideBar";
+import { useCartDetails } from "../../hooks/useCartDetails";
 
 interface Option {
   value: string;

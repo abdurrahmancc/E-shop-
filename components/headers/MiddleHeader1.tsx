@@ -15,9 +15,9 @@ import { useAppDispatch, useAppSelector } from "../../redux/app/reduxHooks";
 import { fetchWishlist } from "../../redux/features/wishlist/wishlistSlice";
 import { fetchCarts } from "../../redux/features/shoppingCart/shoppingCartSlice";
 import { fetchCompare } from "../../redux/features/compare/compareSlice";
-import { useCartDetails } from "../../hooks/useCartDetails";
 import Loading from "../loading/Loading";
-import DrawerSidebar from "../shared/DrawerSidebar";
+import { useCartDetails } from "../../hooks/useCartDetails";
+import DrawerSidebar from "../shared/DrawerSideBar";
 
 interface Option {
   value: string;
