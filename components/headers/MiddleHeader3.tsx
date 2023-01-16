@@ -181,7 +181,6 @@ const MiddleHeader3 = () => {
             </ul>
           </div>
           {/* ========= compare wishlist cart end ========= */}
-
           <DrawerSidebar toggle={toggle} setToggle={setToggle} />
         </div>
       </div>
