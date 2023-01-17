@@ -54,22 +54,79 @@
   }
 
 
+  
 
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 1536px) {
+    #shop-banner-1{
+    max-width: 1079px;
+    }
+  }
+  @media only screen and (max-width: 1500px) {
+    #shop-banner-1{
+      max-width: 1079px;
+    }
+  }
+  @media only screen and (max-width: 1450px) {
+    #shop-banner-1{
+      max-width: 1029px;
+    }
+  }
+  @media only screen and (max-width: 1400px) {
+    #shop-banner-1{
+      max-width: 1000px;
+    }
+  }
+  @media only screen and (max-width: 1350px) {
+    #shop-banner-1{
+      max-width: 950px;
+    }
+  }
+  @media only screen and (max-width: 1300px) {
+    #shop-banner-1{
+      max-width: 916px;
+    }
+  }
+  @media only screen and (max-width: 1280px) {
+    #shop-banner-1{
+    max-width: 916px;
+    }
+  }
+  @media only screen and (max-width: 1280px) {
+    #shop-banner-1{
+    max-width: 886px;
+    }
+  }
+  @media only screen and (max-width: 1250px) {
+    #shop-banner-1{
+    max-width: 836px;
+    }
+  }
+  @media only screen and (max-width: 1200px) {
+    #shop-banner-1{
+    max-width: 786px;
+    }
+  }
+  @media only screen and (max-width: 1150px) {
+    #shop-banner-1{
+    max-width: 736px;
+    }
+  }
+  @media only screen and (max-width: 1100px) {
+    #shop-banner-1{
+    max-width: 686px;
+    }
+  }
+  @media only screen and (max-width: 1050px) {
+    #shop-banner-1{
+    max-width: 660px;
+    }
+  }
+  @media only screen and (max-width: 1023px) {
+    #shop-banner-1{
+    max-width: 100%;
+    }
+  }
 
-  }
-  
-  @media only screen and (max-width: 450px) {
-  
-  }
-  
-  @media only screen and (max-width: 400px) {
-  
-  }
-  
-  @media only screen and (max-width: 350px) {
-  
-  }
   
   
   @media only screen and (max-width: 1120px) {

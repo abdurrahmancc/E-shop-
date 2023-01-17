@@ -30,7 +30,7 @@ const Home2 = ({ products }: Products) => {
       </header>
       <main>
         {/*======== single product banner section start ============*/}
-        <section className="max-w-[1443px] container pt-10 lg:pt-[60px] w-full mx-auto px-4 lg:px-10 2xl:px-0">
+        <section className="max-w-[1443px] container pt-10 lg:pt-[50px] w-full mx-auto px-4 lg:px-10 2xl:px-0">
           <ShopByCategories />
         </section>
         {/*======== single product banner section end ==============*/}

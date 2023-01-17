@@ -15,6 +15,7 @@ import Header1 from "../../components/headers/Header1";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { productsData } from "../../database/data";
 import SEO from "../../components/SEO/SEO";
+import ShopBannerSlider from "../../components/Banner/ShopBannerSlider";
 
 interface ProductTypes {
   products: ProductModel[];
@@ -42,6 +43,7 @@ const Shop = ({ products }: ProductTypes) => {
       </header>
       <main>
         <section className="max-w-[1443px] mt-10 lg:mt-20 container w-full mx-auto px-4 lg:px-10 2xl:px-0">
+          {router.query.id == "3" ? <ShopBannerSlider /> : ""}
           <div className="flex lg:flex-row flex-col gap-y-20 gap-x-5 2xl:gap-x-[30px]">
             {/*============= filter start ============*/}
             <div
@@ -65,7 +67,8 @@ const Shop = ({ products }: ProductTypes) => {
               }`}
             >
               {/*============= banner start =========== */}
-              <ShopBanner1 />
+
+              {router.query.id != "3" ? <ShopBanner1 /> : ""}
               {/*============= banner end =========== */}
               {/* =========== Shop Top Filter start ======= */}
               <ShopTopFilter toggleCard={toggleCard} setToggleCard={setToggleCard} />

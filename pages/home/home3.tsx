@@ -33,7 +33,7 @@ const home3 = ({ products }: Products) => {
       </header>
       <main>
         {/* ============= features start =========== */}
-        <section className="max-w-[1443px] pt-20 container w-full mx-auto px-4 lg:px-10 2xl:px-0">
+        <section className="max-w-[1443px] pt-10 lg:pt-20 container w-full mx-auto px-4 lg:px-10 2xl:px-0">
           <Features3 />
         </section>
         {/* ============= features end =========== */}

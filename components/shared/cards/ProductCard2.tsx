@@ -27,6 +27,7 @@ const ProductCard2 = ({ product }: PropsData) => {
     dispatch(addToCart(id));
     toast.success("Add To cart", { autoClose: 1000 });
   };
+
   const handleAddToCompare = (id: string) => {
     dispatch(addToCompare(id));
     toast.success("Add To compare", { autoClose: 1000 });
@@ -111,7 +112,7 @@ const ProductCard2 = ({ product }: PropsData) => {
                 <AiOutlineHeart className="text-[13px]" />
               </li>
               <li
-                onClick={() => handleAddToCart(product?._id)}
+                onClick={() => handleAddToCompare(product?._id)}
                 className="w-[27.03px] cursor-pointer h-[27.03px] transition-all duration-300 ease-linear text-[#031424] hover:bg-primary hover:text-[#000000] rounded-full flex items-center justify-center border border-primary"
               >
                 <BiGitCompare className="rotate-90 text-[13px]" />

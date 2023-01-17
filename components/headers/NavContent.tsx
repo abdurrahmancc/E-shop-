@@ -19,7 +19,7 @@ const NavContent: FC<PropsWithChildren<Props>> = ({ children: textColor }) => {
           >
             <span
               className={` inline-block pb-1  text-[15px] leading-[26px] ${
-                router.pathname == "/"
+                router.pathname.includes("home") || router.pathname == "/"
                   ? "border-primary font-[500] border-b-2"
                   : "border-animate font-[400]"
               }`}
@@ -62,7 +62,7 @@ const NavContent: FC<PropsWithChildren<Props>> = ({ children: textColor }) => {
           >
             <span
               className={` inline-block pb-1  text-[15px] leading-[26px] ${
-                router.pathname == "/shop/1"
+                router.pathname.includes("shop")
                   ? "border-primary font-[500] border-b-2"
                   : "border-animate font-[400]"
               }`}
@@ -146,7 +146,7 @@ const NavContent: FC<PropsWithChildren<Props>> = ({ children: textColor }) => {
           >
             <span
               className={` inline-block pb-1  text-[15px] leading-[26px] ${
-                router.pathname == "/blogs/blogs1"
+                router.pathname.includes("/blogs")
                   ? "border-primary font-[500] border-b-2"
                   : "border-animate font-[400]"
               }`}

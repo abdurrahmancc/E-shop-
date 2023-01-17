@@ -40,7 +40,7 @@ const BlogsPage1 = ({ blogs }: BlogsType) => {
         {/* =========== breadcrumb end ======== */}
       </header>
       <main>
-        <section className="max-w-[1443px] mt-20 lg:mt-[124px] container w-full mx-auto px-4 lg:px-10 2xl:px-0">
+        <section className="max-w-[1443px] mt-10 lg:mt-20 container w-full mx-auto px-4 lg:px-10 2xl:px-0">
           <Blogs blogs={blogs} />
         </section>
 

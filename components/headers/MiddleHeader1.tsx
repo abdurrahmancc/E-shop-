@@ -62,7 +62,7 @@ const MiddleHeader1 = () => {
   return (
     <div className="lg:bg-inherit bg-[#041E42]">
       <div className="max-w-[1443px] w-full mx-auto container px-4 lg:px-10 2xl:px-0">
-        <div className="py-[22.5px]  flex w-full justify-between">
+        <div className="py-[22.5px] gap-5  flex w-full items-center justify-between">
           <Link href={"/"}>
             {router.pathname.includes("/home/home2") ? (
               <>
@@ -70,21 +70,21 @@ const MiddleHeader1 = () => {
                   src={logo}
                   width={163}
                   height={51}
-                  className="w-[163px] h-[51px] hidden lg:block"
+                  className="w-[120px] h-auto lg:w-[163px] lg:min-w-[163px] lg:h-[51px] hidden lg:block"
                   alt="logo"
                 />
                 <Image
                   src={whiteLogo}
                   width={163}
                   height={51}
-                  className=" w-[163px] h-[51px] lg:hidden "
+                  className="w-[120px] h-auto lg:w-[163px] lg:min-w-[163px] lg:h-[51px] lg:hidden "
                   alt="logo"
                 />
               </>
             ) : (
               <Image
                 src={whiteLogo}
-                className={" w-[163px] h-[51 px]"}
+                className={"w-[120px] h-auto lg:w-[163px] lg:min-w-[163px] lg:h-[51px]"}
                 width={163}
                 height={51}
                 alt="logo"

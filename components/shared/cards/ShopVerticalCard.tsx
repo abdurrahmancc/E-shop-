@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { AiOutlineHeart } from "react-icons/ai";
 import { BiGitCompare, BiSearch } from "react-icons/bi";
@@ -36,15 +37,17 @@ const ShopVerticalCard = ({ product }: Product) => {
     <div className="border py-[17px] pl-5 pr-[25px] border-[#D9D9D9] hover:border-primary">
       <div className="flex sm:flex-row flex-col items-center gap-5">
         <div className="md:w-[226px] w-[210px] flex justify-center items-center md:h-[262px] h-[240px] bg-[#F8F8F8]">
-          <figure>
-            <Image
-              src={product?.img[0]}
-              width={212}
-              height={212}
-              className={`md:max-w-[212px] md:max-h-[212px] max-w-[190px] max-h-[190px]`}
-              alt="product image"
-            />
-          </figure>
+          <Link href={`/shop/product-details/${product?._id}`}>
+            <figure>
+              <Image
+                src={product?.img[0]}
+                width={212}
+                height={212}
+                className={`md:max-w-[212px] md:max-h-[212px] max-w-[190px] max-h-[190px]`}
+                alt="product image"
+              />
+            </figure>
+          </Link>
         </div>
         <div className="w-full">
           <div className="flex items-center gap-[12px]">
@@ -56,7 +59,7 @@ const ShopVerticalCard = ({ product }: Product) => {
             </span>
           </div>
           <h2 className="text-[#0070DC] mt-1 md:text-[24px] text-[18px] sm:text-[20px] md:leading-[36px] leading-[28px] font-[600]">
-            {product?.name}
+            <Link href={`/shop/product-details/${product?._id}`}>{product?.name}</Link>
           </h2>
           <p className="md:text-[20px] text-[16px] w-full md:leading-[30px] leading-6 border-b border-[#D2D2D2] md:pb-5 pb-3 md:mt-3 mt-2 text-[#FD8D03] font-[500]">
             ${product?.price.toFixed(2)}

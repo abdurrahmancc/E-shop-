@@ -65,9 +65,21 @@ const MiddleHeader3 = () => {
         <div className="py-5 flex w-full justify-between">
           <Link href={"/"}>
             {router.pathname.includes("/home/home2") ? (
-              <Image src={logo} width={163} height={51} alt="logo" />
+              <Image
+                src={logo}
+                width={163}
+                height={51}
+                className={"w-[120px] h-auto lg:w-[163px] lg:min-w-[163px] lg:h-[51px]"}
+                alt="logo"
+              />
             ) : (
-              <Image src={whiteLogo} width={163} height={51} alt="logo" />
+              <Image
+                src={whiteLogo}
+                width={163}
+                height={51}
+                className={"w-[120px] h-auto lg:w-[163px] lg:min-w-[163px] lg:h-[51px]"}
+                alt="logo"
+              />
             )}
           </Link>
           {/*========= category search from start =========-*/}

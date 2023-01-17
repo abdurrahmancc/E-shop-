@@ -84,6 +84,8 @@
   #smart-banner-swiper-slider .swiper-pagination {
     text-align: start;
     width: fit-content;
+    display: flex;
+    align-items: center;
   }
 
   @media only screen and (max-width: 640px) {
@@ -124,3 +126,44 @@
   }
 
   /* =============== happy-client-slider end ============= */
+
+
+    /* ================ shop-banner-swiper-slider start =============== */
+  
+    #shop-banner-swiper-slider .swiper-pagination-bullet {
+      height: 9px;
+      width: 9px;
+      text-align: center;
+      line-height: 20px;
+      font-size: 12px;
+      color: #FCB700;
+      opacity: 1;
+      border-radius: 50%;
+      background: none;
+      border: 1px solid #FCB700;
+    }
+    
+    #shop-banner-swiper-slider .swiper-pagination-bullet-active {
+      color: #FCB700;
+      height: 9px;
+      width: 9px;
+      border-radius: 50%;
+      background: #FCB700;
+    }
+  
+    #shop-banner-swiper-slider .swiper-pagination-bullets  {
+      left: 37px;
+      bottom: 10%; 
+    }
+    #shop-banner-swiper-slider .swiper-pagination {
+      text-align: start;
+      width: fit-content;
+    }
+  
+    @media only screen and (max-width: 768px) {
+      #shop-banner-swiper-slider .swiper-pagination-bullets  {
+        left: 16px;
+        bottom: 8%; 
+      }
+    }
+    /* ================shop-banner-swiper-slider end ================ */
