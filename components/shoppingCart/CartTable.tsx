@@ -59,10 +59,10 @@ const CartTable = ({ products }: Product) => {
         <div className="text-center mx-auto">
           <h6 className="text-3xl mb-5 font-semibold">Add to Various Favorite Products</h6>
           <button
-            onClick={() => router.push("/shop/1")}
-            className="bg-primary text-[#000000] text-lg rounded-[8px] w-[200px] h-[60px]"
+            onClick={() => window.history.back()}
+            className="text-[#000000] duration-300 transition-all ease-in-out flex items-center gap-3 bg-gradient-to-r from-[#f9c536] to-[#f9c536] btn-animate  bg-primary rounded-full font-[500] uppercase py-4 mx-auto text-center text-lg px-8"
           >
-            Return To Shop
+            Return to back
           </button>
         </div>
       )}
