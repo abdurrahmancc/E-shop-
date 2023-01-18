@@ -28,7 +28,7 @@ const MobileSidebar = ({ toggle, setToggle }: Props) => {
   } = useForm<FormData>();
 
   const onSubmit = handleSubmit(async (data) => {
-    console.log();
+    console.log(data);
   });
 
   return (

@@ -10,7 +10,7 @@ export const getCompare = async () => {
     if (storageCompare) {
       compare = JSON.parse(storageCompare)
     }
-    const keys = Object.keys(compare)
+    const keys = Object?.keys(compare || {})
     return keys
   } catch (error: any) {
     console.log(error?.message)
@@ -26,7 +26,7 @@ export const deleteCompare = async (id: string) => {
       if (id in compare) {
         delete compare[id]
         localStorage.setItem(eShopCompare, JSON.stringify(compare))
-        const keys = Object.keys(compare)
+        const keys = Object?.keys(compare || {})
         return keys
       }
     }

@@ -1,6 +1,10 @@
 import { CategoryItemsTypes, ProductModel, BlogsModel, TrendingCategoryType } from "../types/types";
 import blog1 from "../assets/blogs/blog-1.png";
 import blog2 from "../assets/blogs/blog-2.png";
+import blog3 from "../assets/blogs/blog-3.png";
+import blog4 from "../assets/blogs/blog-4.png";
+import blog5 from "../assets/blogs/blog-5.png";
+import blog6 from "../assets/blogs/blog-6.png";
 import category1 from "../assets/categories-img/computer.png";
 import category2 from "../assets/categories-img/headphone.png";
 import category3 from "../assets/categories-img/laptop.png";
@@ -1617,8 +1621,11 @@ export const productsData: ProductModel[] = [
 export const blogsData: BlogsModel[] = [
   {
     _id: "1",
-    title: "What is Compliance Testing?",
+    title: "Choosing The Right Projector: 5 Key Points to Consider",
     img: blog1,
+    author: "Brown",
+    date: "June 14, 2022",
+    commentsQuantity: 23,
     category: "development",
     tags: ["development", "Enterprise", "startups"],
     description:
@@ -1626,7 +1633,10 @@ export const blogsData: BlogsModel[] = [
   },
   {
     _id: "2",
-    title: "What is Compliance Testing?",
+    title: "Best White Laptops For Students in 2023",
+    author: "Smelley",
+    date: "June 15, 2022",
+    commentsQuantity: 22,
     img: blog2,
     category: "development",
     tags: ["development", "Enterprise", "startups"],
@@ -1635,8 +1645,47 @@ export const blogsData: BlogsModel[] = [
   },
   {
     _id: "3",
+    title: "Best Gaming Headphones, You Can Buy in 2023",
+    img: blog3,
+    author: "Brown",
+    date: "June 14, 2022",
+    commentsQuantity: 23,
+    category: "development",
+    tags: ["development", "Enterprise", "startups"],
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ipsum vitae debitis, quam, dolore eligendi molestiae amet quasi quas quos vero odio. Ipsam commodi similique natus, corporis est dicta quae in non blanditiis velit consectetur deserunt. Lorem ipsum dolor sit amet consectetur adipisicing elit",
+  },
+  {
+    _id: "4",
+    title: "Convert Your Basic TV into a Smart TV",
+    img: blog4,
+    author: "Jason",
+    date: "June 12, 2022",
+    commentsQuantity: 13,
+    category: "development",
+    tags: ["development", "Enterprise", "startups"],
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ipsum vitae debitis, quam, dolore eligendi molestiae amet quasi quas quos vero odio. Ipsam commodi similique natus, corporis est dicta quae in non blanditiis velit consectetur deserunt. Lorem ipsum dolor sit amet consectetur adipisicing elit",
+  },
+  {
+    _id: "5",
     title: "What is Compliance Testing?",
-    img: blog2,
+    img: blog5,
+    author: "Brown",
+    date: "June 14, 2022",
+    commentsQuantity: 23,
+    category: "development",
+    tags: ["development", "Enterprise", "startups"],
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ipsum vitae debitis, quam, dolore eligendi molestiae amet quasi quas quos vero odio. Ipsam commodi similique natus, corporis est dicta quae in non blanditiis velit consectetur deserunt. Lorem ipsum dolor sit amet consectetur adipisicing elit",
+  },
+  {
+    _id: "6",
+    title: "What is Compliance Testing?",
+    img: blog6,
+    author: "Brown",
+    date: "June 14, 2022",
+    commentsQuantity: 23,
     category: "development",
     tags: ["development", "Enterprise", "startups"],
     description:

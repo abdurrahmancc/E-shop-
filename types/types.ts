@@ -44,6 +44,9 @@ export interface BlogsModel {
   _id: String
   title: String
   category: String
+  author: string
+  date: string
+  commentsQuantity: number
   img: any
   tags: String[]
   description: String

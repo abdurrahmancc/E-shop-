@@ -8,7 +8,7 @@ export const getCarts = async () => {
     if (storageWishlist) {
       shoppingCartQuantity = JSON.parse(storageWishlist)
     }
-    const keys = Object.keys(shoppingCartQuantity)
+    const keys = Object?.keys(shoppingCartQuantity || {})
     return { keys, shoppingCartQuantity }
   } catch (error: any) {
     console.log(error?.message)
@@ -24,7 +24,7 @@ export const deleteCart = async (id: string) => {
       if (id in shoppingCart) {
         delete shoppingCart[id]
         localStorage.setItem(eShoppingCart, JSON.stringify(shoppingCart))
-        const keys = Object.keys(shoppingCart)
+        const keys = Object?.keys(shoppingCart || {})
         return keys
       }
     }

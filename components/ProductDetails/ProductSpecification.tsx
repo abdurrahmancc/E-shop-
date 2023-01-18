@@ -13,15 +13,15 @@ const ProductSpecification = ({ SpecificationInfo }: any) => {
                 <thead>
                   <tr>
                     <th colSpan={2} className="p-3 bg-[#F2F4F8] font-[500] text-start text-info">
-                      {Object.keys(specific)}
+                      {Object?.keys(specific || {})}
                     </th>
                   </tr>
                 </thead>
                 <tbody>
                   {infoData.map((info: any, i: any) => {
                     try {
-                      const fo = Object.keys(info);
-                      const details: any = Object.values(info);
+                      const fo = Object?.keys(info || {});
+                      const details: any = Object?.values(info);
                       return (
                         <tr key={i} className="border-b border-[#AEAEAE]">
                           <td className="text-[#4F4F4F] 2xl:w-[550px] xl:w-[450px] lg:w-[300px] md:w-[250px] sm:w-[200px] w-[150px] capitalize py-3 text-sm md:text-[16px] relative leading-6 ">

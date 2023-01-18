@@ -12,6 +12,7 @@ const Blogs = ({ blogs }: BlogsType) => {
   const [page, setPage] = useState<number>(4);
   const [active, setActive] = useState<String>("all");
   const [pageCount, setPageCount] = useState<number>(4);
+  const blogItems = blogs?.slice(0, 4);
 
   return (
     <div id="blogs-1">
@@ -75,9 +76,10 @@ const Blogs = ({ blogs }: BlogsType) => {
       <div className="flex mt-[50px] flex-col sm:flex-row gap-x-[30px] gap-y-[50px]">
         <div className="max-w-[1146px]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-[35px] gap-[30px]">
-            {blogs.map((blog, i) => {
-              return <BlogCard1 key={i} blog={blog} />;
-            })}
+            {blogItems &&
+              blogItems.map((blog, i) => {
+                return <BlogCard1 key={i} blog={blog} />;
+              })}
           </div>
           <div className="flex justify-center mt-[65px]">
             <Pagination pageCount={pageCount} setPage={setPage} />

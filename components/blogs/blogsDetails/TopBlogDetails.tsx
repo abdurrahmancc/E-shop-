@@ -20,15 +20,17 @@ const TopBlogDetails = ({ blog }: BlogType) => {
         <div className="mt-2 flex items-center  gap-3">
           <div className="flex xl:gap-2 gap-1 items-center">
             <CiUser className="text-[16px] text-info" />
-            <span className="xl:text-[16px] text-xs leading-6 text-[#585858]">Jason</span>
+            <span className="xl:text-[16px] text-xs leading-6 text-[#585858]">{blog?.author}</span>
           </div>
           <div className="flex xl:gap-2 gap-1 items-center">
             <CgCalendarDates className="text-[16px] text-info" />
-            <span className="xl:text-[16px] text-xs leading-6 text-[#585858]">June 12, 2022</span>
+            <span className="xl:text-[16px] text-xs leading-6 text-[#585858]">{blog?.date}</span>
           </div>
           <div className="flex xl:gap-2 gap-1 items-center">
             <TiMessages className="text-[16px] text-info" />
-            <span className="xl:text-[16px] text-xs leading-6 text-[#585858]">4 Comments</span>
+            <span className="xl:text-[16px] text-xs leading-6 text-[#585858]">
+              {blog?.commentsQuantity} Comments
+            </span>
           </div>
         </div>
         <div className="my-[30px]">

@@ -33,7 +33,6 @@ const Shop = ({ products }: ProductTypes) => {
   const [pageCount, setPageCount] = useState<number>(3);
 
   useEffect(() => {
-    console.log(router.pathname, router?.query?.id);
     if (router.pathname == "/shop/[id]" && router?.query?.id == "4") {
       setToggleCard(false);
     }

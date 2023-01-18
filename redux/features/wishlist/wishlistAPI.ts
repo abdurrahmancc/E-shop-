@@ -10,7 +10,7 @@ export const getWishlist = async () => {
     if (storageWishlist) {
       wishlist = JSON.parse(storageWishlist)
     }
-    const keys = Object.keys(wishlist)
+    const keys = Object?.keys(wishlist || {})
     return keys
   } catch (error: any) {
     console.log(error?.message)
@@ -26,7 +26,7 @@ export const deleteWishlist = async (id: string) => {
       if (id in wishlist) {
         delete wishlist[id]
         localStorage.setItem(eShopWishlist, JSON.stringify(wishlist))
-        const keys = Object.keys(wishlist)
+        const keys = Object?.keys(wishlist || {})
         return keys
       }
     }
