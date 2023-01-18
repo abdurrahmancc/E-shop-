@@ -34,7 +34,7 @@ const TopHeader3 = () => {
       <div className="max-w-[1443px] w-full mx-auto container px-4 lg:px-10 2xl:px-0">
         <div className="py-2 flex justify-center sm:justify-between items-center">
           <ul className="lg:flex items-center lg:gap-3 gap-1 hidden">
-            <li className="text-[#FFFFFF] text-xs leading-[18px]">Eshop@gmail.com</li>
+            <li className="text-[#FFFFFF] text-xs leading-[18px]">eshop@gmail.com</li>
             <div className="h-[25.5px] w-[1px] bg-[rgba(255,255,255,0.24)]"></div>
             <li
               onClick={() => router.push("/orderTrack")}

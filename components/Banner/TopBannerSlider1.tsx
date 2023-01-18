@@ -8,9 +8,11 @@ import Image from "next/image";
 import banner1 from "../../assets/banner/banner-1.jpg";
 import banner2 from "../../assets/banner/banner-2.png";
 import banner3 from "../../assets/banner/banner-3.png";
+import { useRouter } from "next/router";
 const { Fade } = require("react-reveal");
 
 const TopBannerSlider1 = () => {
+  const { push } = useRouter();
   const pagination = {
     clickable: true,
     renderBullet: function (index: any, className: any) {
@@ -64,7 +66,10 @@ const TopBannerSlider1 = () => {
                   </p>
                 </Fade>
                 <Fade bottom delay={600}>
-                  <button className="lg:h-[62px] lg:max-w-[159px] h-[44px] max-w-[110px] md:h-[52px] md:max-w-[130px] w-full flex items-center lg:text-[20px] lg:leading-[30px] text-[16px] md:text-lg font-[500] justify-center text-white bg-info bg-gradient-to-r from-[#027aea] to-[#2387e5] btn-animate">
+                  <button
+                    onClick={() => push("/shop/1")}
+                    className="lg:h-[62px] lg:max-w-[159px] h-[44px] max-w-[110px] md:h-[52px] md:max-w-[130px] w-full flex items-center lg:text-[20px] lg:leading-[30px] text-[16px] md:text-lg font-[500] justify-center text-white bg-info bg-gradient-to-r from-[#027aea] to-[#2387e5] btn-animate"
+                  >
                     Shop Now
                   </button>
                 </Fade>
@@ -102,7 +107,10 @@ const TopBannerSlider1 = () => {
                   </p>
                 </Fade>
                 <Fade bottom delay={600}>
-                  <button className="lg:h-[62px] lg:max-w-[159px] h-[44px] max-w-[110px] md:h-[52px] md:max-w-[130px] w-full flex items-center lg:text-[20px] lg:leading-[30px] text-[16px] md:text-lg font-[500] justify-center text-white bg-info bg-gradient-to-r from-[#027aea] to-[#2387e5] btn-animate">
+                  <button
+                    onClick={() => push("/shop/1")}
+                    className="lg:h-[62px] lg:max-w-[159px] h-[44px] max-w-[110px] md:h-[52px] md:max-w-[130px] w-full flex items-center lg:text-[20px] lg:leading-[30px] text-[16px] md:text-lg font-[500] justify-center text-white bg-info bg-gradient-to-r from-[#027aea] to-[#2387e5] btn-animate"
+                  >
                     Shop Now
                   </button>
                 </Fade>
@@ -139,7 +147,10 @@ const TopBannerSlider1 = () => {
                   </p>
                 </Fade>
                 <Fade bottom delay={600}>
-                  <button className="lg:h-[62px] lg:max-w-[159px] h-[44px] max-w-[110px] md:h-[52px] md:max-w-[130px] w-full flex items-center lg:text-[20px] lg:leading-[30px] text-[16px] md:text-lg font-[500] justify-center text-white bg-info bg-gradient-to-r from-[#027aea] to-[#2387e5] btn-animate">
+                  <button
+                    onClick={() => push("/shop/1")}
+                    className="lg:h-[62px] lg:max-w-[159px] h-[44px] max-w-[110px] md:h-[52px] md:max-w-[130px] w-full flex items-center lg:text-[20px] lg:leading-[30px] text-[16px] md:text-lg font-[500] justify-center text-white bg-info bg-gradient-to-r from-[#027aea] to-[#2387e5] btn-animate"
+                  >
                     Shop Now
                   </button>
                 </Fade>

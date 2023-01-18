@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Breadcrumb from "../../components/shared/breadcrumb/Breadcrumb";
 import { ProductModel } from "../../types/types";
 import Pagination from "../../components/shared/pagination/Pagination";
@@ -31,6 +31,13 @@ const Shop = ({ products }: ProductTypes) => {
   const [page, setPage] = useState<number>(4);
   const [toggleCard, setToggleCard] = useState<boolean>(true);
   const [pageCount, setPageCount] = useState<number>(3);
+
+  useEffect(() => {
+    console.log(router.pathname, router?.query?.id);
+    if (router.pathname == "/shop/[id]" && router?.query?.id == "4") {
+      setToggleCard(false);
+    }
+  }, [router.pathname, router?.query?.id]);
 
   return (
     <>
@@ -75,7 +82,7 @@ const Shop = ({ products }: ProductTypes) => {
               {/* =========== Shop Top Filter end ======= */}
               {/* ============ product card toggle start ============ */}
               {router.query.id == "4" ? (
-                toggleCard ? (
+                !toggleCard ? (
                   <ShopVertical products={products} />
                 ) : (
                   <ShopHorizontal products={products} />

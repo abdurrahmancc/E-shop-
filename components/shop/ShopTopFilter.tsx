@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import React, { useState, Dispatch, SetStateAction } from "react";
 import { FaListUl } from "react-icons/fa";
 import { TbGridDots } from "react-icons/tb";
@@ -38,6 +39,7 @@ type Props = {
 const ShopTopFilter = ({ toggleCard, setToggleCard }: Props) => {
   const [selectedSortOption, setSelectedSortOption] = useState<SortOption | null>(sortOptions[0]);
   const [selectedShowOption, setSelectedShowOption] = useState<ShowOption | null>(sortOptions[0]);
+  const { pathname } = useRouter();
 
   return (
     <div className="flex md:flex-row gap-y-5 flex-col mt-[50px] mb-[30px] md:items-center justify-between">
@@ -47,7 +49,7 @@ const ShopTopFilter = ({ toggleCard, setToggleCard }: Props) => {
       <div className="flex flex-wrap order-1 md:order-2 items-center gap-5">
         <div className="flex items-center gap-3">
           <div
-            onClick={() => setToggleCard(!toggleCard)}
+            onClick={() => setToggleCard(true)}
             className={`w-[34px] cursor-pointer h-[34px] flex justify-center items-center ${
               !toggleCard ? "bg-[#EDEDED]" : "text-[#FFFFFF] bg-[#031424]"
             }`}
@@ -55,7 +57,7 @@ const ShopTopFilter = ({ toggleCard, setToggleCard }: Props) => {
             <TbGridDots />
           </div>
           <div
-            onClick={() => setToggleCard(!toggleCard)}
+            onClick={() => setToggleCard(false)}
             className={`w-[34px] h-[34px] cursor-pointer flex justify-center items-center ${
               toggleCard ? "bg-[#EDEDED]" : "text-[#FFFFFF] bg-[#031424]"
             }`}
