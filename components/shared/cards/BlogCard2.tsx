@@ -4,7 +4,6 @@ import React from "react";
 import { CgCalendarDates } from "react-icons/cg";
 import { CiUser } from "react-icons/ci";
 import { TiMessages } from "react-icons/ti";
-import blog1 from "../../../assets/blogs/blogs-2.1.png";
 import { BlogsModel } from "../../../types/types";
 
 type BlogType = {
@@ -13,6 +12,7 @@ type BlogType = {
 
 const BlogCard2 = ({ blog }: BlogType) => {
   const router = useRouter();
+
   return (
     <div className="max-w-[558px]">
       <figure>

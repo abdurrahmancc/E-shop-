@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { HiOutlineArrowRight } from "react-icons/hi2";
 import { ProductModel } from "../../../types/types";
 import ProductCard2 from "../../shared/cards/ProductCard2";
-import SpecialProductCard from "../../shared/cards/SpecialProductCard1";
 import SpecialProductCard2 from "../../shared/cards/SpecialProductCard2";
 
 interface Products {

@@ -1,4 +1,3 @@
-import { count } from "console";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { AiOutlineHeart, AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
@@ -15,14 +14,6 @@ import { addToCart } from "../../redux/features/shoppingCart/shoppingCartSlice";
 import { addToWishlist } from "../../redux/features/wishlist/wishlistSlice";
 import { ProductModel } from "../../types/types";
 import { Rating5 } from "../shared/Ratings/Ratings";
-
-const shortFeatures = [
-  'Apple iMac 21.5" Radeon Pro 560X',
-  "Intel Core i5 8th Gen Processor (3.0GHz up to 4.1GHz)",
-  "8GB RAM + 256GB SSD",
-  "Retina 4K 4096 x 2304 P3 display",
-  "Radeon Pro 560X 4GB Graphics",
-];
 
 interface Product {
   product: ProductModel;

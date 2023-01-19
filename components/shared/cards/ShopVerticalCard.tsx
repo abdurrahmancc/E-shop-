@@ -4,7 +4,6 @@ import React from "react";
 import { AiOutlineHeart } from "react-icons/ai";
 import { BiGitCompare, BiSearch } from "react-icons/bi";
 import { toast } from "react-toastify";
-import img1 from "../../../assets/product-Image/product-1.png";
 import { useAppDispatch } from "../../../redux/app/reduxHooks";
 import { addToCompare } from "../../../redux/features/compare/compareSlice";
 import { addToCart } from "../../../redux/features/shoppingCart/shoppingCartSlice";

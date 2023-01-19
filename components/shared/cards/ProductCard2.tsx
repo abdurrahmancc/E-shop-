@@ -10,7 +10,6 @@ import { addToCart } from "../../../redux/features/shoppingCart/shoppingCartSlic
 import { toast } from "react-toastify";
 import { addToCompare } from "../../../redux/features/compare/compareSlice";
 import { addToWishlist } from "../../../redux/features/wishlist/wishlistSlice";
-import { useRouter } from "next/router";
 import QuickView from "../../modals/QuickView";
 import Link from "next/link";
 
@@ -20,7 +19,6 @@ type PropsData = {
 
 const ProductCard2 = ({ product }: PropsData) => {
   const [isHover, setIsHover] = useState<boolean>(false);
-  const router = useRouter();
   const dispatch = useAppDispatch();
 
   const handleAddToCart = (id: string) => {

@@ -2,7 +2,6 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import React from "react";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
-import img1 from "../../../assets/product-Image/product-1.png";
 
 interface PropsData {
   style?: string;
@@ -13,6 +12,7 @@ interface PropsData {
 
 const SpecialMiniCard = ({ style, img, title, price }: PropsData) => {
   const router = useRouter();
+
   return (
     <div
       className={`bg-[#FBFBFB] px-3 pb-[14px] pt-[15px] h-[290px] rounded-[20.58px]  max-w-[200px] w-full flex flex-col justify-between ${style}`}

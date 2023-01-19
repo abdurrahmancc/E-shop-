@@ -10,12 +10,11 @@ import appStore from "../../../assets/icons/appStore.png";
 import payments from "../../../assets/icons/payments.png";
 import { BsInstagram, BsTwitter } from "react-icons/bs";
 import { SiMinutemailer } from "react-icons/si";
-import { useRouter } from "next/router";
 import Link from "next/link";
 
 const Footer3 = () => {
   const year = new Date().getFullYear();
-  const router = useRouter();
+
   return (
     <div
       style={{ backgroundImage: `url(${bg.src})` }}

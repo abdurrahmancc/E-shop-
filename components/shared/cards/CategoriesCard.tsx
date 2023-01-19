@@ -10,6 +10,7 @@ interface CategoryModel {
 const CategoriesCard = ({ category }: CategoryModel) => {
   const [isHover, setIsHover] = useState<boolean>(false);
   const router = useRouter();
+
   return (
     <div
       onMouseEnter={() => setIsHover(true)}

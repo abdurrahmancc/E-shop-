@@ -66,7 +66,6 @@ const TopHeader2 = () => {
                   options={optionsM}
                   isSearchable={false}
                 />
-                {/* <span>USD</span> <FiChevronDown className="w-3 h-3" /> */}
               </li>
               <div className="h-[25.5px] w-[1px] bg-[rgba(255,255,255,0.24)]"></div>
               <li className="flex capitalize h-[25px] items-center gap-1 text-[#424242] text-xs leading-[18px]">
@@ -80,7 +79,6 @@ const TopHeader2 = () => {
                   options={options}
                   isSearchable={false}
                 />
-                {/* <span>English</span> <FiChevronDown className="w-3 h-3" /> */}
               </li>
               <div className="h-[25.5px] w-[1px] bg-[rgba(255,255,255,0.24)]"></div>
               <li className="flex text-[12px] leading-[18px] text-[#424242] capitalize items-center gap-1">

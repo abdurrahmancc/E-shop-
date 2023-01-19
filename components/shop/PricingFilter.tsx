@@ -1,4 +1,4 @@
-import React, { FC, useState, Dispatch, SetStateAction } from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import ReactSlider from "react-slider";
 
 interface Price {

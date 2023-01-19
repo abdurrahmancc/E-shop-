@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React, { useState } from "react";
-import img from "../../assets/product-Image/product-1.png";
 import { Table, Tbody, Td, Th, Thead, Tr } from "react-super-responsive-table";
 import { useRouter } from "next/router";
 import { ProductModel } from "../../types/types";

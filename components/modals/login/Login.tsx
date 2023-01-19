@@ -1,6 +1,5 @@
-import React, { useState, Dispatch, SetStateAction } from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import { useForm } from "react-hook-form";
-import { IoCloseCircle } from "react-icons/io5";
 
 type FromData = {
   email: string;

@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { type } from "os";
 import React from "react";
 import { MdEdit } from "react-icons/md";
 import user from "../../assets/users/user.png";

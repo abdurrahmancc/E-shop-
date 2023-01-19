@@ -26,7 +26,6 @@ body {
 
 
 /*============== menu border animate start============== */
-
 .border-animate::after{
   content: '';
   position: absolute;

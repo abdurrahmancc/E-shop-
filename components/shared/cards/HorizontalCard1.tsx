@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import img from "../../../assets/product-Image/product-1.png";
 import { ProductModel } from "../../../types/types";
 import { Rating5 } from "../Ratings/Ratings";
 

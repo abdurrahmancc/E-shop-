@@ -1,8 +1,6 @@
-import { useRouter } from "next/router";
 import React, { useState, Dispatch, SetStateAction } from "react";
 import { FaListUl } from "react-icons/fa";
 import { TbGridDots } from "react-icons/tb";
-import { VscThreeBars } from "react-icons/vsc";
 import Select from "react-select";
 import { sortByStyle, showProductsStyle } from "../../styles/selectComponents";
 
@@ -39,7 +37,6 @@ type Props = {
 const ShopTopFilter = ({ toggleCard, setToggleCard }: Props) => {
   const [selectedSortOption, setSelectedSortOption] = useState<SortOption | null>(sortOptions[0]);
   const [selectedShowOption, setSelectedShowOption] = useState<ShowOption | null>(sortOptions[0]);
-  const { pathname } = useRouter();
 
   return (
     <div className="flex md:flex-row gap-y-5 flex-col mt-[50px] mb-[30px] md:items-center justify-between">

@@ -1,6 +1,5 @@
-import React, { useState, SetStateAction, Dispatch } from "react";
+import React, { SetStateAction, Dispatch } from "react";
 import { useForm } from "react-hook-form";
-import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 
 type FromData = {
   firstName: string;
@@ -16,8 +15,6 @@ interface Props {
 }
 
 const Register = ({ setIsLogin, isLogin }: Props) => {
-  const [isHidden, setIsHidden] = useState<string>("close");
-
   const {
     register,
     handleSubmit,

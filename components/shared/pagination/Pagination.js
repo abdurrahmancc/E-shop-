@@ -1,5 +1,4 @@
-import React, { FC, useState } from "react";
-import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
+import React, { useState } from "react";
 import { HiOutlineArrowLeft, HiOutlineArrowRight } from "react-icons/hi2";
 import ReactPaginate from "react-paginate";
 
