@@ -27,7 +27,7 @@ const TopSellingProducts = ({ products }: Products) => {
             <button className="hover:text-white custom_prev transition-all duration-300 ease-linear hover:bg-info justify-center text-info border border-info rounded-full text-ing flex items-center gap-3 md:w-[36px] md:h-[36px] w-7 h-7 leading-[24px] font-[500]">
               <HiOutlineArrowLeft className="w-[13.71px] h-[13.71px] " />
             </button>
-            <button className="hover:text-white custom_prev transition-all duration-300 ease-linear hover:bg-info justify-center text-info border border-info rounded-full text-ing flex items-center gap-3 md:w-[36px] md:h-[36px] w-7 h-7 leading-[24px] font-[500]">
+            <button className="hover:text-white custom_next transition-all duration-300 ease-linear hover:bg-info justify-center text-info border border-info rounded-full text-ing flex items-center gap-3 md:w-[36px] md:h-[36px] w-7 h-7 leading-[24px] font-[500]">
               <HiOutlineArrowRight className="w-[13.71px] h-[13.71px] " />
             </button>
           </div>
