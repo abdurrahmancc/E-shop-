@@ -96,9 +96,9 @@ const MiddleHeader3 = () => {
                   isSearchable={false}
                   options={options}
                 />
-                <div className="h-[26px] w-[1.5px] bg-[#AEAEAE]"></div>
+                <div className="h-[26px] w-[1.5px] bg-[#AEAEAE] "></div>
                 <input
-                  placeholder="Enter your search key....."
+                  placeholder="Enter your search key..."
                   type="text"
                   className="input pl-[22px] leading-[26px] text-black text-sm placeholder:text-[#616161] bg-inherit focus:outline-none h-full w-full"
                 />
