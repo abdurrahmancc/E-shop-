@@ -105,7 +105,7 @@ const MiddleHeader1 = () => {
                   isSearchable={false}
                   options={options}
                 />
-                <div className="h-[26px] w-[1.5px] bg-[#AEAEAE]"></div>
+                <div className="h-[26px] z-50 w-[1.5px] bg-[#AEAEAE]"></div>
                 <input
                   placeholder="Enter your search key....."
                   type="text"
