@@ -1,0 +1,35 @@
+#category-select-component  .css-1fdsijx-ValueContainer{
+padding: 0;
+webkit-flex: none;
+-webkit-flex: none;
+flex: none;
+}
+#category-select-component  .css-hlgwow{
+padding: 0;
+-webkit-flex: none;
+flex: none;
+}
+
+#category-select-component  .css-1rosn8b-singleValue{
+padding: 0;
+margin: 0;
+width: fit-content;
+}
+
+#top-header-currency-select-component  .css-1fdsijx-ValueContainer{
+    padding: 0;
+    -webkit-flex: none;
+    flex: none;
+}
+#top-header-currency-select-component  .css-hlgwow{
+    padding: 0;
+    -webkit-flex: none;
+    flex: none;
+}
+
+#top-header-language-select-component .css-1fdsijx-ValueContainer{
+    padding: 0;
+}
+#top-header-language-select-component .css-hlgwow{
+    padding: 0;
+}

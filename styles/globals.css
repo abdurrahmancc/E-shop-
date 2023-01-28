@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+/* =============tailwind config css start=========== */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* ==============tailwind config css end============= */
+
+
+html,
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: #ffffff;
+}
+
+/* ==========  nav submenu animate start ============ */
+.sub-menu-animate{
+  left: 0;
+  transition: left .2s linear
+}
+.sub-menu-animate:hover{
+  left: 10px;
+}
+/* ==========  nav submenu animate end ============ */
+
+
+/*============== menu border animate start============== */
+.border-animate::after{
+  content: '';
+  position: absolute;
+  width: 0px;
+  height: 2px;
+  left: 50%;
+  bottom: 0px;
+  background-color: #FCB700;
+  transition: all ease-in-out .2s;
+}
+.border-animate:hover::after{
+  width: 100%;
+  left: 0;
+}
+/*============== menu border animate end============== */
+
+
+/* ============== add to card animation start ================ */
+.bottomToTop{
+  bottom: -56px;
+  transition: all .3s ease;
+}
+
+.bottomToTopAnimate{
+  bottom: 48px;
+  transform: translateY(100%)
+}
+/* ============== add to card animation end ================ */
+
+
+/* ============= button animation start ========= */
+.btn-animate{
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: .4s ;
+}
+.btn-animate:hover {
+  background-size: 100% 100%;
+}
+/* ============= button animation end ========= */
+
+/* ============== Trending Categories animate style start ================ */
+.bottomToTopCategory{
+  bottom: -56px;
+  transition: all .3s ease;
+}
+
+.bottomToTopAnimateCategory{
+  bottom: 56px;
+  transform: translateY(100%)
+}
+/* ============== Trending Categories animate style end ================ */
+
+/* ============= shop by categories start ========== */
+.category-subMenu-slide {
+  clear:both;
+  width:100%;
+  height:0px;
+  overflow: hidden;
+  text-align: center;
+  transition: height .4s ease;
+}
+
+#touch-category {position: absolute; opacity: 0; height: 0px;}    
+
+#touch-category:checked + .category-subMenu-slide {height: 578px;} 
+
+
+#header-categories-dropdown ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+#header-categories-dropdown ul:hover {
+    overflow: visible;
+}
+
+/* ============= shop by categories end ========== */
+
+@media only screen and (max-width: 1120px) {
+#bottom-Header-2 .is-hidden{
+  display: none;
+}
+}

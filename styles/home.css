@@ -1,0 +1,67 @@
+@media only screen and (max-width: 500px) {
+    .xs-responsive{
+        max-width: 265px;
+        grid-template-columns: 1fr;
+    }
+    .xs-max-width{
+        max-width: 200px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .xs-max-width{
+        max-width: 180px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #xs-responsive-card-banner img{
+        max-width: 150px;
+    }
+    #special-Sec .xs-top{
+        padding-top: 12px;
+        padding-right: 12px;
+    }
+    #special-Sec img{
+        width: 180px;
+        height: 180px;
+    }
+    #special-Sec .xs-special-Sec{
+        margin-top: 28px;
+    }
+    #special-Sec .xs-title{
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 4px;
+    }
+    #special-Sec .xs-body-top{
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+    #special-Sec .xs-body-top button{
+        width: 28px;
+        height: 28px;
+    }
+    #special-Sec .xs-body-top button svg{
+        width: 14px;
+        height: 14px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    #xs-responsive-card-banner img{
+        max-width: 150px;
+    }
+    #newsletter-1 h2{
+        font-size: 20px;
+    }
+    #newsletter-2 h2{
+        font-size: 20px;
+    }
+    #newsletter-3 h2{
+        font-size: 20px;
+    }
+    #newsletter-4 h2{
+        font-size: 20px;
+    }
+}
